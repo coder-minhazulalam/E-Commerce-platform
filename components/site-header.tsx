@@ -20,20 +20,20 @@ export function SiteHeader() {
       </Link>
 
       <nav className="site-header__nav" aria-label="Primary navigation">
-        <Link href="#lookbook">The edit</Link>
-        <Link href="#approach">Our approach</Link>
+        <Link href="/shop">The edit</Link>
+        <Link href="/#approach">Our approach</Link>
       </nav>
 
       <div className="site-header__aside">
         <Button
           as="a"
           className="site-header__cta"
-          href="#lookbook"
+          href="/shop"
           radius="full"
           size="sm"
           variant="bordered"
         >
-          Discover
+          Shop the edit
         </Button>
       </div>
     </header>

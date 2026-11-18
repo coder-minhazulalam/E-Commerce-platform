@@ -26,8 +26,8 @@ describe("SiteHeader", () => {
     renderHeader();
 
     expect(screen.getByRole("navigation", { name: "Primary navigation" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "The edit" })).toHaveAttribute("href", "#lookbook");
-    expect(screen.getByRole("button", { name: "Discover" })).toHaveAttribute("href", "#lookbook");
+    expect(screen.getByRole("link", { name: "The edit" })).toHaveAttribute("href", "/shop");
+    expect(screen.getByRole("button", { name: "Shop the edit" })).toHaveAttribute("href", "/shop");
   });
 });
 

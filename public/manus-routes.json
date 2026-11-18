@@ -1,1 +1,16 @@
-{"routes":[{"path":"/","title":"Home"}]}
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "Home"
+    },
+    {
+      "path": "/shop",
+      "title": "Shop the edit"
+    },
+    {
+      "path": "/shop/:slug",
+      "title": "Product detail"
+    }
+  ]
+}

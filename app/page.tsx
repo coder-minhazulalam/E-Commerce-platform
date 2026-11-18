@@ -11,20 +11,20 @@ export default function HomePage() {
       <main>
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero__copy">
-            <p className="eyebrow">The everyday edit · Vol. 01</p>
+            <p className="eyebrow">A considered collection · Vol. 01</p>
             <h1 className="hero__title" id="hero-title">
               A little less noise. A little more you.
             </h1>
             <p className="hero__description">
-              Considered pieces, easy to live in. Find a look that feels like your own and take it wherever the day leads.
+              An intentionally small edit of thoughtfully chosen pieces: easy to wear, made to work together, and ready for real life. Find fewer things you love and wear them often.
             </p>
             <div className="hero__actions">
               <HeroCTA />
-              <a className="hero__text-link" href="#approach">
-                A closer look
+              <a className="hero__text-link" href="/shop">
+                Explore the edit
               </a>
             </div>
-            <p className="hero__note">Made for the in-between moments.</p>
+            <p className="hero__note">Considered, versatile, and made for repeat wear.</p>
           </div>
 
           <div className="hero__visual" aria-label="Editorial lookbook portrait">
