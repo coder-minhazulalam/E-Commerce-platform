@@ -21,6 +21,22 @@
       "title": "Collection detail"
     },
     {
+      "path": "/checkout",
+      "title": "Secure Checkout"
+    },
+    {
+      "path": "/auth/login",
+      "title": "Sign In / Register"
+    },
+    {
+      "path": "/auth/signup",
+      "title": "Create Account"
+    },
+    {
+      "path": "/admin",
+      "title": "Admin Dashboard & Control"
+    },
+    {
       "path": "/shop",
       "title": "Shop (Legacy redirect)"
     },
