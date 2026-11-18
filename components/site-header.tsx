@@ -21,6 +21,7 @@ export function SiteHeader() {
 
       <nav className="site-header__nav" aria-label="Primary navigation">
         <Link href="/shop">The edit</Link>
+        <Link href="/looks">Looks</Link>
         <Link href="/#approach">Our approach</Link>
       </nav>
 

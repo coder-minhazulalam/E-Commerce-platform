@@ -11,6 +11,14 @@
     {
       "path": "/shop/:slug",
       "title": "Product detail"
+    },
+    {
+      "path": "/looks",
+      "title": "Editorial Lookbook"
+    },
+    {
+      "path": "/looks/:lookId",
+      "title": "Look detail"
     }
   ]
 }

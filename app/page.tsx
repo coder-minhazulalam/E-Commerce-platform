@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { HeroCTA } from "../components/hero-cta";
+import { LookbookViewer } from "../components/lookbook-viewer";
 import { SiteHeader } from "../components/site-header";
 import { lookbookImage } from "../lib/assets";
 
@@ -49,6 +50,10 @@ export default function HomePage() {
           </div>
           <p className="edit-strip__count">09 — 01</p>
         </section>
+
+        <div className="home-lookbook-container">
+          <LookbookViewer />
+        </div>
 
         <span id="approach" className="sr-only">
           Our approach: thoughtful pieces for everyday wear.
