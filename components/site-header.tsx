@@ -20,8 +20,8 @@ export function SiteHeader() {
       </Link>
 
       <nav className="site-header__nav" aria-label="Primary navigation">
-        <Link href="/shop">The edit</Link>
-        <Link href="/looks">Looks</Link>
+        <Link href="/products">Products</Link>
+        <Link href="/collections">Collections</Link>
         <Link href="/#approach">Our approach</Link>
       </nav>
 
@@ -29,7 +29,7 @@ export function SiteHeader() {
         <Button
           as="a"
           className="site-header__cta"
-          href="/shop"
+          href="/products"
           radius="full"
           size="sm"
           variant="bordered"

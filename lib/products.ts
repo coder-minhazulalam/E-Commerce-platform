@@ -8,11 +8,24 @@ export type Product = {
   currency: string;
   imageIndex: number;
   imageAlt: string;
+  featured?: boolean;
 };
 
 export type ProductSort = "featured" | "price-asc" | "price-desc" | "name-asc";
 export type ProductPage = { items: Product[]; page: number; pageSize: number; total: number };
-export type ProductQuery = { category?: string; q?: string; sort?: ProductSort; page?: number; pageSize?: number };
+export type ProductQuery = { category?: string; q?: string; sort?: ProductSort; page?: number; pageSize?: number; featured?: boolean };
+
+export const CATALOG_PRODUCTS: Product[] = [
+  { id: "product-001", slug: "wool-overcoat", name: "The Wool Overcoat", category: "Outerwear", description: "A structured mid-length overcoat in heavyweight wool blend. Notch lapel, double-breasted button closure, fully lined.", price: 285, currency: "USD", imageIndex: 0, imageAlt: "Wool overcoat in natural stone, belted at the waist", featured: true },
+  { id: "product-002", slug: "linen-wide-leg-trousers", name: "Linen Wide-Leg Trousers", category: "Bottoms", description: "Wide-leg trousers in breathable linen. High rise, elasticated back waistband, two front slash pockets.", price: 125, currency: "USD", imageIndex: 1, imageAlt: "Linen wide-leg trousers in ecru, cropped slightly above the ankle", featured: true },
+  { id: "product-003", slug: "ribbed-knit-crewneck", name: "Ribbed Knit Crewneck", category: "Knitwear", description: "An everyday crewneck in fine-gauge ribbed cotton. Relaxed fit, dropped shoulders, raw hem finish.", price: 98, currency: "USD", imageIndex: 2, imageAlt: "Ribbed knit crewneck in oat, tucked loosely into trousers", featured: true },
+  { id: "product-004", slug: "relaxed-oxford-shirt", name: "Relaxed Oxford Shirt", category: "Shirts", description: "Classic Oxford weave cotton shirt. Relaxed cut through the chest and waist, button-down collar, single chest pocket.", price: 88, currency: "USD", imageIndex: 3, imageAlt: "Relaxed Oxford shirt in pale blue, half-tucked" },
+  { id: "product-005", slug: "tailored-blazer", name: "The Tailored Blazer", category: "Outerwear", description: "A clean-lined tailored blazer in stretch-wool blend. Single-breasted, lightly padded shoulders, flap pockets.", price: 245, currency: "USD", imageIndex: 4, imageAlt: "Tailored blazer in charcoal, worn open over a white shirt", featured: true },
+  { id: "product-006", slug: "slip-midi-dress", name: "Slip Midi Dress", category: "Dresses", description: "Bias-cut slip dress in washed silk-look satin. Midi length, adjustable straps, side seam slit.", price: 168, currency: "USD", imageIndex: 5, imageAlt: "Slip midi dress in champagne satin, worn with a cardigan" },
+  { id: "product-007", slug: "high-rise-straight-jeans", name: "High-Rise Straight Jeans", category: "Denim", description: "Straight-leg jeans in rigid selvedge denim. High waist, clean front, two back patch pockets.", price: 145, currency: "USD", imageIndex: 6, imageAlt: "High-rise straight jeans in deep indigo, cuffed at the ankle" },
+  { id: "product-008", slug: "merino-turtleneck", name: "Fine Merino Turtleneck", category: "Knitwear", description: "An ultra-fine merino wool turtleneck. Slim fit, ribbed knit construction, long sleeve.", price: 115, currency: "USD", imageIndex: 7, imageAlt: "Fine merino turtleneck in ivory, tucked into high-waist trousers" },
+  { id: "product-009", slug: "canvas-work-jacket", name: "Washed Canvas Jacket", category: "Outerwear", description: "A utility work jacket in washed canvas cotton. Relaxed fit, four flap pockets, raw denim-style finish.", price: 195, currency: "USD", imageIndex: 8, imageAlt: "Washed canvas jacket in sand, worn over a knit" },
+];
 
 export function productListUrl(query: ProductQuery = {}): string {
   const params = new URLSearchParams();
@@ -21,6 +34,7 @@ export function productListUrl(query: ProductQuery = {}): string {
   if (query.sort) params.set("sort", query.sort);
   if (query.page !== undefined) params.set("page", String(query.page));
   if (query.pageSize !== undefined) params.set("pageSize", String(query.pageSize));
+  if (query.featured) params.set("featured", "true");
   const suffix = params.toString();
   return `/api/products${suffix ? `?${suffix}` : ""}`;
 }
@@ -38,25 +52,15 @@ export async function getProduct(slug: string, signal?: AbortSignal): Promise<Pr
   return result.item;
 }
 
-export const CATALOG_PRODUCTS: Product[] = [
-  { id: "product-001", slug: "linen-shirt", name: "Linen Shirt", category: "Clothing", description: "A relaxed-fit linen shirt.", price: 68, currency: "USD", imageIndex: 0, imageAlt: "Campaign image 1" },
-  { id: "product-002", slug: "canvas-tote", name: "Canvas Tote", category: "Accessories", description: "A roomy everyday canvas tote.", price: 32, currency: "USD", imageIndex: 1, imageAlt: "Campaign image 2" },
-  { id: "product-003", slug: "ceramic-vase", name: "Ceramic Vase", category: "Home", description: "A handcrafted-look ceramic vase.", price: 54, currency: "USD", imageIndex: 2, imageAlt: "Campaign image 3" },
-  { id: "product-004", slug: "cotton-scarf", name: "Cotton Scarf", category: "Accessories", description: "A soft woven cotton scarf.", price: 45, currency: "USD", imageIndex: 3, imageAlt: "Campaign image 4" },
-  { id: "product-005", slug: "striped-tshirt", name: "Striped T-Shirt", category: "Clothing", description: "A classic striped cotton T-shirt.", price: 38, currency: "USD", imageIndex: 4, imageAlt: "Campaign image 5" },
-  { id: "product-006", slug: "table-lamp", name: "Table Lamp", category: "Home", description: "A compact table lamp for warm light.", price: 110, currency: "USD", imageIndex: 5, imageAlt: "Campaign image 6" },
-  { id: "product-007", slug: "leather-wallet", name: "Leather Wallet", category: "Accessories", description: "A slim everyday wallet.", price: 72, currency: "USD", imageIndex: 6, imageAlt: "Campaign image 7" },
-  { id: "product-008", slug: "cotton-trousers", name: "Cotton Trousers", category: "Clothing", description: "Straight-leg cotton trousers.", price: 84, currency: "USD", imageIndex: 7, imageAlt: "Campaign image 8" },
-  { id: "product-009", slug: "throw-blanket", name: "Throw Blanket", category: "Home", description: "A lightweight woven throw blanket.", price: 96, currency: "USD", imageIndex: 8, imageAlt: "Campaign image 9" },
-];
-
 export function formatPrice(amount: number, currency: string): string {
   return new Intl.NumberFormat(undefined, { style: "currency", currency }).format(amount);
 }
 
 export function getLocalProduct(idOrSlug: string): Product | undefined {
-  const normalized = idOrSlug.toLowerCase();
-  return CATALOG_PRODUCTS.find(
-    (p) => p.id.toLowerCase() === normalized || p.slug.toLowerCase() === normalized,
-  );
+  const n = idOrSlug.toLowerCase();
+  return CATALOG_PRODUCTS.find((p) => p.id.toLowerCase() === n || p.slug.toLowerCase() === n);
+}
+
+export function getFeaturedProducts(): Product[] {
+  return CATALOG_PRODUCTS.filter((p) => p.featured);
 }

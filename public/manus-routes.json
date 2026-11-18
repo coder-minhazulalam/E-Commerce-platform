@@ -5,20 +5,36 @@
       "title": "Home"
     },
     {
-      "path": "/shop",
-      "title": "Shop the edit"
+      "path": "/products",
+      "title": "Products — The Collection"
     },
     {
-      "path": "/shop/:slug",
+      "path": "/products/:slug",
       "title": "Product detail"
     },
     {
+      "path": "/collections",
+      "title": "Collections — Nine Looks"
+    },
+    {
+      "path": "/collections/:slug",
+      "title": "Collection detail"
+    },
+    {
+      "path": "/shop",
+      "title": "Shop (Legacy redirect)"
+    },
+    {
+      "path": "/shop/:slug",
+      "title": "Product detail (Legacy redirect)"
+    },
+    {
       "path": "/looks",
-      "title": "Editorial Lookbook"
+      "title": "Looks (Legacy redirect)"
     },
     {
       "path": "/looks/:lookId",
-      "title": "Look detail"
+      "title": "Look detail (Legacy redirect)"
     }
   ]
 }

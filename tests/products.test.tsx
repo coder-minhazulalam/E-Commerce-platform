@@ -4,11 +4,23 @@ import { describe, expect, it } from "vitest";
 import { ProductGrid } from "../components/product-card";
 import { formatPrice, productListUrl, type Product } from "../lib/products";
 
-const sample: Product = { id: "p1", slug: "linen-shirt", name: "Linen shirt", category: "Shirts", description: "An easy layer.", price: 89, currency: "USD", imageIndex: 2, imageAlt: "Model wearing a pale linen shirt" };
+const sample: Product = {
+  id: "p1",
+  slug: "linen-shirt",
+  name: "Linen shirt",
+  category: "Shirts",
+  description: "An easy layer.",
+  price: 89,
+  currency: "USD",
+  imageIndex: 2,
+  imageAlt: "Model wearing a pale linen shirt",
+};
 
 describe("product API helpers", () => {
   it("builds the relative endpoint URL with only supplied contract parameters", () => {
-    expect(productListUrl({ category: "Shirts", q: "linen", sort: "price-asc", page: 2, pageSize: 12 })).toBe("/api/products?category=Shirts&q=linen&sort=price-asc&page=2&pageSize=12");
+    expect(
+      productListUrl({ category: "Shirts", q: "linen", sort: "price-asc", page: 2, pageSize: 12 }),
+    ).toBe("/api/products?category=Shirts&q=linen&sort=price-asc&page=2&pageSize=12");
     expect(productListUrl()).toBe("/api/products");
   });
   it("formats a product price using its currency", () => {
@@ -29,6 +41,9 @@ describe("ProductGrid", () => {
     rerender(<ProductGrid products={[sample]} />);
     expect(screen.getByRole("heading", { name: "Linen shirt" })).toBeInTheDocument();
     expect(screen.getByRole("img", { name: sample.imageAlt })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "View Linen shirt" })).toHaveAttribute("href", "/shop/linen-shirt");
+    expect(screen.getByRole("link", { name: "View Linen shirt" })).toHaveAttribute(
+      "href",
+      "/products/linen-shirt",
+    );
   });
 });

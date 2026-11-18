@@ -1,11 +1,10 @@
-import { SiteHeader } from "../../../components/site-header";
-import { ProductDetail } from "../../../components/product-detail";
+import { redirect } from "next/navigation";
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export default async function LegacyProductDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
-  return { title: `${decodeURIComponent(slug)} — The edit` };
-}
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  return <div className="site-shell"><SiteHeader /><main className="shop-page"><ProductDetail slug={slug} /></main></div>;
+  redirect(`/products/${slug}`);
 }

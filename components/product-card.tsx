@@ -6,7 +6,7 @@ import { formatPrice, type Product } from "../lib/products";
 export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="product-card">
-      <Link className="product-card__link" href={`/shop/${encodeURIComponent(product.slug)}`} aria-label={`View ${product.name}`}>
+      <Link className="product-card__link" href={`/products/${encodeURIComponent(product.slug)}`} aria-label={`View ${product.name}`}>
         <div className="product-card__image">
           <Image src={lookbookImage(product.imageIndex, 720)} alt={product.imageAlt} fill sizes="(max-width: 620px) 90vw, (max-width: 980px) 45vw, 30vw" />
         </div>
