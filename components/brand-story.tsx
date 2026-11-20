@@ -6,18 +6,19 @@ export function BrandStory() {
     <section className="olaf-story" id="approach" aria-labelledby="story-heading">
       <div className="olaf-story__inner">
         <div className="olaf-story__lead">
-          <p className="olaf-story__label">OUR MANIFESTO</p>
+          <p className="olaf-story__label">OUR HERITAGE MANIFESTO</p>
           <h2 id="story-heading" className="olaf-story__title">
-            CONTEMPORARY UNIFORMS FOR LIFE IN MOTION.
+            REVERENCE FOR WEAVING TRADITIONS. REFINED FOR TODAY.
           </h2>
           <p className="olaf-story__statement">
-            Born out of Amsterdam&rsquo;s creative fabric, we blend the sharp lines of classic European
-            tailoring with the relaxed attitude of modern streetwear. Pieces meant to be worn daily,
-            shared among friends, and cherished season after season.
+            We celebrate South Asia’s rich sartorial history—from Varanasi’s antique brocades to
+            Lucknow’s delicate shadow-work and Bengal’s wild Tussar silks. By uniting ancestral handloom
+            mastery with contemporary architectural silhouettes, we craft heirloom garments built to
+            transcend generations.
           </p>
           <div className="olaf-story__actions">
             <Link href="/products" className="olaf-btn olaf-btn--primary">
-              Explore The Catalog ↗
+              Explore All Outfits ↗
             </Link>
           </div>
         </div>
@@ -25,28 +26,28 @@ export function BrandStory() {
         <div className="olaf-story__pillars">
           <div className="olaf-pillar">
             <span className="olaf-pillar__index">01</span>
-            <h3 className="olaf-pillar__title">INTENTIONAL SILHOUETTE</h3>
+            <h3 className="olaf-pillar__title">ANCESTRAL HANDLOOMS</h3>
             <p className="olaf-pillar__text">
-              Relaxed drops, dropped shoulders, and architectural cuts engineered for fluid movement.
-              Every seam serves purpose and longevity.
+              Every yard of Katan silk, Chanderi, and Tussar is spun and woven by generational artisan
+              clusters across India and Bangladesh, preserving intangible cultural heritage.
             </p>
           </div>
 
           <div className="olaf-pillar">
             <span className="olaf-pillar__index">02</span>
-            <h3 className="olaf-pillar__title">MATERIAL HONESTY</h3>
+            <h3 className="olaf-pillar__title">PURE METALLIC ZARI</h3>
             <p className="olaf-pillar__text">
-              We insist on heavy pure wools, organic twills, and crisp linens sourced from certified
-              European mills. No synthetic shortcuts.
+              We insist on genuine metallic dabka, resham, and gota patti threadwork hand-finished with
+              microscopic precision. No plastic foils or synthetic shortcuts.
             </p>
           </div>
 
           <div className="olaf-pillar">
             <span className="olaf-pillar__index">03</span>
-            <h3 className="olaf-pillar__title">COMMUNITY & FRIENDS</h3>
+            <h3 className="olaf-pillar__title">HEIRLOOM INTEGRITY</h3>
             <p className="olaf-pillar__text">
-              Inspired by the motto &ldquo;Our Life as Friends&rdquo; — collaborating with local
-              artists, photographers, and independent makers worldwide.
+              Outfits designed not for a single occasion, but to be treasured, worn, and passed down as
+              timeless expressions of South Asian elegance.
             </p>
           </div>
         </div>

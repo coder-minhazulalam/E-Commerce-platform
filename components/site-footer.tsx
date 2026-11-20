@@ -6,9 +6,19 @@ export function SiteFooter() {
 
   const nav = [
     {
+      heading: "SOUTH ASIAN OUTFITS",
+      links: [
+        { label: "Royal Sherwanis", href: "/products?category=Sherwani" },
+        { label: "Banarasi Sarees", href: "/products?category=Saree" },
+        { label: "Heritage Kurtas", href: "/products?category=Kurta" },
+        { label: "Tussar Panjabis", href: "/products?category=Panjabi" },
+        { label: "Velvet Bandhgalas", href: "/products?category=Bandhgala" },
+      ],
+    },
+    {
       heading: "COLLECTIONS",
       links: [
-        { label: "All 09 Looks", href: "/collections" },
+        { label: "All 09 Editorial Looks", href: "/collections" },
         { label: "The Morning Edit", href: "/collections/morning-edit" },
         { label: "Office Hours", href: "/collections/office-hours" },
         { label: "Weekend Ease", href: "/collections/weekend-ease" },
@@ -16,31 +26,21 @@ export function SiteFooter() {
       ],
     },
     {
-      heading: "SHOP",
-      links: [
-        { label: "All Pieces", href: "/products" },
-        { label: "Outerwear", href: "/products?category=Outerwear" },
-        { label: "Knitwear", href: "/products?category=Knitwear" },
-        { label: "Bottoms", href: "/products?category=Bottoms" },
-        { label: "Shirts", href: "/products?category=Shirts" },
-      ],
-    },
-    {
-      heading: "STUDIO",
+      heading: "HERITAGE & CRAFT",
       links: [
         { label: "Our Approach", href: "/#approach" },
-        { label: "Materials & Mills", href: "/#approach" },
-        { label: "Amsterdam Flagship", href: "/#approach" },
+        { label: "Ancestral Weaving", href: "/#approach" },
+        { label: "Zari & Embroidery", href: "/#approach" },
         { label: "Admin Portal", href: "/admin" },
       ],
     },
     {
-      heading: "ASSISTANCE",
+      heading: "CONCIERGE",
       links: [
-        { label: "Orders & Tracking", href: "/checkout" },
-        { label: "Worldwide Shipping", href: "/#approach" },
-        { label: "30-Day Returns", href: "/#approach" },
-        { label: "Client Service", href: "mailto:concierge@everydayedit.com" },
+        { label: "Track Your Order", href: "/checkout" },
+        { label: "Bespoke Sizing", href: "/#approach" },
+        { label: "Insured Global Shipping", href: "/#approach" },
+        { label: "Client Assistance", href: "mailto:concierge@everydayedit.com" },
       ],
     },
   ];
@@ -50,7 +50,7 @@ export function SiteFooter() {
       {/* Massive Brand Typographic Headline Banner */}
       <div className="olaf-footer__banner">
         <span className="olaf-footer__brand-text">THE EVERYDAY EDIT</span>
-        <span className="olaf-footer__city-tag">AMSTERDAM · EST. 2024</span>
+        <span className="olaf-footer__city-tag">SOUTH ASIAN HERITAGE · EST. 2024</span>
       </div>
 
       <div className="olaf-footer__grid">
@@ -72,7 +72,7 @@ export function SiteFooter() {
 
       <div className="olaf-footer__bottom">
         <p className="olaf-footer__copy">
-          &copy; {year} THE EVERYDAY EDIT B.V. ALL RIGHTS RESERVED.
+          &copy; {year} THE EVERYDAY EDIT. ALL RIGHTS RESERVED.
         </p>
         <div className="olaf-footer__links">
           <Link href="/#approach" className="olaf-footer__legal-link">
@@ -82,7 +82,7 @@ export function SiteFooter() {
             TERMS OF SERVICE
           </Link>
           <Link href="/#approach" className="olaf-footer__legal-link">
-            CARBON STATEMENT
+            ARTISAN CHARTER
           </Link>
         </div>
       </div>

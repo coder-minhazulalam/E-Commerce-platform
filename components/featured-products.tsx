@@ -1,28 +1,51 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { lookbookImage } from "../lib/assets";
-import { getFeaturedProducts, formatPrice } from "../lib/products";
+import { getProducts, formatPrice, type Product, CATALOG_PRODUCTS } from "../lib/products";
 
 export function FeaturedProducts() {
-  const featured = getFeaturedProducts().slice(0, 4);
+  const [products, setProducts] = useState<Product[]>(CATALOG_PRODUCTS.slice(0, 4));
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+    getProducts({ pageSize: 4, featured: true })
+      .then((data) => {
+        if (active && data.items && data.items.length > 0) {
+          setProducts(data.items);
+        }
+      })
+      .catch(() => {
+        // Fallback to initial local catalog
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   return (
     <section className="olaf-section" aria-labelledby="fp-heading">
       <header className="olaf-section__header">
         <div className="olaf-section__title-group">
-          <p className="olaf-section__label">CORE PIECES</p>
+          <p className="olaf-section__label">CURATED WARDROBE</p>
           <h2 id="fp-heading" className="olaf-section__title">
-            THE EVERYDAY UNIFORM
+            FEATURED SOUTH ASIAN OUTFITS
           </h2>
         </div>
         <Link href="/products" className="olaf-section__link">
-          Complete Catalog <span aria-hidden="true">→</span>
+          Complete Collection ({CATALOG_PRODUCTS.length} Outfits) <span aria-hidden="true">→</span>
         </Link>
       </header>
 
       <div className="olaf-products-grid" role="list">
-        {featured.map((product) => (
+        {products.map((product) => (
           <article key={product.id} className="olaf-prod-card" role="listitem">
             <Link
               href={`/products/${product.slug}`}
@@ -39,7 +62,7 @@ export function FeaturedProducts() {
                   className="olaf-prod-card__img"
                 />
                 <div className="olaf-prod-card__hover-cta">
-                  <span>View Details ↗</span>
+                  <span>View Outfit Details ↗</span>
                 </div>
               </div>
 

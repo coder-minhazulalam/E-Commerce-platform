@@ -1,11 +1,10 @@
--- ============================================================================
--- SUPABASE POSTGRESQL SCHEMA & ROW LEVEL SECURITY (RLS) POLICIES
--- E-Commerce Platform Storefront Foundation
--- ============================================================================
+-- =========================================================================
+-- Supabase Schema & Security Rules for South Asian Heritage E-Commerce
+-- =========================================================================
 
--- 1. Profiles (linked to auth.users)
+-- 1. Profiles table (extends auth.users)
 create table if not exists public.profiles (
-  id uuid references auth.users on delete cascade primary key,
+  id uuid primary key references auth.users(id) on delete cascade,
   email text not null,
   full_name text,
   role text not null default 'customer' check (role in ('customer', 'admin')),
@@ -13,20 +12,18 @@ create table if not exists public.profiles (
   updated_at timestamptz not null default now()
 );
 
--- Enable RLS
 alter table public.profiles enable row level security;
 
--- Policies for profiles
-create policy "Users can view their own profile"
+create policy "Allow users to view own profile"
   on public.profiles for select
   using (auth.uid() = id);
 
-create policy "Users can update their own profile"
+create policy "Allow users to update own profile"
   on public.profiles for update
   using (auth.uid() = id);
 
-create policy "Admins can view all profiles"
-  on public.profiles for select
+create policy "Allow admins full access to profiles"
+  on public.profiles for all
   using (
     exists (
       select 1 from public.profiles
@@ -34,7 +31,7 @@ create policy "Admins can view all profiles"
     )
   );
 
--- Auto-create profile on signup trigger
+-- Trigger to create profile when auth.users signs up
 create or replace function public.handle_new_user()
 returns trigger as $$
 begin
@@ -42,7 +39,7 @@ begin
   values (
     new.id,
     new.email,
-    coalesce(new.raw_user_meta_data->>'full_name', ''),
+    coalesce(new.raw_user_meta_data->>'full_name', split_part(new.email, '@', 1)),
     coalesce(new.raw_user_meta_data->>'role', 'customer')
   );
   return new;
@@ -54,7 +51,7 @@ create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
 
--- 2. Products table
+-- 2. Products table (South Asian Outfits)
 create table if not exists public.products (
   id text primary key,
   slug text unique not null,
@@ -101,7 +98,7 @@ create policy "Allow public read access to inventory"
   on public.inventory for select
   using (true);
 
-create policy "Allow admins and service to manage inventory"
+create policy "Allow admins to update inventory"
   on public.inventory for all
   using (
     exists (
@@ -115,24 +112,20 @@ create table if not exists public.orders (
   id uuid primary key default gen_random_uuid(),
   order_number text unique not null,
   user_id uuid references auth.users(id) on delete set null,
-  email text not null,
-  status text not null default 'pending' check (status in ('pending', 'processing', 'shipped', 'delivered', 'cancelled')),
+  customer_name text not null,
+  customer_email text not null,
+  shipping_address jsonb not null,
   subtotal numeric(10, 2) not null check (subtotal >= 0),
-  shipping numeric(10, 2) not null default 0 check (shipping >= 0),
+  shipping_fee numeric(10, 2) not null check (shipping_fee >= 0),
   total numeric(10, 2) not null check (total >= 0),
-  currency text not null default 'USD',
-  shipping_name text not null,
-  shipping_address text not null,
-  shipping_city text not null,
-  shipping_postal_code text not null,
-  shipping_country text not null default 'US',
+  status text not null default 'pending' check (status in ('pending', 'processing', 'shipped', 'delivered', 'cancelled')),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
 
 alter table public.orders enable row level security;
 
-create policy "Users can view their own orders"
+create policy "Users can view own orders"
   on public.orders for select
   using (auth.uid() = user_id or auth.uid() is null);
 
@@ -140,7 +133,7 @@ create policy "Anyone can create an order"
   on public.orders for insert
   with check (true);
 
-create policy "Admins can view and manage all orders"
+create policy "Admins can view and update all orders"
   on public.orders for all
   using (
     exists (
@@ -185,19 +178,26 @@ create policy "Admins can view all order items"
     )
   );
 
--- 6. Initial Product Seeds
+-- 6. Initial South Asian Outfit Seeds
 insert into public.products (id, slug, name, category, description, price, currency, image_index, image_alt, featured)
 values
-  ('product-001', 'wool-overcoat', 'The Wool Overcoat', 'Outerwear', 'A structured mid-length overcoat in heavyweight wool blend. Notch lapel, double-breasted button closure, fully lined.', 285.00, 'USD', 0, 'Wool overcoat in natural stone, belted at the waist', true),
-  ('product-002', 'linen-wide-leg-trousers', 'Linen Wide-Leg Trousers', 'Bottoms', 'Wide-leg trousers in breathable linen. High rise, elasticated back waistband, two front slash pockets.', 125.00, 'USD', 1, 'Linen wide-leg trousers in ecru, cropped slightly above the ankle', true),
-  ('product-003', 'ribbed-knit-crewneck', 'Ribbed Knit Crewneck', 'Knitwear', 'An everyday crewneck in fine-gauge ribbed cotton. Relaxed fit, dropped shoulders, raw hem finish.', 98.00, 'USD', 2, 'Ribbed knit crewneck in oat, tucked loosely into trousers', true),
-  ('product-004', 'relaxed-oxford-shirt', 'Relaxed Oxford Shirt', 'Shirts', 'Classic Oxford weave cotton shirt. Relaxed cut through the chest and waist, button-down collar, single chest pocket.', 88.00, 'USD', 3, 'Relaxed Oxford shirt in pale blue, half-tucked', false),
-  ('product-005', 'tailored-blazer', 'The Tailored Blazer', 'Outerwear', 'A clean-lined tailored blazer in stretch-wool blend. Single-breasted, lightly padded shoulders, flap pockets.', 245.00, 'USD', 4, 'Tailored blazer in charcoal, worn open over a white shirt', true),
-  ('product-006', 'slip-midi-dress', 'Slip Midi Dress', 'Dresses', 'Bias-cut slip dress in washed silk-look satin. Midi length, adjustable straps, side seam slit.', 168.00, 'USD', 5, 'Slip midi dress in champagne satin, worn with a cardigan', false),
-  ('product-007', 'high-rise-straight-jeans', 'High-Rise Straight Jeans', 'Denim', 'Straight-leg jeans in rigid selvedge denim. High waist, clean front, two back patch pockets.', 145.00, 'USD', 6, 'High-rise straight jeans in deep indigo, cuffed at the ankle', false),
-  ('product-008', 'merino-turtleneck', 'Fine Merino Turtleneck', 'Knitwear', 'An ultra-fine merino wool turtleneck. Slim fit, ribbed knit construction, long sleeve.', 115.00, 'USD', 7, 'Fine merino turtleneck in ivory, tucked into high-waist trousers', false),
-  ('product-009', 'canvas-work-jacket', 'Washed Canvas Jacket', 'Outerwear', 'A utility work jacket in washed canvas cotton. Relaxed fit, four flap pockets, raw denim-style finish.', 195.00, 'USD', 8, 'Washed canvas jacket in sand, worn over a knit', false)
+  ('product-001', 'royal-zardozi-sherwani', 'Royal Zardozi Sherwani', 'Sherwani', 'Imperial ivory raw silk sherwani adorned with handcrafted metallic Zari & dabka embroidery. Tailored mandarin collar with concealed front placket.', 340.00, 'USD', 0, 'Royal ivory raw silk sherwani with intricate gold zardozi embroidery', true),
+  ('product-002', 'banarasi-silk-saree', 'Banarasi Katan Silk Saree', 'Saree', 'Pure handwoven Katan silk drape featuring intricate antique gold zari floral jaal with a regal pallu border. Mastercrafted in Varanasi.', 290.00, 'USD', 1, 'Crimson Banarasi Katan silk saree with antique gold zari border', true),
+  ('product-003', 'chanderi-silk-kurta', 'Heritage Chanderi Kurta Set', 'Kurta', 'Hand-spun Chanderi cotton-silk blend kurta with tonal resham threadwork, paired with tailored ivory churidar trousers.', 145.00, 'USD', 2, 'Ivory and sage handwoven Chanderi silk kurta set with churidar', true),
+  ('product-004', 'tussar-handloom-panjabi', 'Handloom Tussar Silk Panjabi', 'Panjabi', 'Wild textured Tussar wild silk panjabi with minimalist kantha stitch embroidery along the placket and cuffs. Effortlessly breathable.', 120.00, 'USD', 3, 'Textured beige handloom Tussar silk panjabi with subtle kantha collar', true),
+  ('product-005', 'velvet-bandhgala-jodhpuri', 'Midnight Velvet Bandhgala', 'Bandhgala', 'Structured royal Jodhpuri silhouette crafted in plush midnight blue velvet with bespoke handcrafted brass crest buttons.', 275.00, 'USD', 4, 'Tailored midnight velvet bandhgala jacket with hammered brass buttons', true),
+  ('product-006', 'chikankari-organza-anarkali', 'Lucknowi Chikankari Anarkali', 'Anarkali', 'Ethereal hand-embroidered Lucknowi shadow-work chikankari gown in pure silk organza with delicate mukaish embellishments.', 210.00, 'USD', 5, 'Pastel mint Lucknowi chikankari organza anarkali ensemble', false),
+  ('product-007', 'raw-silk-nehru-vest', 'Raw Silk Bundi Nehru Vest', 'Nehru Vest', 'Sleek tailored Nehru waistcoat in textured Matka raw silk. Classic stand collar with welted breast pocket and horn buttons.', 135.00, 'USD', 6, 'Structured ochre raw silk Nehru vest over an off-white kurta', false),
+  ('product-008', 'kashmiri-pashmina-shawl', 'Kashmiri Jamawar Pashmina', 'Pashmina', 'Hand-spun high-altitude Himalayan cashmere shawl woven with heritage paisley jaal tapestry patterns from Srinagar.', 185.00, 'USD', 7, 'Authentic hand-spun Kashmiri Jamawar pashmina shawl', false),
+  ('product-009', 'embroidered-silk-lehenga', 'Gota Patti Raw Silk Lehenga', 'Lehenga', 'Contemporary flared raw silk lehenga ensemble with handcrafted gold gota patti borders, cropped choli, and scalloped dupatta.', 320.00, 'USD', 8, 'Emerald raw silk lehenga with handcrafted gold gota patti embroidery', true)
 on conflict (id) do update set
   name = excluded.name,
   price = excluded.price,
   description = excluded.description;
+
+-- 7. Seed Inventory across sizes for all products
+insert into public.inventory (product_id, size, stock_quantity)
+select p.id, s.size, 15
+from public.products p
+cross join (values ('XS'), ('S'), ('M'), ('L'), ('XL')) as s(size)
+on conflict (product_id, size) do nothing;

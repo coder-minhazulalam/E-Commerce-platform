@@ -5,15 +5,15 @@ import { lookbookImage } from "../lib/assets";
 import { NINE_COLLECTIONS } from "../lib/collections";
 
 export function CollectionsPreview() {
-  const featured = [NINE_COLLECTIONS[0], NINE_COLLECTIONS[4], NINE_COLLECTIONS[6]];
+  const featured = [NINE_COLLECTIONS[0], NINE_COLLECTIONS[1], NINE_COLLECTIONS[4]];
 
   return (
     <section className="olaf-section" aria-labelledby="coll-prev-heading">
       <header className="olaf-section__header">
         <div className="olaf-section__title-group">
-          <p className="olaf-section__label">CURATED LOOKS</p>
+          <p className="olaf-section__label">HERITAGE CAPSULES</p>
           <h2 id="coll-prev-heading" className="olaf-section__title">
-            SEASONAL CAPSULES
+            NINE EDITORIAL LOOKS
           </h2>
         </div>
         <Link href="/collections" className="olaf-section__link">
@@ -39,12 +39,12 @@ export function CollectionsPreview() {
                   className="olaf-col-card__img"
                 />
                 <div className="olaf-col-card__overlay">
-                  <span>Explore Capsule ↗</span>
+                  <span>Explore Lookbook Capsule ↗</span>
                 </div>
               </div>
               <div className="olaf-col-card__meta">
                 <div className="olaf-col-card__meta-top">
-                  <p className="olaf-col-card__tag">AMSTERDAM EDIT</p>
+                  <p className="olaf-col-card__tag">HERITAGE EDIT</p>
                   <p className="olaf-col-card__season">AW / 26</p>
                 </div>
                 <h3 className="olaf-col-card__title">{col.title}</h3>

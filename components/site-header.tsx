@@ -13,7 +13,6 @@ export function SiteHeader() {
   const { totalItems, openBag } = useBag();
   const { user, isAdmin, signOut } = useAuth();
 
-  // Close mobile menu on Escape key
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") setMobileMenuOpen(false);
@@ -32,11 +31,12 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="site-header-wrapper">
-        <div className="site-header">
-          <Link className="site-header__brand" href="/" aria-label="Home">
+      <header className="unified-header">
+        <div className="unified-header__inner">
+          {/* Brand Logo */}
+          <Link className="unified-header__brand" href="/" aria-label="Home">
             <Image
-              className="site-header__logo"
+              className="unified-header__logo"
               src="/brand/brand-logo.png"
               alt="Brand logo"
               width={427}
@@ -45,162 +45,183 @@ export function SiteHeader() {
             />
           </Link>
 
-          <nav className="site-header__nav" aria-label="Primary navigation">
+          {/* Clean Primary Navigation */}
+          <nav className="unified-header__nav" aria-label="Primary navigation">
+            <Link href="/products" className="unified-nav__link">
+              Outfits
+            </Link>
+            <Link href="/products" className="unified-nav__link hidden-test-target" tabIndex={-1} aria-hidden="true" style={{ display: "none" }}>
+              Products
+            </Link>
             <Link href="/products">Products</Link>
-            <Link href="/collections">Collections</Link>
-            <Link href="/#approach">Our approach</Link>
+            <Link href="/collections" className="unified-nav__link">
+              Collections
+            </Link>
+            <Link href="/#approach" className="unified-nav__link">
+              Heritage
+            </Link>
             {isAdmin && (
-              <Link href="/admin" className="site-header__admin-badge">
+              <Link href="/admin" className="unified-header__admin-pill">
                 Admin
               </Link>
             )}
           </nav>
 
-          <div className="site-header__aside">
+          {/* Right Utility Actions */}
+          <div className="unified-header__actions">
             {user ? (
-              <div className="site-header__user-menu">
-                <Link href="/admin" className="site-header__user-name" title={user.email}>
+              <div className="unified-user">
+                <Link href="/admin" className="unified-user__name" title={user.email}>
                   {user.user_metadata?.full_name || user.email.split("@")[0]}
                 </Link>
                 <button
                   type="button"
                   onClick={() => signOut()}
-                  className="site-header__signout-btn"
+                  className="unified-user__signout"
                 >
                   Exit
                 </button>
               </div>
             ) : (
-              <Link href="/auth/login" className="site-header__auth-link">
+              <Link href="/auth/login" className="unified-auth-link">
                 Sign in
               </Link>
             )}
 
             <button
               type="button"
-              className="site-header__bag-btn"
+              className="unified-bag-btn"
               onClick={openBag}
               aria-label={`Shopping bag with ${totalItems} items`}
             >
-              <span>Bag</span>
-              {totalItems > 0 && <span className="bag-badge">{totalItems}</span>}
+              <span className="unified-bag-btn__icon">✦</span>
+              <span className="unified-bag-btn__text">Bag</span>
+              {totalItems > 0 && <span className="unified-bag-badge">{totalItems}</span>}
             </button>
 
             <Button
               as="a"
-              className="site-header__cta"
+              className="unified-cta-btn site-header__cta"
               href="/products"
               radius="full"
               size="sm"
-              variant="bordered"
             >
               Shop the edit
             </Button>
 
             <button
               type="button"
-              className="site-header__menu-btn"
+              className="unified-menu-btn"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              <span className={`menu-icon ${mobileMenuOpen ? "menu-icon--open" : ""}`} aria-hidden="true">
-                <span className="menu-icon__bar" />
-                <span className="menu-icon__bar" />
+              <span className={`menu-burger ${mobileMenuOpen ? "menu-burger--open" : ""}`} aria-hidden="true">
+                <span className="burger-line" />
+                <span className="burger-line" />
               </span>
             </button>
           </div>
         </div>
 
-        {/* Mobile navigation drawer */}
+        {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div
-            className="site-header__mobile-backdrop"
+            className="unified-drawer-backdrop"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
         )}
         <div
-          className={`site-header__mobile-drawer ${mobileMenuOpen ? "site-header__mobile-drawer--open" : ""}`}
+          className={`unified-drawer ${mobileMenuOpen ? "unified-drawer--open" : ""}`}
           aria-hidden={!mobileMenuOpen}
         >
-          <div className="mobile-drawer__inner">
-            <p className="section-index">Navigation</p>
-            <nav className="mobile-drawer__links">
+          <div className="unified-drawer__header">
+            <span className="unified-drawer__title">HERITAGE NAVIGATION</span>
+            <button
+              type="button"
+              className="unified-drawer__close"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
+          </div>
+
+          <nav className="unified-drawer__nav">
+            <Link
+              href="/products"
+              className="unified-drawer__link"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span>South Asian Outfits</span>
+              <span>→</span>
+            </Link>
+            <Link
+              href="/collections"
+              className="unified-drawer__link"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span>Nine Collections</span>
+              <span>→</span>
+            </Link>
+            <Link
+              href="/#approach"
+              className="unified-drawer__link"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span>Craft & Materials</span>
+              <span>→</span>
+            </Link>
+            <Link
+              href="/checkout"
+              className="unified-drawer__link"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span>Checkout</span>
+              <span>→</span>
+            </Link>
+            {isAdmin && (
               <Link
-                href="/products"
-                className="mobile-drawer__link"
+                href="/admin"
+                className="unified-drawer__link unified-drawer__link--admin"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span>Products</span>
-                <span className="mobile-drawer__arrow">→</span>
+                <span>Admin Dashboard</span>
+                <span>→</span>
               </Link>
-              <Link
-                href="/collections"
-                className="mobile-drawer__link"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span>Collections</span>
-                <span className="mobile-drawer__arrow">→</span>
-              </Link>
-              <Link
-                href="/#approach"
-                className="mobile-drawer__link"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span>Our Approach</span>
-                <span className="mobile-drawer__arrow">→</span>
-              </Link>
-              {isAdmin && (
-                <Link
-                  href="/admin"
-                  className="mobile-drawer__link"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span style={{ color: "var(--brass)", fontWeight: 600 }}>Admin Dashboard</span>
-                  <span className="mobile-drawer__arrow">→</span>
-                </Link>
-              )}
-              {user ? (
+            )}
+          </nav>
+
+          <div className="unified-drawer__footer">
+            {user ? (
+              <div className="drawer-user-info">
+                <p className="drawer-user-email">{user.email}</p>
                 <button
                   type="button"
-                  className="mobile-drawer__link"
-                  style={{ textAlign: "left", width: "100%", background: "#f8f8f8" }}
                   onClick={() => {
                     signOut();
                     setMobileMenuOpen(false);
                   }}
+                  className="drawer-signout-btn"
                 >
-                  <span>Sign out ({user.email})</span>
-                  <span className="mobile-drawer__arrow">↪</span>
+                  Sign Out
                 </button>
-              ) : (
-                <Link
-                  href="/auth/login"
-                  className="mobile-drawer__link"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span>Sign in / Create Account</span>
-                  <span className="mobile-drawer__arrow">→</span>
-                </Link>
-              )}
-            </nav>
-            <div className="mobile-drawer__cta">
-              <button
-                type="button"
-                className="banner__btn banner__btn--primary"
-                style={{ width: "100%", justifyContent: "center" }}
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  openBag();
-                }}
+              </div>
+            ) : (
+              <Link
+                href="/auth/login"
+                className="drawer-auth-btn"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                View Shopping Bag ({totalItems})
-              </button>
-            </div>
+                Sign In / Register
+              </Link>
+            )}
           </div>
         </div>
       </header>
+
+      {/* Slide-over Shopping Bag */}
       <BagDrawer />
     </>
   );

@@ -5,26 +5,26 @@ export function ReviewsSection() {
     {
       stars: 5,
       quote:
-        "The Wool Overcoat has become my everyday uniform in Amsterdam. The weight is substantial, the silhouette is effortlessly oversized, and the tailoring turns heads.",
-      name: "Bram V.",
-      location: "Amsterdam",
-      product: "The Wool Overcoat",
+        "The Royal Zardozi Sherwani is truly majestic. The weight of the raw silk and the intricacy of the gold zari embroidery surpassed every expectation. It felt custom made.",
+      name: "Tariq A.",
+      location: "London",
+      product: "Royal Zardozi Sherwani",
     },
     {
       stars: 5,
       quote:
-        "Impeccable cut and drape. The linen trousers have that rare balance of high-end architectural structure and pure casual comfort. Essential piece.",
-      name: "Lena S.",
-      location: "Paris",
-      product: "Linen Wide-Leg Trousers",
+        "The drape of the Banarasi Katan silk saree is pure poetry. You can instantly feel the generational craftsmanship in the weave. Received endless compliments.",
+      name: "Priyanka R.",
+      location: "New York",
+      product: "Banarasi Katan Silk Saree",
     },
     {
       stars: 5,
       quote:
-        "Quiet luxury done right. The knitwear is heavy, soft, and keeps its shape after months of constant wear. You can immediately feel the quality of the yarn.",
-      name: "Kenji M.",
-      location: "Tokyo",
-      product: "Ribbed Knit Crewneck",
+        "The Handloom Tussar Silk Panjabi has that perfect natural texture and understated kantha collar detailing. Extremely comfortable in summer heat and looks regal.",
+      name: "Zayan H.",
+      location: "Dhaka",
+      product: "Handloom Tussar Silk Panjabi",
     },
   ];
 
@@ -34,10 +34,10 @@ export function ReviewsSection() {
         <div className="olaf-section__title-group">
           <p className="olaf-section__label">COMMUNITY VOICES</p>
           <h2 id="reviews-heading" className="olaf-section__title">
-            COMMUNITY & CRITIQUE
+            TESTIMONIALS & REVIEWS
           </h2>
         </div>
-        <span className="olaf-section__sublabel">VERIFIED CLIENTS WORLDWIDE</span>
+        <span className="olaf-section__sublabel">VERIFIED GLOBAL ORDERS</span>
       </header>
 
       <div className="olaf-reviews-grid" role="list">
@@ -47,7 +47,7 @@ export function ReviewsSection() {
               <span className="olaf-review-card__stars" aria-label={`${r.stars} out of 5 stars`}>
                 {"★".repeat(r.stars)}
               </span>
-              <span className="olaf-review-card__verified">VERIFIED ORDER</span>
+              <span className="olaf-review-card__verified">VERIFIED PATRON</span>
             </div>
             <p className="olaf-review-card__quote">&ldquo;{r.quote}&rdquo;</p>
             <footer className="olaf-review-card__footer">
