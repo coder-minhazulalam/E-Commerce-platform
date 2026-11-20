@@ -8,37 +8,47 @@ export function CollectionsPreview() {
   const featured = [NINE_COLLECTIONS[0], NINE_COLLECTIONS[4], NINE_COLLECTIONS[6]];
 
   return (
-    <section className="collections-preview" aria-labelledby="coll-prev-heading">
-      <header className="section-header">
-        <div>
-          <p className="section-index">02 / Collections</p>
-          <h2 id="coll-prev-heading" className="section-title">
-            Nine looks. Season-spanning.
+    <section className="olaf-section" aria-labelledby="coll-prev-heading">
+      <header className="olaf-section__header">
+        <div className="olaf-section__title-group">
+          <p className="olaf-section__label">CURATED LOOKS</p>
+          <h2 id="coll-prev-heading" className="olaf-section__title">
+            SEASONAL CAPSULES
           </h2>
         </div>
-        <Link href="/collections" className="section-all-link">
-          View all nine →
+        <Link href="/collections" className="olaf-section__link">
+          All 09 Looks <span aria-hidden="true">→</span>
         </Link>
       </header>
 
-      <div className="collections-preview__grid" role="list">
+      <div className="olaf-collections-grid" role="list">
         {featured.map((col) => (
-          <article key={col.id} className="col-preview-card" role="listitem">
-            <Link href={`/collections/${col.slug}`} className="col-preview-card__link" aria-label={`View ${col.title} collection`}>
-              <div className="col-preview-card__media">
-                <span className="col-preview-card__badge">0{col.number}</span>
+          <article key={col.id} className="olaf-col-card" role="listitem">
+            <Link
+              href={`/collections/${col.slug}`}
+              className="olaf-col-card__link"
+              aria-label={`View ${col.title} collection`}
+            >
+              <div className="olaf-col-card__media">
+                <span className="olaf-col-card__pill">LOOK 0{col.number}</span>
                 <Image
                   src={lookbookImage(col.imageIndex, 720)}
                   alt={col.imageAlt}
                   fill
-                  sizes="(max-width: 640px) 90vw, 33vw"
-                  className="col-preview-card__img"
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                  className="olaf-col-card__img"
                 />
+                <div className="olaf-col-card__overlay">
+                  <span>Explore Capsule ↗</span>
+                </div>
               </div>
-              <div className="col-preview-card__body">
-                <p className="col-preview-card__sub">{col.subtitle}</p>
-                <h3 className="col-preview-card__title">{col.title}</h3>
-                <span className="col-preview-card__cta">View collection →</span>
+              <div className="olaf-col-card__meta">
+                <div className="olaf-col-card__meta-top">
+                  <p className="olaf-col-card__tag">AMSTERDAM EDIT</p>
+                  <p className="olaf-col-card__season">AW / 26</p>
+                </div>
+                <h3 className="olaf-col-card__title">{col.title}</h3>
+                <p className="olaf-col-card__sub">{col.subtitle}</p>
               </div>
             </Link>
           </article>

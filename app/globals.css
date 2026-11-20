@@ -4011,3 +4011,1071 @@ a {
     width: 100%;
   }
 }
+
+/* =========================================================================
+   ØLÅF AESTHETIC — MINIMAL CONTEMPORARY EDITORIAL & STREETWEAR
+   ========================================================================= */
+
+.olaf-hero {
+  position: relative;
+  background: var(--studio);
+  padding: 24px clamp(18px, 4vw, 64px) 56px;
+  border-bottom: 1px solid var(--line);
+}
+
+.olaf-hero__ticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 14px;
+  margin-bottom: 28px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.ticker-pill {
+  font-weight: 700;
+}
+
+.ticker-divider {
+  color: var(--muted);
+}
+
+.ticker-text {
+  color: var(--ink-secondary);
+}
+
+.olaf-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+}
+
+.olaf-hero__copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.olaf-hero__index {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 16px 0;
+}
+
+.olaf-hero__title {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 24px 0;
+  font-size: clamp(44px, 5.8vw, 84px);
+  font-weight: 900;
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.olaf-hero__title .title-highlight {
+  color: var(--ink);
+  -webkit-text-stroke: 1px var(--ink);
+}
+
+.olaf-hero__desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444444;
+  max-width: 520px;
+  margin: 0 0 36px 0;
+}
+
+.olaf-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+
+.olaf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 32px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 220ms ease;
+  cursor: pointer;
+}
+
+.olaf-btn--primary {
+  background: #0a0a0a;
+  color: #ffffff !important;
+  border: 1px solid #0a0a0a;
+}
+
+.olaf-btn--primary:hover {
+  background: #242424;
+  border-color: #242424;
+  transform: translateY(-2px);
+}
+
+.olaf-btn--outline {
+  background: transparent;
+  color: #0a0a0a !important;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+}
+
+.olaf-btn--outline:hover {
+  border-color: #0a0a0a;
+  background: rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+.olaf-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.olaf-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.olaf-badge__number {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  background: #0a0a0a;
+  color: #ffffff;
+  border-radius: 2px;
+}
+
+.olaf-badge__text {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #555555;
+}
+
+.olaf-hero__visual {
+  position: relative;
+  width: 100%;
+}
+
+.olaf-hero__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #eae9e4;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.olaf-hero__img-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.olaf-hero__img {
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.olaf-hero__frame:hover .olaf-hero__img {
+  transform: scale(1.03);
+}
+
+.olaf-hero__meta-corner {
+  position: absolute;
+  z-index: 2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+.olaf-hero__meta-corner.top-left {
+  top: 18px;
+  left: 18px;
+}
+
+.olaf-hero__meta-corner.top-right {
+  top: 18px;
+  right: 18px;
+}
+
+.olaf-hero__meta-corner.bottom-left {
+  bottom: 18px;
+  left: 18px;
+}
+
+.olaf-hero__meta-corner.bottom-right {
+  bottom: 18px;
+  right: 18px;
+}
+
+.olaf-tag {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 260px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  transition: all 200ms ease;
+}
+
+.olaf-tag:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+  border-color: #0a0a0a;
+}
+
+.olaf-tag__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.olaf-tag__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.olaf-tag__sku {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #777777;
+}
+
+.olaf-tag__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.olaf-tag__name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.olaf-tag__price {
+  font-size: 11px;
+  color: #666666;
+  margin: 2px 0 0 0;
+}
+
+.olaf-tag__arrow {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0a0a0a;
+}
+
+/* Features Strip */
+.olaf-features {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  padding: 44px clamp(18px, 4vw, 64px);
+}
+
+.olaf-features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.olaf-feature-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.olaf-feature-item__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.olaf-feature-item__num {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #0a0a0a;
+}
+
+.olaf-feature-item__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.olaf-feature-item__title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  margin: 0 0 8px 0;
+}
+
+.olaf-feature-item__detail {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #666666;
+  margin: 0;
+}
+
+/* Sections Common Header */
+.olaf-section {
+  padding: 64px clamp(18px, 4vw, 64px);
+  border-bottom: 1px solid var(--line);
+}
+
+.olaf-section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 36px;
+  gap: 20px;
+}
+
+.olaf-section__title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.olaf-section__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 6px 0;
+}
+
+.olaf-section__title {
+  font-size: clamp(26px, 3.4vw, 42px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1;
+}
+
+.olaf-section__link {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 180ms ease;
+  white-space: nowrap;
+}
+
+.olaf-section__link:hover {
+  color: #555555;
+}
+
+.olaf-section__sublabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+/* Collections Grid */
+.olaf-collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.5vw, 32px);
+}
+
+.olaf-col-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 260ms ease;
+}
+
+.olaf-col-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border-color: #0a0a0a;
+}
+
+.olaf-col-card__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.olaf-col-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #eae9e4;
+  overflow: hidden;
+}
+
+.olaf-col-card__img {
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.olaf-col-card:hover .olaf-col-card__img {
+  transform: scale(1.04);
+}
+
+.olaf-col-card__pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0a0a0a;
+}
+
+.olaf-col-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 18px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 240ms ease;
+}
+
+.olaf-col-card:hover .olaf-col-card__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.olaf-col-card__meta {
+  padding: 20px 22px;
+}
+
+.olaf-col-card__meta-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.olaf-col-card__tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0;
+}
+
+.olaf-col-card__season {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  margin: 0;
+}
+
+.olaf-col-card__title {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 6px 0;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.olaf-col-card__sub {
+  font-size: 13px;
+  color: #666666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Products Grid */
+.olaf-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.olaf-prod-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 240ms ease;
+}
+
+.olaf-prod-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  border-color: #0a0a0a;
+}
+
+.olaf-prod-card__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.olaf-prod-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #eae9e4;
+  overflow: hidden;
+}
+
+.olaf-prod-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0a0a0a;
+}
+
+.olaf-prod-card__img {
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.olaf-prod-card:hover .olaf-prod-card__img {
+  transform: scale(1.04);
+}
+
+.olaf-prod-card__hover-cta {
+  position: absolute;
+  inset-inline: 12px;
+  bottom: 12px;
+  padding: 10px;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 220ms ease;
+}
+
+.olaf-prod-card:hover .olaf-prod-card__hover-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.olaf-prod-card__meta {
+  padding: 16px 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.olaf-prod-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.olaf-prod-card__name {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.olaf-prod-card__desc {
+  font-size: 12px;
+  color: #777777;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.olaf-prod-card__price {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Brand Story / Manifesto */
+.olaf-story {
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 88px clamp(18px, 4vw, 64px);
+}
+
+.olaf-story__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: flex-start;
+}
+
+.olaf-story__lead {
+  display: flex;
+  flex-direction: column;
+}
+
+.olaf-story__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #888888;
+  margin: 0 0 16px 0;
+}
+
+.olaf-story__title {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
+}
+
+.olaf-story__statement {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #b0b0b0;
+  margin: 0 0 36px 0;
+}
+
+.olaf-story__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  padding-left: clamp(24px, 4vw, 48px);
+}
+
+.olaf-pillar {
+  display: flex;
+  flex-direction: column;
+}
+
+.olaf-pillar__index {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #888888;
+  margin-bottom: 6px;
+}
+
+.olaf-pillar__title {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.olaf-pillar__text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #999999;
+  margin: 0;
+}
+
+/* Reviews */
+.olaf-reviews-wrap {
+  background: var(--studio);
+}
+
+.olaf-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.5vw, 32px);
+}
+
+.olaf-review-card {
+  margin: 0;
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.olaf-review-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.olaf-review-card__stars {
+  color: #0a0a0a;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.olaf-review-card__verified {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #777777;
+}
+
+.olaf-review-card__quote {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+  font-style: italic;
+}
+
+.olaf-review-card__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 14px;
+}
+
+.olaf-review-card__author {
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  color: #0a0a0a;
+}
+
+.olaf-review-card__meta {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Newsletter */
+.olaf-newsletter {
+  background: #eae9e4;
+  padding: 72px clamp(18px, 4vw, 64px);
+  border-bottom: 1px solid var(--line);
+}
+
+.olaf-newsletter__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+
+.olaf-newsletter__copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.olaf-newsletter__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin: 0 0 10px 0;
+}
+
+.olaf-newsletter__title {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  line-height: 1;
+}
+
+.olaf-newsletter__desc {
+  font-size: 15px;
+  color: #555555;
+  margin: 0;
+  max-width: 440px;
+}
+
+.olaf-newsletter__form {
+  display: flex;
+  gap: 0;
+  background: #ffffff;
+  border: 1px solid #0a0a0a;
+}
+
+.olaf-newsletter__input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #0a0a0a;
+  outline: none;
+}
+
+.olaf-newsletter__input::placeholder {
+  color: #888888;
+}
+
+.olaf-newsletter__btn {
+  padding: 16px 28px;
+  background: #0a0a0a;
+  color: #ffffff;
+  border: none;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: background 200ms ease;
+  white-space: nowrap;
+}
+
+.olaf-newsletter__btn:hover {
+  background: #282828;
+}
+
+.olaf-newsletter__thanks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 24px;
+  background: #ffffff;
+  border: 1px solid #0a0a0a;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+.thanks-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+/* Footer */
+.olaf-footer {
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 72px clamp(18px, 4vw, 64px) 36px;
+}
+
+.olaf-footer__banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  padding-bottom: 28px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.olaf-footer__brand-text {
+  font-size: clamp(32px, 5.2vw, 76px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.olaf-footer__city-tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #888888;
+}
+
+.olaf-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  margin-bottom: 64px;
+}
+
+.olaf-footer__col-heading {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+}
+
+.olaf-footer__col-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.olaf-footer__col-link {
+  font-size: 13px;
+  color: #888888;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.olaf-footer__col-link:hover {
+  color: #ffffff;
+}
+
+.olaf-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.olaf-footer__copy {
+  font-size: 11px;
+  color: #666666;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.olaf-footer__links {
+  display: flex;
+  gap: 20px;
+}
+
+.olaf-footer__legal-link {
+  font-size: 11px;
+  color: #777777;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: color 180ms ease;
+}
+
+.olaf-footer__legal-link:hover {
+  color: #ffffff;
+}
+
+/* Responsive Overrides */
+@media (max-width: 980px) {
+  .olaf-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .olaf-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .olaf-collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .olaf-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .olaf-story__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .olaf-story__pillars {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-left: 0;
+    padding-top: 36px;
+  }
+
+  .olaf-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .olaf-newsletter__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .olaf-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .olaf-hero {
+    padding: 20px 16px 40px;
+  }
+
+  .olaf-features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .olaf-products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .olaf-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .olaf-newsletter__form {
+    flex-direction: column;
+  }
+
+  .olaf-tag {
+    min-width: calc(100% - 32px);
+  }
+}

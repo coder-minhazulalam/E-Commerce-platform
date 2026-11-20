@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export function SiteFooter() {
@@ -7,93 +6,83 @@ export function SiteFooter() {
 
   const nav = [
     {
-      heading: "Shop",
+      heading: "COLLECTIONS",
       links: [
-        { label: "All Products", href: "/products" },
-        { label: "New Arrivals", href: "/products?sort=featured" },
+        { label: "All 09 Looks", href: "/collections" },
+        { label: "The Morning Edit", href: "/collections/morning-edit" },
+        { label: "Office Hours", href: "/collections/office-hours" },
+        { label: "Weekend Ease", href: "/collections/weekend-ease" },
+        { label: "City Dusk", href: "/collections/city-dusk" },
+      ],
+    },
+    {
+      heading: "SHOP",
+      links: [
+        { label: "All Pieces", href: "/products" },
         { label: "Outerwear", href: "/products?category=Outerwear" },
         { label: "Knitwear", href: "/products?category=Knitwear" },
-        { label: "Denim", href: "/products?category=Denim" },
+        { label: "Bottoms", href: "/products?category=Bottoms" },
+        { label: "Shirts", href: "/products?category=Shirts" },
       ],
     },
     {
-      heading: "Collections",
+      heading: "STUDIO",
       links: [
-        { label: "View All", href: "/collections" },
-        { label: "Morning Edit", href: "/collections/morning-edit" },
-        { label: "Weekend Ease", href: "/collections/weekend-ease" },
-        { label: "Office Hours", href: "/collections/office-hours" },
-        { label: "Golden Hour", href: "/collections/golden-hour" },
+        { label: "Our Approach", href: "/#approach" },
+        { label: "Materials & Mills", href: "/#approach" },
+        { label: "Amsterdam Flagship", href: "/#approach" },
+        { label: "Admin Portal", href: "/admin" },
       ],
     },
     {
-      heading: "Company",
+      heading: "ASSISTANCE",
       links: [
-        { label: "About", href: "/#approach" },
-        { label: "Journal", href: "#" },
-        { label: "Sustainability", href: "#" },
-        { label: "Press", href: "#" },
-      ],
-    },
-    {
-      heading: "Help",
-      links: [
-        { label: "Size Guide", href: "#" },
-        { label: "Care Guide", href: "#" },
-        { label: "Delivery", href: "#" },
-        { label: "Returns", href: "#" },
-        { label: "Contact", href: "#" },
+        { label: "Orders & Tracking", href: "/checkout" },
+        { label: "Worldwide Shipping", href: "/#approach" },
+        { label: "30-Day Returns", href: "/#approach" },
+        { label: "Client Service", href: "mailto:concierge@everydayedit.com" },
       ],
     },
   ];
 
   return (
-    <footer className="site-footer" aria-label="Site footer">
-      <div className="site-footer__top">
-        <div className="site-footer__brand">
-          <Image
-            src="/brand/brand-logo.png"
-            alt="Brand logo"
-            width={140}
-            height={58}
-            className="site-footer__logo"
-          />
-          <p className="site-footer__tagline">
-            Clothes that earn their place.
-          </p>
-        </div>
-
-        <nav className="site-footer__nav" aria-label="Footer navigation">
-          {nav.map((col) => (
-            <div key={col.heading} className="site-footer__col">
-              <h3 className="site-footer__col-title">{col.heading}</h3>
-              <ul className="site-footer__links">
-                {col.links.map((link) => (
-                  <li key={link.label}>
-                    <Link href={link.href} className="site-footer__link">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </nav>
+    <footer className="olaf-footer" aria-label="Site footer">
+      {/* Massive Brand Typographic Headline Banner */}
+      <div className="olaf-footer__banner">
+        <span className="olaf-footer__brand-text">THE EVERYDAY EDIT</span>
+        <span className="olaf-footer__city-tag">AMSTERDAM · EST. 2024</span>
       </div>
 
-      <div className="site-footer__bar">
-        <p className="site-footer__copy">
-          © {year} · All rights reserved
+      <div className="olaf-footer__grid">
+        {nav.map((col) => (
+          <div key={col.heading} className="olaf-footer__col">
+            <h3 className="olaf-footer__col-heading">{col.heading}</h3>
+            <ul className="olaf-footer__col-list">
+              {col.links.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="olaf-footer__col-link">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div className="olaf-footer__bottom">
+        <p className="olaf-footer__copy">
+          &copy; {year} THE EVERYDAY EDIT B.V. ALL RIGHTS RESERVED.
         </p>
-        <div className="site-footer__legal">
-          <Link href="#" className="site-footer__legal-link">
-            Privacy
+        <div className="olaf-footer__links">
+          <Link href="/#approach" className="olaf-footer__legal-link">
+            PRIVACY POLICY
           </Link>
-          <Link href="#" className="site-footer__legal-link">
-            Terms
+          <Link href="/#approach" className="olaf-footer__legal-link">
+            TERMS OF SERVICE
           </Link>
-          <Link href="#" className="site-footer__legal-link">
-            Instagram
+          <Link href="/#approach" className="olaf-footer__legal-link">
+            CARBON STATEMENT
           </Link>
         </div>
       </div>
