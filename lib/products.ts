@@ -128,7 +128,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Low Stock — 3 Pieces Remaining",
     "images": {
-      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDEcTHm37Xg86Anzf2GNEAFWn4Hs4qXAIJtPxTTP44m3EcM6EpESpbZoItlKNYcn534Rh3SXUW4lzlaDXalX8uaeenot8wT2qUBlnppIZcd4MFhTY5RQFnbi_O79xDcgSVkoZhmyGabQ_SpdKNN76IjNFcWfGnfcGRgf8lWdrZExB5JFpsZeZroABpDpSP0Jr0xi4xJg4mY_y6hU410xGroXzb84HQOdgNc4wTVrXE",
+      "hero_flatlay": "/assets/products/jamdani-saree-handloom.jpg",
       "hanging_view": "/assets/products/saree-jamdani-drape.jpg",
       "fabric_macro_detail": "/assets/products/saree-jamdani-pallu-zoom.jpg",
       "back_view": null,

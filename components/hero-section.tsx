@@ -39,7 +39,7 @@ export function HeroSection() {
           <div className="lg:col-span-7">
             <div className="w-full aspect-[4/5] bg-[#f6f3ee] overflow-hidden relative group cursor-pointer shadow-sm">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCua08J3bqXRcnBLFIc44WM9WsVxOnAAg28SNwXK4lp6Ce0iAzpBJYKlB7PIHzIBPij1H_rbO4ZEMXqJ8BscO9KLIMx_GolCSnVirGq7Nu1Nev-pFgZ8jqJiHh-xYqoYA-Mct08q996xytLK4N8VVD_Lo5vx3rOcyNfnORRk_kXsbUlU2pjvXSuNfmwA0vTrIHAlimLRf6G5s8GR-8y42MNb5_gM79OdXVD_ljpLTY"
+                src="/assets/hero/hero-panjabi-craft.jpg"
                 alt="Luxury Ivory Embroidered Panjabi"
                 fill
                 priority

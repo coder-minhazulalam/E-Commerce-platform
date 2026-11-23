@@ -16,7 +16,7 @@ export const PRODUCT_IMAGE_MAP: Record<string, string> = {
   "OOT-PAN-001":
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAx8vW0kFmfEnUl9PaTDPEbJNorq41yiqZjWR-glADPlcJJbHgsY-xm40du1UXIWNvrkB95PgVSEPU1Oa7hwYSTAjCwE3IITd29a7kpehW8hKoxsCATTq0tQz1B17Cj22aPJhZJVQQu2xDTCedNjxv9LzkR7H7Fq1gl5Opt9rX5meYURqxkO7Z21C-GvxdB3Ier8f_fCahkL85k_aM2vzmQIUJ1iN9S9f_SVXVy9-w",
   "OOT-SAR-002":
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDEcTHm37Xg86Anzf2GNEAFWn4Hs4qXAIJtPxTTP44m3EcM6EpESpbZoItlKNYcn534Rh3SXUW4lzlaDXalX8uaeenot8wT2qUBlnppIZcd4MFhTY5RQFnbi_O79xDcgSVkoZhmyGabQ_SpdKNN76IjNFcWfGnfcGRgf8lWdrZExB5JFpsZeZroABpDpSP0Jr0xi4xJg4mY_y6hU410xGroXzb84HQOdgNc4wTVrXE",
+    "/assets/products/jamdani-saree-handloom.jpg",
   "OOT-BLZ-003":
     "https://lh3.googleusercontent.com/aida-public/AB6AXuCoFHKrK_pzA3MAoy-T41foeGmDQxJ0Wzcvk68JSpVpPJUty7qH4nx0IJNuFFjnKMHMiMIAj2Tr2EEv1p_AlVi5BQdKmUq2X_s_MA93FcfeqLhoiAuLsTu4NZypKr3W3iSvlftVfCEVpAV3JilELtV5jpN7qPlAHKbYJbXV9tsTf8AEvJyeIilVwSj3dV5Sf-rmKRzrYePi7PCtsrj2-xIHmGw4MF3WILCYvms8xyM",
   "OOT-TRP-004":
@@ -86,9 +86,8 @@ export function ProductCard({
 
   const imgSrc =
     PRODUCT_IMAGE_MAP[product.id] ||
-    (product.images?.hero_flatlay && !product.images.hero_flatlay.startsWith("/assets")
-      ? product.images.hero_flatlay
-      : PRODUCT_IMAGE_MAP["OOT-PAN-001"]);
+    product.images?.hero_flatlay ||
+    PRODUCT_IMAGE_MAP["OOT-PAN-001"];
 
   const handleHeartClick = (e: React.MouseEvent) => {
     e.stopPropagation();
