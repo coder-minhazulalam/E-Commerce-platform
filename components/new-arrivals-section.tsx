@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { ArrowRight } from "lucide-react";
 import { type OotfyProduct } from "../lib/products";
 import { ProductCard } from "./product-card";
 
@@ -34,12 +35,10 @@ export function NewArrivalsSection({
           </div>
           <a
             href="#category-nav"
-            className="group text-xs uppercase tracking-widest text-[#1c1c19] hover:text-[#755a21] transition-colors inline-flex items-center gap-1.5 font-medium"
+            className="group text-xs uppercase tracking-widest text-[#1c1c19] hover:text-[#755a21] transition-colors inline-flex items-center gap-2 font-medium"
           >
             <span>View All ({products.length})</span>
-            <span className="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:translate-x-1">
-              arrow_forward
-            </span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </div>
 

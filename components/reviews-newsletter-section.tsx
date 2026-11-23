@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { Star, Check, ArrowRight } from "lucide-react";
 
 interface ReviewsNewsletterSectionProps {
   onNotify?: (msg: string) => void;
@@ -29,6 +30,11 @@ export function ReviewsNewsletterSection({ onNotify }: ReviewsNewsletterSectionP
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Review 1 */}
               <div className="bg-[#f6f3ee] p-6 lg:p-8 flex flex-col justify-between gap-6 border border-[#c3c8c2]/30 transition-all duration-300 hover:-translate-y-1 hover:border-[#755a21] hover:shadow-sm">
+                <div className="flex items-center gap-1 mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-[#755a21] text-[#755a21]" />
+                  ))}
+                </div>
                 <p className="text-sm lg:text-base text-[#1c1c19] italic leading-relaxed">
                   “The ivory Panjabi feels weightless yet structured. The Dhakai tonal embroidery is understated in the best possible way.”
                 </p>
@@ -42,6 +48,11 @@ export function ReviewsNewsletterSection({ onNotify }: ReviewsNewsletterSectionP
 
               {/* Review 2 */}
               <div className="bg-[#f6f3ee] p-6 lg:p-8 flex flex-col justify-between gap-6 border border-[#c3c8c2]/30 transition-all duration-300 hover:-translate-y-1 hover:border-[#755a21] hover:shadow-sm">
+                <div className="flex items-center gap-1 mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-[#755a21] text-[#755a21]" />
+                  ))}
+                </div>
                 <p className="text-sm lg:text-base text-[#1c1c19] italic leading-relaxed">
                   “Finally a Bangladeshi label that understands quiet luxury. My Jamdani saree arrived in museum-grade packaging.”
                 </p>
@@ -83,14 +94,15 @@ export function ReviewsNewsletterSection({ onNotify }: ReviewsNewsletterSectionP
                 </div>
                 <button
                   type="submit"
-                  className="bg-[#243329] text-white text-xs uppercase tracking-widest px-6 py-3 hover:bg-[#3a4a3f] transition-all duration-300 whitespace-nowrap active:scale-95 font-medium cursor-pointer"
+                  className="bg-[#243329] text-white text-xs uppercase tracking-widest px-6 py-3 hover:bg-[#3a4a3f] transition-all duration-300 whitespace-nowrap active:scale-95 font-medium cursor-pointer inline-flex items-center gap-2 justify-center"
                 >
-                  Subscribe
+                  <span>Subscribe</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </form>
             ) : (
-              <div className="flex items-center gap-2 p-3 bg-[#243329]/10 border border-[#243329]/20 text-[#243329]">
-                <span className="material-symbols-outlined text-[18px]">verified</span>
+              <div className="flex items-center gap-2.5 p-3.5 bg-[#243329]/10 border border-[#243329]/20 text-[#243329]">
+                <Check className="w-4 h-4 text-[#243329]" />
                 <p className="text-xs font-medium">
                   Subscribed to Atelier Dispatches. Welcome to OOTFY.
                 </p>

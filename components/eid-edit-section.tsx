@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export function EidEditSection() {
   return (
@@ -23,12 +24,10 @@ export function EidEditSection() {
             </p>
             <a
               href="#category-nav"
-              className="group text-xs uppercase tracking-widest text-[#1c1c19] hover:text-[#755a21] transition-colors whitespace-nowrap inline-flex items-center gap-1.5 font-medium"
+              className="group text-xs uppercase tracking-widest text-[#1c1c19] hover:text-[#755a21] transition-colors whitespace-nowrap inline-flex items-center gap-2 font-medium"
             >
               <span>Explore Edit</span>
-              <span className="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:translate-x-1">
-                arrow_forward
-              </span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>
         </div>
@@ -42,7 +41,8 @@ export function EidEditSection() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlHxT9a54dLcyokiwx7H_bzlRZyUPfxuO-b1pZ4NW1rc8f-PiooIwIfcW8aNnLVWxNQp1GNxzynr9XfDXZapZ6QwKy2oaaxp5c6qsKoQZtGg1SR8wGv0MGNkwlQxIV9nplGd11SyLjykbZnpyh091diOfdjb6DO9-KU9gJT84zZ9gy6-OQ0V8f8g0IhesvVkOWoLIg7D1-UHz_uIn922tCC0eLYqg4dDHAOSBNQD0"
                 alt="The Eid Edit Featured Panjabi"
                 fill
-                className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
+                unoptimized
+                className="object-cover object-top transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                 sizes="(max-width: 1024px) 100vw, 58vw"
               />
               <div className="absolute bottom-6 left-6 bg-[#fcf9f4]/90 backdrop-blur-sm px-4 py-2 border border-[#c3c8c2]/30 transition-all duration-300 group-hover:bg-[#fcf9f4]">
@@ -60,6 +60,7 @@ export function EidEditSection() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeQcivkgTtkfnKeO-ByW7wpzBO4JIOtGHPjj2SYlb8EIcaZ59Z3TRu88zjZ2TXH_31oUeBCa2_QM6tQDjdAI3LlyoNXoqpyA_ySh8kACVIYY5fHPgDQGd92NeDL9sM5-ZRQ2XUvwAjUHAdXsVqqd5ncYIbfujibuehHISlhUQueAkZ_tRKmPQoRDtebrNIiLHuJTs3lrijLnnZ4aJUmADlUq6bCLYDaQSHFjmkHyM"
                 alt="Eid Edit Embroidery Detail"
                 fill
+                unoptimized
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 42vw"
               />
@@ -74,6 +75,7 @@ export function EidEditSection() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYAFI_PmmauTCrm73TRCjj9Gevg-iIOPNnIMA2vXYOHYf5jALiTM7imQ9s_EH-7ht0ryf1qGxIMrIlApFTt66mJiK_hRskBhuya8Qth9QaLsb6RUIs9tADGdHqVSU1EODql9mLkxW7hSiE_Q92yyE_Gn7SPqLbbEJKY__D3IzzQDLnS0Z2e5S79HhdWI__isNQlL9jW9bAmBCiTdraouLZKeeE6AgSVWXojJf6ZIQ"
                 alt="Eid Edit Folded Silks"
                 fill
+                unoptimized
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 42vw"
               />

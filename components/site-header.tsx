@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { Search, Heart, ShoppingBag, User } from "lucide-react";
 
 interface SiteHeaderProps {
   wishlistCount?: number;
@@ -92,7 +93,7 @@ export function SiteHeader({ wishlistCount = 0, cartCount = 0, onOpenSearch }: S
                 className="text-[#434844] hover:text-[#1c1c19] transition-transform duration-200 hover:scale-110 flex items-center cursor-pointer"
                 type="button"
               >
-                <span className="material-symbols-outlined text-[20px]">search</span>
+                <Search className="w-5 h-5" />
               </button>
 
               <button
@@ -100,7 +101,7 @@ export function SiteHeader({ wishlistCount = 0, cartCount = 0, onOpenSearch }: S
                 className="text-[#434844] hover:text-[#1c1c19] transition-transform duration-200 hover:scale-110 flex items-center relative cursor-pointer"
                 type="button"
               >
-                <span className="material-symbols-outlined text-[20px]">favorite</span>
+                <Heart className="w-5 h-5" />
                 {wishlistCount > 0 && (
                   <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#755a21] text-[9px] font-bold text-white rounded-full flex items-center justify-center">
                     {wishlistCount}
@@ -113,7 +114,7 @@ export function SiteHeader({ wishlistCount = 0, cartCount = 0, onOpenSearch }: S
                 className="text-[#434844] hover:text-[#1c1c19] transition-transform duration-200 hover:scale-110 flex items-center relative cursor-pointer"
                 type="button"
               >
-                <span className="material-symbols-outlined text-[20px]">shopping_bag</span>
+                <ShoppingBag className="w-5 h-5" />
                 {cartCount > 0 && (
                   <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#243329] text-[9px] font-bold text-white rounded-full flex items-center justify-center">
                     {cartCount}
@@ -127,7 +128,7 @@ export function SiteHeader({ wishlistCount = 0, cartCount = 0, onOpenSearch }: S
                 type="button"
               >
                 <div className="w-8 h-8 rounded-full bg-[#ebe8e3] text-[#243329] border border-[#c3c8c2] flex items-center justify-center text-xs font-semibold">
-                  M
+                  <User className="w-4 h-4 text-[#243329]" />
                 </div>
               </button>
             </div>

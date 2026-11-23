@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 interface SiteFooterProps {
   onNotify?: (msg: string) => void;
@@ -145,10 +146,11 @@ export function SiteFooter({ onNotify }: SiteFooterProps) {
                 required
               />
               <button
-                className="text-xs uppercase text-[#1c1c19] hover:text-[#755a21] transition-colors ml-2 font-medium cursor-pointer"
+                className="text-xs uppercase text-[#1c1c19] hover:text-[#755a21] transition-colors ml-2 font-medium cursor-pointer inline-flex items-center gap-1"
                 type="submit"
               >
-                Join
+                <span>Join</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </form>
           </div>

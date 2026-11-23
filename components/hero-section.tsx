@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -26,12 +27,10 @@ export function HeroSection() {
             <div className="pt-2 animate-hero-4">
               <a
                 href="#new-arrivals"
-                className="group inline-flex items-center justify-center gap-3 bg-[#243329] text-white text-xs uppercase tracking-widest px-8 py-4 hover:bg-[#3a4a3f] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 shadow-sm font-medium"
+                className="group inline-flex items-center justify-center gap-3 bg-[#243329] text-white text-xs uppercase tracking-widest px-8 py-4 hover:bg-[#3a4a3f] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 shadow-sm font-medium cursor-pointer"
               >
                 <span>Shop Collection</span>
-                <span className="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1">
-                  arrow_forward
-                </span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -44,7 +43,8 @@ export function HeroSection() {
                 alt="Luxury Ivory Embroidered Panjabi"
                 fill
                 priority
-                className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
+                unoptimized
+                className="object-cover object-top transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                 sizes="(max-width: 1024px) 100vw, 58vw"
               />
               <div className="absolute bottom-6 left-6 bg-[#fcf9f4]/90 backdrop-blur-md px-4 py-2 border border-[#c3c8c2]/40 flex items-center gap-3 shadow-sm transition-all duration-300 group-hover:bg-[#fcf9f4]">

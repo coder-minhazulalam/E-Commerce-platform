@@ -128,7 +128,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Low Stock — 3 Pieces Remaining",
     "images": {
-      "hero_flatlay": "/assets/products/saree-jamdani-hero.jpg",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDEcTHm37Xg86Anzf2GNEAFWn4Hs4qXAIJtPxTTP44m3EcM6EpESpbZoItlKNYcn534Rh3SXUW4lzlaDXalX8uaeenot8wT2qUBlnppIZcd4MFhTY5RQFnbi_O79xDcgSVkoZhmyGabQ_SpdKNN76IjNFcWfGnfcGRgf8lWdrZExB5JFpsZeZroABpDpSP0Jr0xi4xJg4mY_y6hU410xGroXzb84HQOdgNc4wTVrXE",
       "hanging_view": "/assets/products/saree-jamdani-drape.jpg",
       "fabric_macro_detail": "/assets/products/saree-jamdani-pallu-zoom.jpg",
       "back_view": null,
@@ -300,7 +300,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Made-to-Order (7 Days Dispatch)",
     "images": {
-      "hero_flatlay": "/assets/products/saree-gold-tissue.jpg",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYAFI_PmmauTCrm73TRCjj9Gevg-iIOPNnIMA2vXYOHYf5jALiTM7imQ9s_EH-7ht0ryf1qGxIMrIlApFTt66mJiK_hRskBhuya8Qth9QaLsb6RUIs9tADGdHqVSU1EODql9mLkxW7hSiE_Q92yyE_Gn7SPqLbbEJKY__D3IzzQDLnS0Z2e5S79HhdWI__isNQlL9jW9bAmBCiTdraouLZKeeE6AgSVWXojJf6ZIQ",
       "hanging_view": "/assets/products/saree-tissue-drape.jpg",
       "fabric_macro_detail": "/assets/products/saree-tissue-zari-zoom.jpg",
       "back_view": null,
@@ -622,7 +622,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Bespoke Order (14 Days Crafting)",
     "images": {
-      "hero_flatlay": "/assets/products/lehenga-jamdani-front.jpg",
+      "hero_flatlay": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=85&w=1200&auto=format&fit=crop",
       "hanging_view": "/assets/products/lehenga-jamdani-mannequin.jpg",
       "fabric_macro_detail": "/assets/products/lehenga-jamdani-motifs.jpg",
       "back_view": "/assets/products/lehenga-jamdani-back.jpg",
@@ -979,7 +979,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "2 Units Remaining",
     "images": {
-      "hero_flatlay": "/assets/products/saree-jamdani-black-hero.jpg",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuBeQcivkgTtkfnKeO-ByW7wpzBO4JIOtGHPjj2SYlb8EIcaZ59Z3TRu88zjZ2TXH_31oUeBCa2_QM6tQDjdAI3LlyoNXoqpyA_ySh8kACVIYY5fHPgDQGd92NeDL9sM5-ZRQ2XUvwAjUHAdXsVqqd5ncYIbfujibuehHISlhUQueAkZ_tRKmPQoRDtebrNIiLHuJTs3lrijLnnZ4aJUmADlUq6bCLYDaQSHFjmkHyM",
       "hanging_view": "/assets/products/saree-jamdani-black-drape.jpg",
       "fabric_macro_detail": "/assets/products/saree-jamdani-black-zoom.jpg",
       "back_view": null,
@@ -1021,7 +1021,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/shirt-tuxedo-front.jpg",
+      "hero_flatlay": "https://images.unsplash.com/photo-1620012253295-c15c429f66bf?q=85&w=1200&auto=format&fit=crop",
       "hanging_view": "/assets/products/shirt-tuxedo-hang.jpg",
       "fabric_macro_detail": "/assets/products/shirt-tuxedo-bib.jpg",
       "back_view": "/assets/products/shirt-tuxedo-back.jpg",
@@ -1194,7 +1194,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/saree-matka-biscuit-hero.jpg",
+      "hero_flatlay": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=85&w=1200&auto=format&fit=crop",
       "hanging_view": "/assets/products/saree-matka-biscuit-drape.jpg",
       "fabric_macro_detail": "/assets/products/saree-matka-selvedge.jpg",
       "back_view": null,
@@ -1280,7 +1280,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/shirt-indigo-khadi-flat.jpg",
+      "hero_flatlay": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=85&w=1200&auto=format&fit=crop",
       "hanging_view": "/assets/products/shirt-indigo-khadi-hang.jpg",
       "fabric_macro_detail": "/assets/products/shirt-indigo-slub.jpg",
       "back_view": "/assets/products/shirt-indigo-khadi-back.jpg",
@@ -1321,7 +1321,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Made-to-Order (10 Days)",
     "images": {
-      "hero_flatlay": "/assets/products/lehenga-organza-sand-flat.jpg",
+      "hero_flatlay": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=85&w=1200&auto=format&fit=crop",
       "hanging_view": "/assets/products/lehenga-organza-sand-mannequin.jpg",
       "fabric_macro_detail": "/assets/products/lehenga-organza-dori.jpg",
       "back_view": "/assets/products/lehenga-organza-sand-back.jpg",

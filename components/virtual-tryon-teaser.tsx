@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { Sparkles, RotateCcw, Eye } from "lucide-react";
 
 interface VirtualTryonTeaserProps {
   onLaunchModal?: () => void;
@@ -48,12 +49,10 @@ export function VirtualTryonTeaser({ onLaunchModal }: VirtualTryonTeaserProps) {
               <button
                 type="button"
                 onClick={onLaunchModal}
-                className="tryon-pulse inline-flex items-center justify-center bg-[#fcf9f4] text-[#1c1c19] text-xs uppercase tracking-widest px-8 py-4 hover:bg-[#f6f3ee] transition-all group cursor-pointer font-medium shadow-sm"
+                className="tryon-pulse inline-flex items-center justify-center gap-2 bg-[#fcf9f4] text-[#1c1c19] text-xs uppercase tracking-widest px-8 py-4 hover:bg-[#f6f3ee] transition-all group cursor-pointer font-medium shadow-sm"
               >
                 <span>Launch Virtual Try-On</span>
-                <span className="material-symbols-outlined text-[18px] ml-2 transition-transform duration-300 group-hover:scale-110">
-                  360
-                </span>
+                <Sparkles className="w-4 h-4 text-[#755a21] transition-transform duration-300 group-hover:scale-110" />
               </button>
             </div>
           </div>
@@ -65,7 +64,8 @@ export function VirtualTryonTeaser({ onLaunchModal }: VirtualTryonTeaserProps) {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeQSxquca6_eFBohygNnrAoIapcJGaMfofzrEmDPRb3zPxuW9P6IovnVCXVC5z97rXztB6lESH8fQskzP2GO-RoueMsra5Si2rvJLw9qERDxJeypiZOeael6njgxExI-CBy0Vk3OblYdhwjtsU0x1ZxXYWaOKPW_h7-ZXRkSHU3Adwh4yMX-KwEL-7ejUOI7ujkBBEhIcAb94wfinTAHs0TGf1Mo5vJsuSEDUEYgw"
                 alt="Virtual Try-On Black Panjabi Preview"
                 fill
-                className="object-cover transition-transform duration-500 ease-out"
+                unoptimized
+                className="object-cover object-top transition-transform duration-500 ease-out"
                 style={{ transform: angleConfig[angle].transform }}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -114,7 +114,7 @@ export function VirtualTryonTeaser({ onLaunchModal }: VirtualTryonTeaserProps) {
                 </div>
 
                 <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-white/90 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 font-medium">
-                  <span className="material-symbols-outlined text-[13px]">touch_app</span>
+                  <RotateCcw className="w-3.5 h-3.5" />
                   <span>3D Rotate</span>
                 </span>
               </div>
