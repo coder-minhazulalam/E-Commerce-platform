@@ -128,7 +128,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Low Stock — 3 Pieces Remaining",
     "images": {
-      "hero_flatlay": "/assets/products/jamdani-saree-handloom.jpg",
+      "hero_flatlay": "/assets/products/jamdani-saree-clean.jpg",
       "hanging_view": "/assets/products/saree-jamdani-drape.jpg",
       "fabric_macro_detail": "/assets/products/saree-jamdani-pallu-zoom.jpg",
       "back_view": null,
@@ -622,7 +622,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Bespoke Order (14 Days Crafting)",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=85&w=1200&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuBaHEhrOg3rqjVYFyAaT_FhKLFkCkrCMOZOGzHAgOQabQL6MjrKy9tH16rH4EI7wi6b2dORwohONtNL_fOwNRd25jXY5bHVv2cYlP_PQA3_v573jK1EuaEWCvAFmgFPT0nM-S3OH4CF8Q3PKAq0x0X2BkKhlC-n2e1OkeUnn3NXr4ik6CnPtcsIe5JVCorVtqXe70WtHKYZouQx1Wpc8sxj702NGJNsORjJ9LEaDPY=s0",
       "hanging_view": "/assets/products/lehenga-jamdani-mannequin.jpg",
       "fabric_macro_detail": "/assets/products/lehenga-jamdani-motifs.jpg",
       "back_view": "/assets/products/lehenga-jamdani-back.jpg",
@@ -1021,7 +1021,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1620012253295-c15c429f66bf?q=85&w=1200&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
       "hanging_view": "/assets/products/shirt-tuxedo-hang.jpg",
       "fabric_macro_detail": "/assets/products/shirt-tuxedo-bib.jpg",
       "back_view": "/assets/products/shirt-tuxedo-back.jpg",
@@ -1194,7 +1194,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=85&w=1200&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuD72gHZPVdMYtTmQBh2rwGAqVYBd-FgoGz0dmgQHhcVEfIc9Nt6DlFfmsUfWT6f-Q4sMRQNfOMbR8t3UBXYMW_aTya2qZp5xguRuH2hKusKiFszoRa82gpOT0zncf0pha9zkReM-mHEYhVR2HalCLz8tZ8V3QRKTAiAysFcDD0uL2bXZ3zsthEOZpDhiVlqxNajrkDhMDzY-6ESss1qZHVDDZvaHvvom17XkVrMob4=s0",
       "hanging_view": "/assets/products/saree-matka-biscuit-drape.jpg",
       "fabric_macro_detail": "/assets/products/saree-matka-selvedge.jpg",
       "back_view": null,
@@ -1280,7 +1280,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=85&w=1200&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
       "hanging_view": "/assets/products/shirt-indigo-khadi-hang.jpg",
       "fabric_macro_detail": "/assets/products/shirt-indigo-slub.jpg",
       "back_view": "/assets/products/shirt-indigo-khadi-back.jpg",
@@ -1321,7 +1321,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Made-to-Order (10 Days)",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=85&w=1200&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYAFI_PmmauTCrm73TRCjj9Gevg-iIOPNnIMA2vXYOHYf5jALiTM7imQ9s_EH-7ht0ryf1qGxIMrIlApFTt66mJiK_hRskBhuya8Qth9QaLsb6RUIs9tADGdHqVSU1EODql9mLkxW7hSiE_Q92yyE_Gn7SPqLbbEJKY__D3IzzQDLnS0Z2e5S79HhdWI__isNQlL9jW9bAmBCiTdraouLZKeeE6AgSVWXojJf6ZIQ=s0",
       "hanging_view": "/assets/products/lehenga-organza-sand-mannequin.jpg",
       "fabric_macro_detail": "/assets/products/lehenga-organza-dori.jpg",
       "back_view": "/assets/products/lehenga-organza-sand-back.jpg",

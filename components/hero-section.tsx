@@ -35,16 +35,16 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Featured Imagery */}
+          {/* Right Featured Imagery - Pure Clothing Only: Ivory Panjabi on Brass Hanger */}
           <div className="lg:col-span-7">
             <div className="w-full aspect-[4/5] bg-[#f6f3ee] overflow-hidden relative group cursor-pointer shadow-sm">
               <Image
-                src="/assets/hero/hero-panjabi-craft.jpg"
-                alt="Luxury Ivory Embroidered Panjabi"
+                src="/assets/hero/hero-banner-master.jpg"
+                alt="Luxury Ivory Embroidered Panjabi on Brass Hanger"
                 fill
                 priority
                 unoptimized
-                className="object-cover object-top transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
+                className="object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                 sizes="(max-width: 1024px) 100vw, 58vw"
               />
               <div className="absolute bottom-6 left-6 bg-[#fcf9f4]/90 backdrop-blur-md px-4 py-2 border border-[#c3c8c2]/40 flex items-center gap-3 shadow-sm transition-all duration-300 group-hover:bg-[#fcf9f4]">
