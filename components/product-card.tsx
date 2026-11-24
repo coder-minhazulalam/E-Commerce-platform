@@ -41,7 +41,7 @@ export const PRODUCT_IMAGE_MAP: Record<string, string> = {
   "OOT-SHT-012":
     "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop",
   "OOT-LHN-013":
-    "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000&auto=format&fit=crop",
   "OOT-PAN-014":
     "/assets/tryon/tryon-avatar-mannequin.jpg",
   "OOT-KID-015":
@@ -51,9 +51,9 @@ export const PRODUCT_IMAGE_MAP: Record<string, string> = {
   "OOT-KUR-017":
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAYAFI_PmmauTCrm73TRCjj9Gevg-iIOPNnIMA2vXYOHYf5jALiTM7imQ9s_EH-7ht0ryf1qGxIMrIlApFTt66mJiK_hRskBhuya8Qth9QaLsb6RUIs9tADGdHqVSU1EODql9mLkxW7hSiE_Q92yyE_Gn7SPqLbbEJKY__D3IzzQDLnS0Z2e5S79HhdWI__isNQlL9jW9bAmBCiTdraouLZKeeE6AgSVWXojJf6ZIQ=s0",
   "OOT-SLW-018":
-    "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=1000&auto=format&fit=crop",
   "OOT-PAN-019":
-    "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1598966739654-5e9a252d8c32?q=80&w=1000&auto=format&fit=crop",
   "OOT-PNT-020":
     "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000&auto=format&fit=crop",
   "OOT-SAR-021":
@@ -73,9 +73,9 @@ export const PRODUCT_IMAGE_MAP: Record<string, string> = {
   "OOT-SHT-028":
     "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=1000&auto=format&fit=crop",
   "OOT-LHN-029":
-    "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1619603364854-23b1a94b48ad?q=80&w=1000&auto=format&fit=crop",
   "OOT-PAN-030":
-    "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1626947346165-4c2288dadc2a?q=80&w=1000&auto=format&fit=crop",
   "OOT-SAR-031":
     "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop",
   "OOT-TRP-032":
@@ -89,7 +89,7 @@ export const PRODUCT_IMAGE_MAP: Record<string, string> = {
   "OOT-BLZ-036":
     "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1000&auto=format&fit=crop",
   "OOT-LHN-037":
-    "https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?q=80&w=1000&auto=format&fit=crop",
   "OOT-SAR-038":
     "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1000&auto=format&fit=crop",
   "OOT-PAN-039":
