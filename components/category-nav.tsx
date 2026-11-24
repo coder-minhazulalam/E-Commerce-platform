@@ -10,7 +10,8 @@ const CATEGORIES = [
   { id: "saree", label: "SAREE" },
   { id: "three-piece", label: "THREE-PIECE" },
   { id: "lehenga", label: "LEHENGA" },
-  { id: "suits", label: "SUITS" },
+  { id: "suits", label: "SUITS & BLAZERS" },
+  { id: "kids", label: "THE LITTLE EDIT (KIDS)" },
 ];
 
 interface CategoryNavProps {

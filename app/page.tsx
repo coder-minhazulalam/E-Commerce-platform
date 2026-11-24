@@ -44,9 +44,20 @@ export default function HomePage() {
     if (catId === "all") {
       setProducts(OOTFY_PRODUCTS);
     } else {
-      const filtered = OOTFY_PRODUCTS.filter(
-        (p) => p.category.toLowerCase().replace(/[\s-_]+/g, "") === catId.replace(/[\s-_]+/g, "")
-      );
+      const filtered = OOTFY_PRODUCTS.filter((p) => {
+        const pCat = p.category.toLowerCase().replace(/[\s-_]+/g, "");
+        const target = catId.replace(/[\s-_]+/g, "");
+        if (target === "suits") {
+          return pCat === "suit" || pCat === "blazer" || pCat === "suits";
+        }
+        if (target === "kids") {
+          return pCat === "kids" || p.gender.toLowerCase() === "kids";
+        }
+        if (target === "threepiece") {
+          return pCat === "threepiece" || pCat === "salwarkameez" || pCat === "kurti";
+        }
+        return pCat === target;
+      });
       setProducts(filtered.length > 0 ? filtered : OOTFY_PRODUCTS);
     }
   };

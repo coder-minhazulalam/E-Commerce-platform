@@ -70,11 +70,6 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
         "name": "Deep Olive",
         "hex": "#3A4A3F",
         "is_default": false
-      },
-      {
-        "name": "Muted Ochre",
-        "hex": "#B89758",
-        "is_default": false
       }
     ],
     "sizes": [
@@ -86,15 +81,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/panjabi-ivory-front.jpg",
-      "hanging_view": "/assets/products/panjabi-ivory-hang.jpg",
-      "fabric_macro_detail": "/assets/products/panjabi-ivory-embroidery-zoom.jpg",
-      "back_view": "/assets/products/panjabi-ivory-back.jpg",
-      "folded_view": "/assets/products/panjabi-ivory-folded.jpg"
+      "hero_flatlay": "/assets/products/men/panjabi-embroidered-ivory/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/panjabi-embroidered-ivory/hanging_studio.jpg",
+      "fabric_macro_detail": "/assets/products/men/panjabi-embroidered-ivory/collar_threadwork_macro.jpg",
+      "back_view": "/assets/products/men/panjabi-embroidered-ivory/back_drape.jpg",
+      "folded_view": "/assets/products/men/panjabi-embroidered-ivory/folded_packshot.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_panjabi_ivory_01",
+    "avatar_preview_id": "tryon_panjabi_ivory_001",
     "fit_recommendation": "Tailored Fit",
     "featured": true
   },
@@ -128,11 +123,11 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Low Stock — 3 Pieces Remaining",
     "images": {
-      "hero_flatlay": "/assets/products/jamdani-saree-clean.jpg",
-      "hanging_view": "/assets/products/saree-jamdani-drape.jpg",
-      "fabric_macro_detail": "/assets/products/saree-jamdani-pallu-zoom.jpg",
-      "back_view": null,
-      "folded_view": "/assets/products/saree-jamdani-folded.jpg"
+      "hero_flatlay": "/assets/products/women/saree-handloom-jamdani-gold/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/saree-handloom-jamdani-gold/mannequin_drape.jpg",
+      "fabric_macro_detail": "/assets/products/women/saree-handloom-jamdani-gold/pallu_weft_macro.jpg",
+      "back_view": "/assets/products/women/saree-handloom-jamdani-gold/pleat_cascade_back.jpg",
+      "folded_view": "/assets/products/women/saree-handloom-jamdani-gold/folded_box.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": false,
@@ -173,15 +168,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/blazer-olive-front.jpg",
-      "hanging_view": "/assets/products/blazer-olive-hanger.jpg",
-      "fabric_macro_detail": "/assets/products/blazer-olive-lapel.jpg",
-      "back_view": "/assets/products/blazer-olive-back.jpg",
-      "folded_view": "/assets/products/blazer-olive-folded.jpg"
+      "hero_flatlay": "/assets/products/men/blazer-tailored-olive-linen/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/blazer-tailored-olive-linen/wooden_hanger_view.jpg",
+      "fabric_macro_detail": "/assets/products/men/blazer-tailored-olive-linen/lapel_horn_button_macro.jpg",
+      "back_view": "/assets/products/men/blazer-tailored-olive-linen/vented_back.jpg",
+      "folded_view": "/assets/products/men/blazer-tailored-olive-linen/folded_atelier_case.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_blazer_olive_01",
+    "avatar_preview_id": "tryon_blazer_olive_003",
     "fit_recommendation": "Modern Slim",
     "featured": true
   },
@@ -218,15 +213,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/threepiece-rawsilk-flatlay.jpg",
-      "hanging_view": "/assets/products/threepiece-rawsilk-hanger.jpg",
-      "fabric_macro_detail": "/assets/products/threepiece-neckline.jpg",
-      "back_view": "/assets/products/threepiece-back.jpg",
-      "folded_view": "/assets/products/threepiece-folded.jpg"
+      "hero_flatlay": "/assets/products/women/threepiece-rawsilk-sand/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/threepiece-rawsilk-sand/hanging_triptych.jpg",
+      "fabric_macro_detail": "/assets/products/women/threepiece-rawsilk-sand/neckline_ari_macro.jpg",
+      "back_view": "/assets/products/women/threepiece-rawsilk-sand/back_tunic_drape.jpg",
+      "folded_view": "/assets/products/women/threepiece-rawsilk-sand/folded_dupatta_set.jpg"
     },
     "has_3d_view": false,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_threepiece_sand_01",
+    "avatar_preview_id": "tryon_threepiece_sand_004",
     "fit_recommendation": "Fluid Regular",
     "featured": true
   },
@@ -240,7 +235,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     "price_bdt": 7200,
     "original_price_bdt": 8500,
     "badge": "LIMITED",
-    "description": "Opulent deep espresso silk kurta adorned with antique gold zardozi bullion embroidery on collar, chest placket, and sleeve cuffs. Designed for celebratory evening wear.",
+    "description": "Opulent deep espresso silk kurta adorned with antique gold zardozi bullion embroidery on collar, chest placket, and sleeve cuffs.",
     "fabric": "100% Rajshahi Tussar Silk",
     "craft_technique": "Old-Dhaka Antique Zardozi Work",
     "colors": [
@@ -263,15 +258,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Limited Release — 5 Units Left",
     "images": {
-      "hero_flatlay": "/assets/products/panjabi-zardozi-flat.jpg",
-      "hanging_view": "/assets/products/panjabi-zardozi-stand.jpg",
-      "fabric_macro_detail": "/assets/products/panjabi-zardozi-macro.jpg",
-      "back_view": "/assets/products/panjabi-zardozi-back.jpg",
-      "folded_view": "/assets/products/panjabi-zardozi-stack.jpg"
+      "hero_flatlay": "/assets/products/men/panjabi-zardozi-chocolate/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/panjabi-zardozi-chocolate/pedestal_stand_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/panjabi-zardozi-chocolate/bullion_gold_macro.jpg",
+      "back_view": "/assets/products/men/panjabi-zardozi-chocolate/back_seamless_cut.jpg",
+      "folded_view": "/assets/products/men/panjabi-zardozi-chocolate/gift_casket_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_panjabi_zardozi_01",
+    "avatar_preview_id": "tryon_panjabi_zardozi_005",
     "fit_recommendation": "Atelier Tailored",
     "featured": true
   },
@@ -300,11 +295,11 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Made-to-Order (7 Days Dispatch)",
     "images": {
-      "hero_flatlay": "/assets/eid/eid-folded-silks.jpg",
-      "hanging_view": "/assets/products/saree-tissue-drape.jpg",
-      "fabric_macro_detail": "/assets/products/saree-tissue-zari-zoom.jpg",
-      "back_view": null,
-      "folded_view": "/assets/products/saree-tissue-box.jpg"
+      "hero_flatlay": "/assets/products/women/saree-gold-tissue-zardozi/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/saree-gold-tissue-zardozi/atelier_drape_stand.jpg",
+      "fabric_macro_detail": "/assets/products/women/saree-gold-tissue-zardozi/scallop_pearl_macro.jpg",
+      "back_view": "/assets/products/women/saree-gold-tissue-zardozi/blouse_piece_back.jpg",
+      "folded_view": "/assets/products/women/saree-gold-tissue-zardozi/presentation_box_folded.jpg"
     },
     "has_3d_view": false,
     "has_virtual_try_on": false,
@@ -351,17 +346,17 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/shirt-mandarin-white-front.jpg",
-      "hanging_view": "/assets/products/shirt-mandarin-white-hang.jpg",
-      "fabric_macro_detail": "/assets/products/shirt-mandarin-collar.jpg",
-      "back_view": "/assets/products/shirt-mandarin-white-back.jpg",
-      "folded_view": "/assets/products/shirt-mandarin-folded.jpg"
+      "hero_flatlay": "/assets/products/men/shirt-mandarin-white/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/shirt-mandarin-white/brass_hanger_studio.jpg",
+      "fabric_macro_detail": "/assets/products/men/shirt-mandarin-white/pearl_button_placket_macro.jpg",
+      "back_view": "/assets/products/men/shirt-mandarin-white/pleated_yoke_back.jpg",
+      "folded_view": "/assets/products/men/shirt-mandarin-white/folded_collar_stand.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_shirt_mandarin_white",
+    "avatar_preview_id": "tryon_shirt_mandarin_007",
     "fit_recommendation": "Regular Relaxed",
-    "featured": true
+    "featured": false
   },
   {
     "id": "OOT-PNT-008",
@@ -386,11 +381,6 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
         "name": "Off-White Alabaster",
         "hex": "#F4F0E8",
         "is_default": false
-      },
-      {
-        "name": "Dark Umber",
-        "hex": "#302622",
-        "is_default": false
       }
     ],
     "sizes": [
@@ -402,17 +392,17 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/trouser-linen-sand-flat.jpg",
-      "hanging_view": "/assets/products/trouser-linen-sand-hang.jpg",
-      "fabric_macro_detail": "/assets/products/trouser-linen-pleat-zoom.jpg",
-      "back_view": "/assets/products/trouser-linen-sand-back.jpg",
-      "folded_view": "/assets/products/trouser-linen-folded.jpg"
+      "hero_flatlay": "/assets/products/men/trouser-pleated-sand-linen/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/trouser-pleated-sand-linen/trouser_bar_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/trouser-pleated-sand-linen/side_buckle_pleat_macro.jpg",
+      "back_view": "/assets/products/men/trouser-pleated-sand-linen/rear_welt_pockets_back.jpg",
+      "folded_view": "/assets/products/men/trouser-pleated-sand-linen/folded_crease_stack.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_trouser_sand_01",
+    "avatar_preview_id": "tryon_trouser_sand_008",
     "fit_recommendation": "Tapered Relaxed",
-    "featured": true
+    "featured": false
   },
   {
     "id": "OOT-SAR-009",
@@ -444,17 +434,17 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — 4 Units Remaining",
     "images": {
-      "hero_flatlay": "/assets/products/saree-katan-emerald-hero.jpg",
-      "hanging_view": "/assets/products/saree-katan-drape.jpg",
-      "fabric_macro_detail": "/assets/products/saree-katan-border.jpg",
-      "back_view": null,
-      "folded_view": "/assets/products/saree-katan-folded.jpg"
+      "hero_flatlay": "/assets/products/women/saree-katan-emerald-gold/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/saree-katan-emerald-gold/flowing_drape_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/saree-katan-emerald-gold/zari_border_sheen_macro.jpg",
+      "back_view": "/assets/products/women/saree-katan-emerald-gold/pallu_trailing_back.jpg",
+      "folded_view": "/assets/products/women/saree-katan-emerald-gold/muslin_wrapped_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": false,
     "avatar_preview_id": null,
     "fit_recommendation": "Classic Drape",
-    "featured": false
+    "featured": true
   },
   {
     "id": "OOT-SUT-010",
@@ -489,17 +479,17 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/suit-charcoal-front.jpg",
-      "hanging_view": "/assets/products/suit-charcoal-hang.jpg",
-      "fabric_macro_detail": "/assets/products/suit-charcoal-weave.jpg",
-      "back_view": "/assets/products/suit-charcoal-back.jpg",
-      "folded_view": "/assets/products/suit-charcoal-garmentbag.jpg"
+      "hero_flatlay": "/assets/products/men/suit-structured-charcoal-wool/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/suit-structured-charcoal-wool/valet_stand_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/suit-structured-charcoal-wool/notch_lapel_stitch_macro.jpg",
+      "back_view": "/assets/products/men/suit-structured-charcoal-wool/double_vent_back.jpg",
+      "folded_view": "/assets/products/men/suit-structured-charcoal-wool/canvas_garment_bag_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_suit_charcoal_01",
+    "avatar_preview_id": "tryon_suit_charcoal_010",
     "fit_recommendation": "Structured Modern Fit",
-    "featured": false
+    "featured": true
   },
   {
     "id": "OOT-PAN-011",
@@ -524,11 +514,6 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
         "name": "Deep Forest Olive",
         "hex": "#304033",
         "is_default": false
-      },
-      {
-        "name": "Matte Charcoal",
-        "hex": "#212121",
-        "is_default": false
       }
     ],
     "sizes": [
@@ -540,15 +525,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/panjabi-dhakai-handloom-hero.jpg",
-      "hanging_view": "/assets/products/panjabi-dhakai-hang.jpg",
-      "fabric_macro_detail": "/assets/products/panjabi-dhakai-zoom.jpg",
-      "back_view": "/assets/products/panjabi-dhakai-back.jpg",
-      "folded_view": "/assets/products/panjabi-dhakai-folded.jpg"
+      "hero_flatlay": "/assets/products/men/panjabi-dhakai-handloom-ivory/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/panjabi-dhakai-handloom-ivory/studio_hanger_view.jpg",
+      "fabric_macro_detail": "/assets/products/men/panjabi-dhakai-handloom-ivory/geometric_needlework_macro.jpg",
+      "back_view": "/assets/products/men/panjabi-dhakai-handloom-ivory/high_slit_profile_back.jpg",
+      "folded_view": "/assets/products/men/panjabi-dhakai-handloom-ivory/atelier_cardboard_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_panjabi_dhakai_01",
+    "avatar_preview_id": "tryon_panjabi_dhakai_011",
     "fit_recommendation": "Comfort Tailored",
     "featured": false
   },
@@ -585,15 +570,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/overshirt-olive-front.jpg",
-      "hanging_view": "/assets/products/overshirt-olive-hanger.jpg",
-      "fabric_macro_detail": "/assets/products/overshirt-olive-pocket.jpg",
-      "back_view": "/assets/products/overshirt-olive-back.jpg",
-      "folded_view": "/assets/products/overshirt-olive-folded.jpg"
+      "hero_flatlay": "/assets/products/men/overshirt-atelier-linen-olive/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/overshirt-atelier-linen-olive/natural_oak_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/overshirt-atelier-linen-olive/bellow_pocket_texture_macro.jpg",
+      "back_view": "/assets/products/men/overshirt-atelier-linen-olive/straight_yoke_back.jpg",
+      "folded_view": "/assets/products/men/overshirt-atelier-linen-olive/industrial_folded_display.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_overshirt_olive_01",
+    "avatar_preview_id": "tryon_overshirt_olive_012",
     "fit_recommendation": "Relaxed Boxy",
     "featured": false
   },
@@ -622,17 +607,17 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Bespoke Order (14 Days Crafting)",
     "images": {
-      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuBaHEhrOg3rqjVYFyAaT_FhKLFkCkrCMOZOGzHAgOQabQL6MjrKy9tH16rH4EI7wi6b2dORwohONtNL_fOwNRd25jXY5bHVv2cYlP_PQA3_v573jK1EuaEWCvAFmgFPT0nM-S3OH4CF8Q3PKAq0x0X2BkKhlC-n2e1OkeUnn3NXr4ik6CnPtcsIe5JVCorVtqXe70WtHKYZouQx1Wpc8sxj702NGJNsORjJ9LEaDPY=s0",
-      "hanging_view": "/assets/products/lehenga-jamdani-mannequin.jpg",
-      "fabric_macro_detail": "/assets/products/lehenga-jamdani-motifs.jpg",
-      "back_view": "/assets/products/lehenga-jamdani-back.jpg",
-      "folded_view": "/assets/products/lehenga-jamdani-case.jpg"
+      "hero_flatlay": "/assets/products/women/lehenga-botanical-jamdani-ecru/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/lehenga-botanical-jamdani-ecru/mannequin_volumetric_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/lehenga-botanical-jamdani-ecru/kalidar_zari_vine_macro.jpg",
+      "back_view": "/assets/products/women/lehenga-botanical-jamdani-ecru/tassled_latkan_back.jpg",
+      "folded_view": "/assets/products/women/lehenga-botanical-jamdani-ecru/archive_trunk_folded.jpg"
     },
     "has_3d_view": false,
     "has_virtual_try_on": false,
     "avatar_preview_id": null,
     "fit_recommendation": "Custom Waist & Flare",
-    "featured": false
+    "featured": true
   },
   {
     "id": "OOT-PAN-014",
@@ -668,15 +653,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/panjabi-black-front.jpg",
-      "hanging_view": "/assets/products/panjabi-black-hang.jpg",
-      "fabric_macro_detail": "/assets/products/panjabi-black-collar.jpg",
-      "back_view": "/assets/products/panjabi-black-back.jpg",
-      "folded_view": "/assets/products/panjabi-black-folded.jpg"
+      "hero_flatlay": "/assets/products/men/panjabi-obsidian-black-minimal/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/panjabi-obsidian-black-minimal/black_metal_hanger_view.jpg",
+      "fabric_macro_detail": "/assets/products/men/panjabi-obsidian-black-minimal/gunmetal_snap_macro.jpg",
+      "back_view": "/assets/products/men/panjabi-obsidian-black-minimal/streamlined_spine_back.jpg",
+      "folded_view": "/assets/products/men/panjabi-obsidian-black-minimal/matte_crease_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_panjabi_black_01",
+    "avatar_preview_id": "tryon_panjabi_black_014",
     "fit_recommendation": "Tailored Slim",
     "featured": false
   },
@@ -714,11 +699,11 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/kids-panjabi-ivory-flat.jpg",
-      "hanging_view": "/assets/products/kids-panjabi-ivory-hang.jpg",
-      "fabric_macro_detail": "/assets/products/kids-panjabi-collar.jpg",
-      "back_view": "/assets/products/kids-panjabi-ivory-back.jpg",
-      "folded_view": "/assets/products/kids-panjabi-ivory-folded.jpg"
+      "hero_flatlay": "/assets/products/kids/panjabi-junior-jamdani-ivory/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/kids/panjabi-junior-jamdani-ivory/child_wooden_hanger.jpg",
+      "fabric_macro_detail": "/assets/products/kids/panjabi-junior-jamdani-ivory/soft_yoke_jamdani_macro.jpg",
+      "back_view": "/assets/products/kids/panjabi-junior-jamdani-ivory/relaxed_kid_cut_back.jpg",
+      "folded_view": "/assets/products/kids/panjabi-junior-jamdani-ivory/pajama_combo_folded.jpg"
     },
     "has_3d_view": false,
     "has_virtual_try_on": false,
@@ -759,11 +744,11 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/kids-kurti-blush-flat.jpg",
-      "hanging_view": "/assets/products/kids-kurti-blush-hang.jpg",
-      "fabric_macro_detail": "/assets/products/kids-kurti-booti.jpg",
-      "back_view": "/assets/products/kids-kurti-blush-back.jpg",
-      "folded_view": "/assets/products/kids-kurti-blush-folded.jpg"
+      "hero_flatlay": "/assets/products/kids/kurti-girls-chanderi-blush/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/kids/kurti-girls-chanderi-blush/petite_mannequin_hang.jpg",
+      "fabric_macro_detail": "/assets/products/kids/kurti-girls-chanderi-blush/scallop_booti_macro.jpg",
+      "back_view": "/assets/products/kids/kurti-girls-chanderi-blush/keyhole_button_back.jpg",
+      "folded_view": "/assets/products/kids/kurti-girls-chanderi-blush/dhoti_set_folded.jpg"
     },
     "has_3d_view": false,
     "has_virtual_try_on": false,
@@ -805,15 +790,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/kurti-silk-putty-flat.jpg",
-      "hanging_view": "/assets/products/kurti-silk-putty-hang.jpg",
-      "fabric_macro_detail": "/assets/products/kurti-cowl-zoom.jpg",
-      "back_view": "/assets/products/kurti-silk-putty-back.jpg",
-      "folded_view": "/assets/products/kurti-silk-folded.jpg"
+      "hero_flatlay": "/assets/products/women/kurti-asymmetric-mulberry-putty/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/kurti-asymmetric-mulberry-putty/flax_cord_hanger_view.jpg",
+      "fabric_macro_detail": "/assets/products/women/kurti-asymmetric-mulberry-putty/cowl_slit_button_macro.jpg",
+      "back_view": "/assets/products/women/kurti-asymmetric-mulberry-putty/elongated_hem_back.jpg",
+      "folded_view": "/assets/products/women/kurti-asymmetric-mulberry-putty/minimal_creased_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_kurti_putty_01",
+    "avatar_preview_id": "tryon_kurti_putty_017",
     "fit_recommendation": "Fluid Architectural",
     "featured": false
   },
@@ -850,11 +835,11 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/salwar-tangail-flat.jpg",
-      "hanging_view": "/assets/products/salwar-tangail-hang.jpg",
-      "fabric_macro_detail": "/assets/products/salwar-tangail-border.jpg",
-      "back_view": "/assets/products/salwar-tangail-back.jpg",
-      "folded_view": "/assets/products/salwar-tangail-folded.jpg"
+      "hero_flatlay": "/assets/products/women/salwar-tangail-cotton-ecru/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/salwar-tangail-cotton-ecru/studio_rod_drape.jpg",
+      "fabric_macro_detail": "/assets/products/women/salwar-tangail-cotton-ecru/fishscale_border_macro.jpg",
+      "back_view": "/assets/products/women/salwar-tangail-cotton-ecru/churidar_dupatta_back.jpg",
+      "folded_view": "/assets/products/women/salwar-tangail-cotton-ecru/three_piece_stack_folded.jpg"
     },
     "has_3d_view": false,
     "has_virtual_try_on": false,
@@ -896,15 +881,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/panjabi-khadi-oat-flat.jpg",
-      "hanging_view": "/assets/products/panjabi-khadi-oat-hang.jpg",
-      "fabric_macro_detail": "/assets/products/panjabi-khadi-texture.jpg",
-      "back_view": "/assets/products/panjabi-khadi-oat-back.jpg",
-      "folded_view": "/assets/products/panjabi-khadi-folded.jpg"
+      "hero_flatlay": "/assets/products/men/panjabi-fine-khadi-oatmeal/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/panjabi-fine-khadi-oatmeal/rustic_wooden_hanger.jpg",
+      "fabric_macro_detail": "/assets/products/men/panjabi-fine-khadi-oatmeal/slub_khadi_stud_macro.jpg",
+      "back_view": "/assets/products/men/panjabi-fine-khadi-oatmeal/contrast_yoke_back.jpg",
+      "folded_view": "/assets/products/men/panjabi-fine-khadi-oatmeal/artisan_paper_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_panjabi_khadi_01",
+    "avatar_preview_id": "tryon_panjabi_khadi_019",
     "fit_recommendation": "Classic Straight",
     "featured": false
   },
@@ -942,15 +927,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/trouser-charcoal-flat.jpg",
-      "hanging_view": "/assets/products/trouser-charcoal-hang.jpg",
-      "fabric_macro_detail": "/assets/products/trouser-charcoal-zoom.jpg",
-      "back_view": "/assets/products/trouser-charcoal-back.jpg",
-      "folded_view": "/assets/products/trouser-charcoal-folded.jpg"
+      "hero_flatlay": "/assets/products/men/trouser-tailored-charcoal-wool/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/trouser-tailored-charcoal-wool/clamping_hanger_view.jpg",
+      "fabric_macro_detail": "/assets/products/men/trouser-tailored-charcoal-wool/blind_hem_crease_macro.jpg",
+      "back_view": "/assets/products/men/trouser-tailored-charcoal-wool/curtain_waistband_back.jpg",
+      "folded_view": "/assets/products/men/trouser-tailored-charcoal-wool/flat_creased_stack.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_trouser_charcoal_01",
+    "avatar_preview_id": "tryon_trouser_charcoal_020",
     "fit_recommendation": "Slim Straight",
     "featured": false
   },
@@ -979,17 +964,17 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "2 Units Remaining",
     "images": {
-      "hero_flatlay": "/assets/eid/eid-muslin-detail.jpg",
-      "hanging_view": "/assets/products/saree-jamdani-black-drape.jpg",
-      "fabric_macro_detail": "/assets/products/saree-jamdani-black-zoom.jpg",
-      "back_view": null,
-      "folded_view": "/assets/products/saree-jamdani-black-folded.jpg"
+      "hero_flatlay": "/assets/products/women/saree-muslin-jamdani-monochrome/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/saree-muslin-jamdani-monochrome/backlit_sheer_drape.jpg",
+      "fabric_macro_detail": "/assets/products/women/saree-muslin-jamdani-monochrome/diamond_white_thread_macro.jpg",
+      "back_view": "/assets/products/women/saree-muslin-jamdani-monochrome/contrast_fall_back.jpg",
+      "folded_view": "/assets/products/women/saree-muslin-jamdani-monochrome/black_archive_box_folded.jpg"
     },
     "has_3d_view": false,
     "has_virtual_try_on": false,
     "avatar_preview_id": null,
     "fit_recommendation": "Architectural Drape",
-    "featured": false
+    "featured": true
   },
   {
     "id": "OOT-SHT-022",
@@ -1021,15 +1006,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
-      "hanging_view": "/assets/products/shirt-tuxedo-hang.jpg",
-      "fabric_macro_detail": "/assets/products/shirt-tuxedo-bib.jpg",
-      "back_view": "/assets/products/shirt-tuxedo-back.jpg",
-      "folded_view": "/assets/products/shirt-tuxedo-folded.jpg"
+      "hero_flatlay": "/assets/products/men/shirt-pleated-bib-tuxedo/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/shirt-pleated-bib-tuxedo/tuxedo_stand_hanger.jpg",
+      "fabric_macro_detail": "/assets/products/men/shirt-pleated-bib-tuxedo/micro_pintuck_bib_macro.jpg",
+      "back_view": "/assets/products/men/shirt-pleated-bib-tuxedo/french_cuff_back.jpg",
+      "folded_view": "/assets/products/men/shirt-pleated-bib-tuxedo/collar_stud_band_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_shirt_tuxedo_white",
+    "avatar_preview_id": "tryon_shirt_tuxedo_022",
     "fit_recommendation": "Sartorial Fitted",
     "featured": false
   },
@@ -1066,17 +1051,17 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/bandhgala-sand-front.jpg",
-      "hanging_view": "/assets/products/bandhgala-sand-hang.jpg",
-      "fabric_macro_detail": "/assets/products/bandhgala-collar-zoom.jpg",
-      "back_view": "/assets/products/bandhgala-sand-back.jpg",
-      "folded_view": "/assets/products/bandhgala-sand-folded.jpg"
+      "hero_flatlay": "/assets/products/men/blazer-bandhgala-sand-matka/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/blazer-bandhgala-sand-matka/sculpted_torso_hanger.jpg",
+      "fabric_macro_detail": "/assets/products/men/blazer-bandhgala-sand-matka/brass_button_collar_macro.jpg",
+      "back_view": "/assets/products/men/blazer-bandhgala-sand-matka/tailored_waist_seam_back.jpg",
+      "folded_view": "/assets/products/men/blazer-bandhgala-sand-matka/folded_suit_box.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_bandhgala_sand_01",
+    "avatar_preview_id": "tryon_bandhgala_sand_023",
     "fit_recommendation": "Structured Royal",
-    "featured": false
+    "featured": true
   },
   {
     "id": "OOT-TRP-024",
@@ -1111,15 +1096,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/threepiece-chanderi-flat.jpg",
-      "hanging_view": "/assets/products/threepiece-chanderi-hang.jpg",
-      "fabric_macro_detail": "/assets/products/threepiece-chanderi-border.jpg",
-      "back_view": "/assets/products/threepiece-chanderi-back.jpg",
-      "folded_view": "/assets/products/threepiece-chanderi-folded.jpg"
+      "hero_flatlay": "/assets/products/women/threepiece-chanderi-goldleaf/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/threepiece-chanderi-goldleaf/trio_palazzo_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/threepiece-chanderi-goldleaf/aari_sequin_leaf_macro.jpg",
+      "back_view": "/assets/products/women/threepiece-chanderi-goldleaf/sheer_kota_dupatta_back.jpg",
+      "folded_view": "/assets/products/women/threepiece-chanderi-goldleaf/silk_ribbon_folded.jpg"
     },
     "has_3d_view": false,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_threepiece_gold_01",
+    "avatar_preview_id": "tryon_threepiece_gold_024",
     "fit_recommendation": "Relaxed Straight",
     "featured": false
   },
@@ -1157,15 +1142,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/panjabi-tussar-cream-flat.jpg",
-      "hanging_view": "/assets/products/panjabi-tussar-cream-hang.jpg",
-      "fabric_macro_detail": "/assets/products/panjabi-tussar-rib.jpg",
-      "back_view": "/assets/products/panjabi-tussar-cream-back.jpg",
-      "folded_view": "/assets/products/panjabi-tussar-folded.jpg"
+      "hero_flatlay": "/assets/products/men/panjabi-tussar-rib-cream/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/panjabi-tussar-rib-cream/sculpted_hanger_studio.jpg",
+      "fabric_macro_detail": "/assets/products/men/panjabi-tussar-rib-cream/jacquard_rib_texture_macro.jpg",
+      "back_view": "/assets/products/men/panjabi-tussar-rib-cream/deep_pocket_profile_back.jpg",
+      "folded_view": "/assets/products/men/panjabi-tussar-rib-cream/clean_square_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_panjabi_tussar_01",
+    "avatar_preview_id": "tryon_panjabi_tussar_025",
     "fit_recommendation": "Tailored Regular",
     "featured": false
   },
@@ -1194,11 +1179,11 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuD72gHZPVdMYtTmQBh2rwGAqVYBd-FgoGz0dmgQHhcVEfIc9Nt6DlFfmsUfWT6f-Q4sMRQNfOMbR8t3UBXYMW_aTya2qZp5xguRuH2hKusKiFszoRa82gpOT0zncf0pha9zkReM-mHEYhVR2HalCLz8tZ8V3QRKTAiAysFcDD0uL2bXZ3zsthEOZpDhiVlqxNajrkDhMDzY-6ESss1qZHVDDZvaHvvom17XkVrMob4=s0",
-      "hanging_view": "/assets/products/saree-matka-biscuit-drape.jpg",
-      "fabric_macro_detail": "/assets/products/saree-matka-selvedge.jpg",
-      "back_view": null,
-      "folded_view": "/assets/products/saree-matka-folded.jpg"
+      "hero_flatlay": "/assets/products/women/saree-matka-biscuit-selvedge/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/saree-matka-biscuit-selvedge/vertical_drape_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/saree-matka-biscuit-selvedge/charcoal_selvedge_macro.jpg",
+      "back_view": "/assets/products/women/saree-matka-biscuit-selvedge/sculptural_fall_back.jpg",
+      "folded_view": "/assets/products/women/saree-matka-biscuit-selvedge/jute_tied_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": false,
@@ -1239,15 +1224,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/pants-drawstring-ivory-flat.jpg",
-      "hanging_view": "/assets/products/pants-drawstring-ivory-hang.jpg",
-      "fabric_macro_detail": "/assets/products/pants-drawstring-waistband.jpg",
-      "back_view": "/assets/products/pants-drawstring-ivory-back.jpg",
-      "folded_view": "/assets/products/pants-drawstring-folded.jpg"
+      "hero_flatlay": "/assets/products/men/pants-relaxed-silk-linen-ivory/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/pants-relaxed-silk-linen-ivory/drawstring_clamp_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/pants-relaxed-silk-linen-ivory/woven_cord_eyelet_macro.jpg",
+      "back_view": "/assets/products/men/pants-relaxed-silk-linen-ivory/vented_ankle_hem_back.jpg",
+      "folded_view": "/assets/products/men/pants-relaxed-silk-linen-ivory/soft_roll_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_pants_drawstring_01",
+    "avatar_preview_id": "tryon_pants_drawstring_027",
     "fit_recommendation": "Relaxed Tapered",
     "featured": false
   },
@@ -1280,15 +1265,15 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
-      "hanging_view": "/assets/products/shirt-indigo-khadi-hang.jpg",
-      "fabric_macro_detail": "/assets/products/shirt-indigo-slub.jpg",
-      "back_view": "/assets/products/shirt-indigo-khadi-back.jpg",
-      "folded_view": "/assets/products/shirt-indigo-folded.jpg"
+      "hero_flatlay": "/assets/products/men/shirt-indigo-khadi-bandcollar/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/shirt-indigo-khadi-bandcollar/rustic_peg_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/shirt-indigo-khadi-bandcollar/indigo_slub_bonebutton_macro.jpg",
+      "back_view": "/assets/products/men/shirt-indigo-khadi-bandcollar/reinforced_yoke_back.jpg",
+      "folded_view": "/assets/products/men/shirt-indigo-khadi-bandcollar/indigo_dyed_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_shirt_indigo_01",
+    "avatar_preview_id": "tryon_shirt_indigo_028",
     "fit_recommendation": "Casual Tailored",
     "featured": false
   },
@@ -1321,17 +1306,17 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Made-to-Order (10 Days)",
     "images": {
-      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYAFI_PmmauTCrm73TRCjj9Gevg-iIOPNnIMA2vXYOHYf5jALiTM7imQ9s_EH-7ht0ryf1qGxIMrIlApFTt66mJiK_hRskBhuya8Qth9QaLsb6RUIs9tADGdHqVSU1EODql9mLkxW7hSiE_Q92yyE_Gn7SPqLbbEJKY__D3IzzQDLnS0Z2e5S79HhdWI__isNQlL9jW9bAmBCiTdraouLZKeeE6AgSVWXojJf6ZIQ=s0",
-      "hanging_view": "/assets/products/lehenga-organza-sand-mannequin.jpg",
-      "fabric_macro_detail": "/assets/products/lehenga-organza-dori.jpg",
-      "back_view": "/assets/products/lehenga-organza-sand-back.jpg",
-      "folded_view": "/assets/products/lehenga-organza-box.jpg"
+      "hero_flatlay": "/assets/products/women/lehenga-tissue-organza-sand/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/lehenga-tissue-organza-sand/can-can_flared_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/lehenga-tissue-organza-sand/cord_embroidery_border_macro.jpg",
+      "back_view": "/assets/products/women/lehenga-tissue-organza-sand/bustier_tie_back.jpg",
+      "folded_view": "/assets/products/women/lehenga-tissue-organza-sand/couture_garment_box_folded.jpg"
     },
     "has_3d_view": false,
     "has_virtual_try_on": false,
     "avatar_preview_id": null,
     "fit_recommendation": "High-Waist Flared",
-    "featured": false
+    "featured": true
   },
   {
     "id": "OOT-PAN-030",
@@ -1372,68 +1357,912 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/products/panjabi-linen-sand-flat.jpg",
-      "hanging_view": "/assets/products/panjabi-linen-sand-hang.jpg",
-      "fabric_macro_detail": "/assets/products/panjabi-linen-texture.jpg",
-      "back_view": "/assets/products/panjabi-linen-sand-back.jpg",
-      "folded_view": "/assets/products/panjabi-linen-folded.jpg"
+      "hero_flatlay": "/assets/products/men/panjabi-minimalist-linen-sand/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/panjabi-minimalist-linen-sand/studio_hanger_view.jpg",
+      "fabric_macro_detail": "/assets/products/men/panjabi-minimalist-linen-sand/french_seam_texture_macro.jpg",
+      "back_view": "/assets/products/men/panjabi-minimalist-linen-sand/vented_silhouette_back.jpg",
+      "folded_view": "/assets/products/men/panjabi-minimalist-linen-sand/linen_pressed_folded.jpg"
     },
     "has_3d_view": true,
     "has_virtual_try_on": true,
-    "avatar_preview_id": "tryon_panjabi_linen_sand_01",
+    "avatar_preview_id": "tryon_panjabi_linen_030",
     "fit_recommendation": "Modern Straight",
+    "featured": false
+  },
+  {
+    "id": "OOT-SAR-031",
+    "name": "Crimson Hand-Spun Khadi Jamdani Saree",
+    "subtitle_or_tagline": "Heritage Bridal Capsule",
+    "category": "Saree",
+    "collection": "The Eid Edit",
+    "gender": "Women",
+    "price_bdt": 18500,
+    "original_price_bdt": 21000,
+    "badge": "EXCLUSIVE",
+    "description": "Deep madder crimson khadi muslin body hand-loomed with gold zari supplementary weft paisleys. Handcrafted in Narayanganj by master weavers over 45 days.",
+    "fabric": "100% Fine Hand-Spun Khadi with Pure Gold Zari",
+    "craft_technique": "Dhakai Karigar Pit-Loom Weave",
+    "colors": [
+      {
+        "name": "Heritage Crimson",
+        "hex": "#6C1D24",
+        "is_default": true
+      },
+      {
+        "name": "Deep Garnet",
+        "hex": "#4C1419",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "Free Size (6.5 Yards with Blouse Piece)"
+    ],
+    "stock_status": "Limited Release — 2 Pieces",
+    "images": {
+      "hero_flatlay": "/assets/products/women/saree-khadi-jamdani-crimson/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/saree-khadi-jamdani-crimson/heritage_arch_drape.jpg",
+      "fabric_macro_detail": "/assets/products/women/saree-khadi-jamdani-crimson/gold_paisley_weft_macro.jpg",
+      "back_view": "/assets/products/women/saree-khadi-jamdani-crimson/unstitched_blouse_back.jpg",
+      "folded_view": "/assets/products/women/saree-khadi-jamdani-crimson/teak_wood_casket_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "Regal Architectural Drape",
+    "featured": true
+  },
+  {
+    "id": "OOT-TRP-032",
+    "name": "Layered Muslin Angrakha Three-Piece",
+    "subtitle_or_tagline": "The New Bangladeshi Edit",
+    "category": "Three-Piece",
+    "collection": "The New Bangladeshi Edit",
+    "gender": "Women",
+    "price_bdt": 7600,
+    "original_price_bdt": 8500,
+    "badge": "NEW",
+    "description": "Wrap-around asymmetrical Angrakha tunic in layered translucent muslin with handmade fabric latkan cords, cigarette linen trousers, and crinkle chiffon dupatta.",
+    "fabric": "100% Mulmul Muslin with Pure Linen Trousers",
+    "craft_technique": "Hand-stitched Angrakha Overlap & Fabric Bead Ties",
+    "colors": [
+      {
+        "name": "Soft Ivory & Alabaster",
+        "hex": "#F9F6F0",
+        "is_default": true
+      },
+      {
+        "name": "Dusty Rose Mist",
+        "hex": "#D8C2BE",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/women/threepiece-angrakha-muslin-ivory/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/threepiece-angrakha-muslin-ivory/mannequin_overlap_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/threepiece-angrakha-muslin-ivory/latkan_cord_tassel_macro.jpg",
+      "back_view": "/assets/products/women/threepiece-angrakha-muslin-ivory/fluid_flare_back.jpg",
+      "folded_view": "/assets/products/women/threepiece-angrakha-muslin-ivory/atelier_ribbon_box_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_threepiece_angrakha_032",
+    "fit_recommendation": "Flared Wrap Fit",
+    "featured": true
+  },
+  {
+    "id": "OOT-KUR-033",
+    "name": "Bespoke Pintuck Khadi Tunic",
+    "subtitle_or_tagline": "Atelier Signatures / Everyday Elegance",
+    "category": "Kurti",
+    "collection": "Atelier Signatures",
+    "gender": "Women",
+    "price_bdt": 3200,
+    "original_price_bdt": null,
+    "badge": null,
+    "description": "Straight-line artisan tunic engineered with millimeter-spaced front pintucks, high mandarin collar, and hidden in-seam pockets for clean functionality.",
+    "fabric": "100% Hand-Spun Comilla Khadi",
+    "craft_technique": "Precision Tailored Pin-Tuck Channels",
+    "colors": [
+      {
+        "name": "Sage Green",
+        "hex": "#768679",
+        "is_default": true
+      },
+      {
+        "name": "Natural Cream",
+        "hex": "#F3ECE1",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/women/kurti-pintuck-khadi-sage/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/kurti-pintuck-khadi-sage/minimal_rack_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/kurti-pintuck-khadi-sage/millimeter_pintuck_macro.jpg",
+      "back_view": "/assets/products/women/kurti-pintuck-khadi-sage/inverted_box_pleat_back.jpg",
+      "folded_view": "/assets/products/women/kurti-pintuck-khadi-sage/pressed_atelier_stack_folded.jpg"
+    },
+    "has_3d_view": false,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_kurti_sage_033",
+    "fit_recommendation": "Straight Tailored",
+    "featured": false
+  },
+  {
+    "id": "OOT-SAR-034",
+    "name": "Burnished Gold Tissue Banarasi Saree",
+    "subtitle_or_tagline": "Atelier Masterpiece",
+    "category": "Saree",
+    "collection": "The Eid Edit",
+    "gender": "Women",
+    "price_bdt": 24000,
+    "original_price_bdt": 27500,
+    "badge": "EXCLUSIVE",
+    "description": "Ultra-fine tissue silk warp interwoven with pure copper-burnished gold zari motifs inspired by Mughal floral jaal geometry. Drapes like liquid gold.",
+    "fabric": "Pure Tissue Silk with Real Copper-Gold Zari",
+    "craft_technique": "Kadwa Floral Jaal Handloom Weave",
+    "colors": [
+      {
+        "name": "Burnished Gold",
+        "hex": "#C5A869",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "Free Size (6.5 Yards)"
+    ],
+    "stock_status": "1 Unit in Atelier Vault",
+    "images": {
+      "hero_flatlay": "/assets/products/women/saree-tissue-banarasi-burnished-gold/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/saree-tissue-banarasi-burnished-gold/museum_mount_drape.jpg",
+      "fabric_macro_detail": "/assets/products/women/saree-tissue-banarasi-burnished-gold/kadwa_jaal_zari_macro.jpg",
+      "back_view": "/assets/products/women/saree-tissue-banarasi-burnished-gold/dense_pallu_fall_back.jpg",
+      "folded_view": "/assets/products/women/saree-tissue-banarasi-burnished-gold/heritage_silk_sack_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "Couture Flow",
+    "featured": true
+  },
+  {
+    "id": "OOT-PNT-035",
+    "name": "Wide-Leg Raw Silk Trousers",
+    "subtitle_or_tagline": "Modern Separates Capsule",
+    "category": "Pants",
+    "collection": "Atelier Signatures",
+    "gender": "Women",
+    "price_bdt": 3500,
+    "original_price_bdt": null,
+    "badge": null,
+    "description": "Floor-skimming wide palazzo pants cut from heavyweight Rajshahi Matka silk with a tailored flat front, concealed side zip, and deep slash pockets.",
+    "fabric": "100% Pure Rajshahi Matka Raw Silk",
+    "craft_technique": "Sartorial Blind-Hem Wide-Leg Architecture",
+    "colors": [
+      {
+        "name": "Warm Sand",
+        "hex": "#D5C8B4",
+        "is_default": true
+      },
+      {
+        "name": "Obsidian Black",
+        "hex": "#1C1C1C",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/women/pants-wideleg-rawsilk-sand/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/pants-wideleg-rawsilk-sand/vertical_leg_fall_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/pants-wideleg-rawsilk-sand/slub_silk_waistband_macro.jpg",
+      "back_view": "/assets/products/women/pants-wideleg-rawsilk-sand/tailored_dart_profile_back.jpg",
+      "folded_view": "/assets/products/women/pants-wideleg-rawsilk-sand/wide_crease_stack_folded.jpg"
+    },
+    "has_3d_view": false,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_pants_wideleg_035",
+    "fit_recommendation": "High-Rise Wide Leg",
+    "featured": false
+  },
+  {
+    "id": "OOT-BLZ-036",
+    "name": "Structured Raw Silk Tuxedo Vest",
+    "subtitle_or_tagline": "Evening Tailoring Edit",
+    "category": "Blazer",
+    "collection": "Atelier Signatures",
+    "gender": "Women",
+    "price_bdt": 4900,
+    "original_price_bdt": 5500,
+    "badge": "NEW",
+    "description": "Sleeveless waistcoat tailored with razor-sharp shawl lapels in raw silk, double welt pockets, and an adjustable back belt cinch.",
+    "fabric": "100% Rajshahi Tussar Silk with Mulberry Lining",
+    "craft_technique": "Sartorial Floating Chest Piece",
+    "colors": [
+      {
+        "name": "Ivory Alabaster",
+        "hex": "#F8F5EE",
+        "is_default": true
+      },
+      {
+        "name": "Midnight Charcoal",
+        "hex": "#22252A",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/women/vest-tuxedo-rawsilk-ivory/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/vest-tuxedo-rawsilk-ivory/tailor_mannequin_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/vest-tuxedo-rawsilk-ivory/shawl_lapel_welt_macro.jpg",
+      "back_view": "/assets/products/women/vest-tuxedo-rawsilk-ivory/cinched_buckle_back.jpg",
+      "folded_view": "/assets/products/women/vest-tuxedo-rawsilk-ivory/tailored_waistcoat_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_vest_rawsilk_036",
+    "fit_recommendation": "Tailored Slim Fit",
+    "featured": false
+  },
+  {
+    "id": "OOT-LHN-037",
+    "name": "Midnight Indigo Zari Jamdani Lehenga",
+    "subtitle_or_tagline": "The Eid Edit / Haute Capsule",
+    "category": "Lehenga",
+    "collection": "The Eid Edit",
+    "gender": "Women",
+    "price_bdt": 34000,
+    "original_price_bdt": 38000,
+    "badge": "EXCLUSIVE",
+    "description": "Deep fermented indigo muslin lehenga woven with pure antique silver and gold floral bel motifs, hand-pleated with internal horsehair braid hem for sculpted volume.",
+    "fabric": "Organic Handloom Khadi Muslin with Natural Indigo",
+    "craft_technique": "Fermented Indigo Vat Dyeing & Supplementary Weft",
+    "colors": [
+      {
+        "name": "Midnight Natural Indigo",
+        "hex": "#1E2738",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "Custom Atelier Sizing (XS - XL)"
+    ],
+    "stock_status": "Bespoke Order (18 Days Crafting)",
+    "images": {
+      "hero_flatlay": "/assets/products/women/lehenga-indigo-jamdani-zari/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/lehenga-indigo-jamdani-zari/monumental_flare_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/lehenga-indigo-jamdani-zari/silver_gold_bel_macro.jpg",
+      "back_view": "/assets/products/women/lehenga-indigo-jamdani-zari/handwoven_dori_back.jpg",
+      "folded_view": "/assets/products/women/lehenga-indigo-jamdani-zari/vault_trunk_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "Sculpted Volumetric",
+    "featured": true
+  },
+  {
+    "id": "OOT-SAR-038",
+    "name": "Natural Mulberry Silk Tangail Saree",
+    "subtitle_or_tagline": "Atelier Signatures / Everyday Luxury",
+    "category": "Saree",
+    "collection": "Atelier Signatures",
+    "gender": "Women",
+    "price_bdt": 6400,
+    "original_price_bdt": null,
+    "badge": null,
+    "description": "Lightweight Tangail handloom saree featuring micro-temple borders in raw sand and ecru thread. Breathable, fluid, and effortless for warm weather gatherings.",
+    "fabric": "100% Tangail Mulberry Silk & Combed Cotton",
+    "craft_technique": "Tangail Handloom Temple Border Motif",
+    "colors": [
+      {
+        "name": "Alabaster Ecru",
+        "hex": "#F4EFE6",
+        "is_default": true
+      },
+      {
+        "name": "Muted Moss",
+        "hex": "#627063",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "Free Size (6 Yards)"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/women/saree-tangail-silk-alabaster/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/women/saree-tangail-silk-alabaster/linen_cord_drape_hang.jpg",
+      "fabric_macro_detail": "/assets/products/women/saree-tangail-silk-alabaster/temple_border_weave_macro.jpg",
+      "back_view": "/assets/products/women/saree-tangail-silk-alabaster/cascade_pallu_back.jpg",
+      "folded_view": "/assets/products/women/saree-tangail-silk-alabaster/muslin_bundle_folded.jpg"
+    },
+    "has_3d_view": false,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "Fluid Soft Drape",
+    "featured": false
+  },
+  {
+    "id": "OOT-PAN-039",
+    "name": "Minimalist Slate Grey Panjabi",
+    "subtitle_or_tagline": "Modern Sartorial Menswear",
+    "category": "Panjabi",
+    "collection": "Atelier Signatures",
+    "gender": "Men",
+    "price_bdt": 3100,
+    "original_price_bdt": null,
+    "badge": null,
+    "description": "Cool slate grey modal-linen Panjabi tailored with sharp concealed front buttoning, structured minimal collar band, and reinforced high vents.",
+    "fabric": "55% Belgian Linen, 45% Micro-Modal",
+    "craft_technique": "Concealed Placket Clean Seam Tailoring",
+    "colors": [
+      {
+        "name": "Slate Grey",
+        "hex": "#5D636B",
+        "is_default": true
+      },
+      {
+        "name": "Off-White",
+        "hex": "#F2EFE9",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/men/panjabi-minimalist-slate-grey/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/panjabi-minimalist-slate-grey/steel_hanger_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/panjabi-minimalist-slate-grey/hidden_snap_collar_macro.jpg",
+      "back_view": "/assets/products/men/panjabi-minimalist-slate-grey/clean_shoulder_back.jpg",
+      "folded_view": "/assets/products/men/panjabi-minimalist-slate-grey/geometric_crease_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_panjabi_slate_039",
+    "fit_recommendation": "Modern Slim",
+    "featured": false
+  },
+  {
+    "id": "OOT-PAN-040",
+    "name": "Tonal Marled Linen Panjabi",
+    "subtitle_or_tagline": "The New Bangladeshi Edit",
+    "category": "Panjabi",
+    "collection": "The New Bangladeshi Edit",
+    "gender": "Men",
+    "price_bdt": 4200,
+    "original_price_bdt": null,
+    "badge": "NEW",
+    "description": "Woven with double-twisted ecru and deep olive flax threads creating a heathered marl texture. Finished with hand-turned bone buttons.",
+    "fabric": "100% French Twisted Flax Linen",
+    "craft_technique": "Cross-Twist Slub Weave",
+    "colors": [
+      {
+        "name": "Olive Ecru Marl",
+        "hex": "#4D5648",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/men/panjabi-marled-linen-olive/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/panjabi-marled-linen-olive/wood_scaffold_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/panjabi-marled-linen-olive/marl_slub_bone_button_macro.jpg",
+      "back_view": "/assets/products/men/panjabi-marled-linen-olive/straight_fall_back.jpg",
+      "folded_view": "/assets/products/men/panjabi-marled-linen-olive/craft_twine_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_panjabi_marled_040",
+    "fit_recommendation": "Tailored Relaxed",
+    "featured": true
+  },
+  {
+    "id": "OOT-SHT-041",
+    "name": "Camp-Collar Relaxed Linen Shirt",
+    "subtitle_or_tagline": "Summer Atelier Resort Edit",
+    "category": "Shirts",
+    "collection": "The New Bangladeshi Edit",
+    "gender": "Men",
+    "price_bdt": 2400,
+    "original_price_bdt": null,
+    "badge": null,
+    "description": "Relaxed cuban camp-collar shirt with seamless French placket, natural horn buttons, and straight vented hem for subtropical leisure.",
+    "fabric": "100% Pure European Washed Linen",
+    "craft_technique": "Soft Enzyme Garment Washed",
+    "colors": [
+      {
+        "name": "Warm Sand",
+        "hex": "#D8CDBC",
+        "is_default": true
+      },
+      {
+        "name": "Deep Terracotta",
+        "hex": "#8A4C36",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/men/shirt-camp-collar-sand-linen/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/shirt-camp-collar-sand-linen/sunlit_breeze_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/shirt-camp-collar-sand-linen/camp_collar_horn_button_macro.jpg",
+      "back_view": "/assets/products/men/shirt-camp-collar-sand-linen/straight_box_pleat_back.jpg",
+      "folded_view": "/assets/products/men/shirt-camp-collar-sand-linen/rolled_sleeve_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_shirt_camp_041",
+    "fit_recommendation": "Boxy Casual",
+    "featured": false
+  },
+  {
+    "id": "OOT-BLZ-042",
+    "name": "Midnight Double-Breasted Wool Blazer",
+    "subtitle_or_tagline": "Atelier Tailoring / Formal Capsule",
+    "category": "Blazer",
+    "collection": "Atelier Signatures",
+    "gender": "Men",
+    "price_bdt": 9500,
+    "original_price_bdt": 11000,
+    "badge": "EXCLUSIVE",
+    "description": "Six-button double-breasted blazer with architectural peak lapels, horn buttons, cut from super-130s tropical wool for evening distinction.",
+    "fabric": "Super-130s Tropical Worsted Wool & Bengali Cupro",
+    "craft_technique": "Full Floating Canvas & Hand-set Shoulders",
+    "colors": [
+      {
+        "name": "Midnight Navy",
+        "hex": "#181E29",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "38R",
+      "40R",
+      "42R",
+      "44R"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/men/blazer-doublebreasted-midnight-wool/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/blazer-doublebreasted-midnight-wool/sartorial_stand_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/blazer-doublebreasted-midnight-wool/peak_lapel_buttonhole_macro.jpg",
+      "back_view": "/assets/products/men/blazer-doublebreasted-midnight-wool/double_flapped_vent_back.jpg",
+      "folded_view": "/assets/products/men/blazer-doublebreasted-midnight-wool/velvet_hanger_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_blazer_db_navy_042",
+    "fit_recommendation": "Tailored Architectural",
+    "featured": true
+  },
+  {
+    "id": "OOT-PNT-043",
+    "name": "Bespoke Off-White Gurkha Trousers",
+    "subtitle_or_tagline": "Sartorial Menswear Edit",
+    "category": "Pants",
+    "collection": "The New Bangladeshi Edit",
+    "gender": "Men",
+    "price_bdt": 3600,
+    "original_price_bdt": null,
+    "badge": "NEW",
+    "description": "Traditional double-buckle crossover Gurkha waistband, deep double forward pleats, and a 2-inch sartorial turn-up cuff in heavy cotton twill.",
+    "fabric": "100% Heavyweight Handloom Cotton Twill",
+    "craft_technique": "Crossover Double-Buckle Gurkha Construction",
+    "colors": [
+      {
+        "name": "Off-White Alabaster",
+        "hex": "#F4F0E8",
+        "is_default": true
+      },
+      {
+        "name": "Classic Khaki",
+        "hex": "#B5A48B",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36",
+      "38"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/men/pants-gurkha-alabaster-twill/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/pants-gurkha-alabaster-twill/buckle_detail_hang.jpg",
+      "fabric_macro_detail": "/assets/products/men/pants-gurkha-alabaster-twill/brass_gurkha_buckles_macro.jpg",
+      "back_view": "/assets/products/men/pants-gurkha-alabaster-twill/split_waistband_back.jpg",
+      "folded_view": "/assets/products/men/pants-gurkha-alabaster-twill/cuffed_hem_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_pants_gurkha_043",
+    "fit_recommendation": "High-Rise Gurkha Tapered",
+    "featured": false
+  },
+  {
+    "id": "OOT-SHT-044",
+    "name": "Natural Ecru Raw-Silk Shirt",
+    "subtitle_or_tagline": "Atelier Luxury Separates",
+    "category": "Shirts",
+    "collection": "Atelier Signatures",
+    "gender": "Men",
+    "price_bdt": 3800,
+    "original_price_bdt": null,
+    "badge": null,
+    "description": "Crafted from hand-spun Rajshahi Matka silk with natural slub textures, structured semi-spread collar, and tonal smoked shell buttons.",
+    "fabric": "100% Hand-Spun Rajshahi Matka Silk",
+    "craft_technique": "Single-Needle Bespoke Seam Tailoring",
+    "colors": [
+      {
+        "name": "Raw Ecru",
+        "hex": "#EFE8DA",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/men/shirt-raw-silk-ecru-matka/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/men/shirt-raw-silk-ecru-matka/minimal_hanger_view.jpg",
+      "fabric_macro_detail": "/assets/products/men/shirt-raw-silk-ecru-matka/matka_slub_texture_macro.jpg",
+      "back_view": "/assets/products/men/shirt-raw-silk-ecru-matka/clean_curved_hem_back.jpg",
+      "folded_view": "/assets/products/men/shirt-raw-silk-ecru-matka/linen_tie_folded.jpg"
+    },
+    "has_3d_view": true,
+    "has_virtual_try_on": true,
+    "avatar_preview_id": "tryon_shirt_matka_044",
+    "fit_recommendation": "Relaxed Sartorial",
+    "featured": false
+  },
+  {
+    "id": "OOT-KID-045",
+    "name": "Boys Olive Khadi Panjabi Set",
+    "subtitle_or_tagline": "The Little Edit / Festive Collection",
+    "category": "Kids",
+    "collection": "The Little Edit",
+    "gender": "Kids",
+    "price_bdt": 2350,
+    "original_price_bdt": null,
+    "badge": "NEW",
+    "description": "Breathable earthy olive hand-spun cotton khadi Panjabi with gentle wooden toggle buttons and matching off-white relaxed cotton trousers.",
+    "fabric": "100% Handloom Organic Cotton Khadi",
+    "craft_technique": "Soft-Touch Seaming for Sensitive Skin",
+    "colors": [
+      {
+        "name": "Earth Olive",
+        "hex": "#5A6756",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "2-3Y",
+      "4-5Y",
+      "6-7Y",
+      "8-9Y",
+      "10-12Y"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/kids/panjabi-boys-olive-khadi/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/kids/panjabi-boys-olive-khadi/nursery_wooden_hang.jpg",
+      "fabric_macro_detail": "/assets/products/kids/panjabi-boys-olive-khadi/wood_toggle_button_macro.jpg",
+      "back_view": "/assets/products/kids/panjabi-boys-olive-khadi/soft_vent_back.jpg",
+      "folded_view": "/assets/products/kids/panjabi-boys-olive-khadi/trouser_combo_box_folded.jpg"
+    },
+    "has_3d_view": false,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "Kids Relaxed Comfort",
+    "featured": false
+  },
+  {
+    "id": "OOT-KID-046",
+    "name": "Girls Jamdani Floral Tunic & Salwar",
+    "subtitle_or_tagline": "The Little Edit / Heritage Capsule",
+    "category": "Kids",
+    "collection": "The Little Edit",
+    "gender": "Kids",
+    "price_bdt": 2750,
+    "original_price_bdt": null,
+    "badge": null,
+    "description": "Delicate ivory muslin tunic woven with pastel coral floral Jamdani motifs, paired with soft gathered cotton salwar with gentle elastic cuffs.",
+    "fabric": "100% Superfine Muslin Cotton",
+    "craft_technique": "Handloom Jamdani Weave & Soft Mulmul Lining",
+    "colors": [
+      {
+        "name": "Ivory & Pastel Coral",
+        "hex": "#FAF5ED",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "3-4Y",
+      "5-6Y",
+      "7-8Y",
+      "9-10Y"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/kids/kurti-girls-jamdani-coral/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/kids/kurti-girls-jamdani-coral/petite_studio_hang.jpg",
+      "fabric_macro_detail": "/assets/products/kids/kurti-girls-jamdani-coral/coral_flora_weft_macro.jpg",
+      "back_view": "/assets/products/kids/kurti-girls-jamdani-coral/gentle_gathers_back.jpg",
+      "folded_view": "/assets/products/kids/kurti-girls-jamdani-coral/ribbon_wrapped_kid_folded.jpg"
+    },
+    "has_3d_view": false,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "Kids Flared A-Line",
+    "featured": false
+  },
+  {
+    "id": "OOT-KID-047",
+    "name": "Junior Tailored Linen Kurta Shirt",
+    "subtitle_or_tagline": "The Little Edit / Minimalist Classics",
+    "category": "Kids",
+    "collection": "The Little Edit",
+    "gender": "Kids",
+    "price_bdt": 1850,
+    "original_price_bdt": null,
+    "badge": null,
+    "description": "Mandarin stand collar kurta shirt tailored from pre-washed French flax linen with soft rounded hems for all-day festive ease.",
+    "fabric": "100% Pre-washed European Linen",
+    "craft_technique": "Single-Needle Garment Wash Construction",
+    "colors": [
+      {
+        "name": "Warm Sand",
+        "hex": "#DBD0BE",
+        "is_default": true
+      },
+      {
+        "name": "Pure Alabaster",
+        "hex": "#FFFFFF",
+        "is_default": false
+      }
+    ],
+    "sizes": [
+      "4-5Y",
+      "6-7Y",
+      "8-9Y",
+      "10-12Y"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/kids/kurta-junior-sand-linen/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/kids/kurta-junior-sand-linen/small_brass_hanger.jpg",
+      "fabric_macro_detail": "/assets/products/kids/kurta-junior-sand-linen/linen_texture_roundhem_macro.jpg",
+      "back_view": "/assets/products/kids/kurta-junior-sand-linen/kid_pleated_yoke_back.jpg",
+      "folded_view": "/assets/products/kids/kurta-junior-sand-linen/neat_pocket_folded.jpg"
+    },
+    "has_3d_view": false,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "Straight Easy Fit",
+    "featured": false
+  },
+  {
+    "id": "OOT-KID-048",
+    "name": "Girls Organza Tiered Festive Frock",
+    "subtitle_or_tagline": "The Little Edit / Eid Special",
+    "category": "Kids",
+    "collection": "The Eid Edit",
+    "gender": "Kids",
+    "price_bdt": 3100,
+    "original_price_bdt": 3600,
+    "badge": "LIMITED",
+    "description": "Double-tiered sheer silk organza frock in muted champagne with golden thread scalloped hem and hypoallergenic pure cotton mulmul lining.",
+    "fabric": "Silk Organza with 100% Organic Mulmul Lining",
+    "craft_technique": "Hand-cut Zari Scalloped Hemming",
+    "colors": [
+      {
+        "name": "Champagne Mist",
+        "hex": "#E8DEC9",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "2-3Y",
+      "4-5Y",
+      "6-7Y",
+      "8-9Y"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/kids/dress-girls-organza-champagne/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/kids/dress-girls-organza-champagne/tiered_float_hang.jpg",
+      "fabric_macro_detail": "/assets/products/kids/dress-girls-organza-champagne/organza_zari_scallop_macro.jpg",
+      "back_view": "/assets/products/kids/dress-girls-organza-champagne/silk_sash_bow_back.jpg",
+      "folded_view": "/assets/products/kids/dress-girls-organza-champagne/sweet_gift_box_folded.jpg"
+    },
+    "has_3d_view": false,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "Tiered Festive Flare",
+    "featured": false
+  },
+  {
+    "id": "OOT-KID-049",
+    "name": "Boys Raw Silk Bandhgala Waistcoat Set",
+    "subtitle_or_tagline": "The Little Edit / Wedding Edit",
+    "category": "Kids",
+    "collection": "The Eid Edit",
+    "gender": "Kids",
+    "price_bdt": 3400,
+    "original_price_bdt": null,
+    "badge": "EXCLUSIVE",
+    "description": "Miniature tailored Bandhgala waistcoat in textured Rajshahi Matka silk with brass buttons, worn over a crisp white cotton kurta and pajama trousers.",
+    "fabric": "Pure Rajshahi Matka Silk & Combed Cotton",
+    "craft_technique": "Bespoke Junior Tailoring",
+    "colors": [
+      {
+        "name": "Warm Sand & White",
+        "hex": "#D6C6B0",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "4-5Y",
+      "6-7Y",
+      "8-9Y",
+      "10-12Y"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/kids/waistcoat-boys-bandhgala-sand/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/kids/waistcoat-boys-bandhgala-sand/formal_junior_hang.jpg",
+      "fabric_macro_detail": "/assets/products/kids/waistcoat-boys-bandhgala-sand/miniature_brass_button_macro.jpg",
+      "back_view": "/assets/products/kids/waistcoat-boys-bandhgala-sand/cinch_strap_back.jpg",
+      "folded_view": "/assets/products/kids/waistcoat-boys-bandhgala-sand/complete_ensemble_folded.jpg"
+    },
+    "has_3d_view": false,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "Tailored Junior Fit",
+    "featured": false
+  },
+  {
+    "id": "OOT-KID-050",
+    "name": "Junior Monochrome Muslin Kurti Set",
+    "subtitle_or_tagline": "The Little Edit / Contemporary Craft",
+    "category": "Kids",
+    "collection": "Atelier Signatures",
+    "gender": "Kids",
+    "price_bdt": 2400,
+    "original_price_bdt": null,
+    "badge": null,
+    "description": "Monochrome Dhakai Jamdani kurti for young girls with minimal geometric borders and soft gathered white cotton pajamas.",
+    "fabric": "100% Breathable Muslin Cotton",
+    "craft_technique": "Supplementary Weft Needlework",
+    "colors": [
+      {
+        "name": "Obsidian & Chalk",
+        "hex": "#212121",
+        "is_default": true
+      }
+    ],
+    "sizes": [
+      "3-4Y",
+      "5-6Y",
+      "7-8Y",
+      "9-10Y"
+    ],
+    "stock_status": "In Stock — Dhaka Atelier",
+    "images": {
+      "hero_flatlay": "/assets/products/kids/kurti-junior-monochrome-muslin/hero_flatlay.jpg",
+      "hanging_view": "/assets/products/kids/kurti-junior-monochrome-muslin/child_boutique_hang.jpg",
+      "fabric_macro_detail": "/assets/products/kids/kurti-junior-monochrome-muslin/geometric_chalk_motif_macro.jpg",
+      "back_view": "/assets/products/kids/kurti-junior-monochrome-muslin/button_fastening_back.jpg",
+      "folded_view": "/assets/products/kids/kurti-junior-monochrome-muslin/clean_creased_junior_folded.jpg"
+    },
+    "has_3d_view": false,
+    "has_virtual_try_on": false,
+    "avatar_preview_id": null,
+    "fit_recommendation": "A-Line Relaxed",
     "featured": false
   }
 ];
 
-export const CATALOG_PRODUCTS: OotfyProduct[] = OOTFY_PRODUCTS;
-
-export function formatPriceBDT(amount: number): string {
-  return `৳${amount.toLocaleString("en-US")}`;
-}
-
-export function formatPrice(amount: number, currency: string = "BDT"): string {
-  if (currency === "BDT" || !currency) {
-    return formatPriceBDT(amount);
-  }
-  return new Intl.NumberFormat("en-US", { style: "currency", currency }).format(amount);
-}
-
-export type ProductQuery = {
+export type ProductFilterQuery = {
   category?: string;
-  collection?: string;
   gender?: string;
-  badge?: string;
+  collection?: string;
+  featured?: boolean;
   q?: string;
-  sort?: "featured" | "price-asc" | "price-desc" | "name-asc";
+  sort?: "price-asc" | "price-desc" | "name-asc";
   page?: number;
   pageSize?: number;
-  featured?: boolean;
 };
 
-export async function getProducts(query: ProductQuery = {}): Promise<{ items: OotfyProduct[]; total: number; page: number; pageSize: number }> {
-  // Attempt to fetch from Supabase if table is populated
+export async function getProducts(query: ProductFilterQuery = {}): Promise<{
+  items: OotfyProduct[];
+  total: number;
+  page: number;
+  pageSize: number;
+}> {
   try {
-    let sbQuery = supabase.from("products").select("*", { count: "exact" });
-    if (query.category) sbQuery = sbQuery.eq("category", query.category);
-    if (query.gender) sbQuery = sbQuery.eq("gender", query.gender);
-    if (query.collection) sbQuery = sbQuery.eq("collection", query.collection);
-    if (query.featured) sbQuery = sbQuery.eq("featured", true);
+    let dbQuery = supabase.from("products").select("*", { count: "exact" });
+    if (query.category) dbQuery = dbQuery.ilike("category", query.category);
+    if (query.gender) dbQuery = dbQuery.ilike("gender", query.gender);
+    if (query.collection) dbQuery = dbQuery.ilike("collection", query.collection);
+    if (query.featured) dbQuery = dbQuery.eq("featured", true);
+    if (query.q) dbQuery = dbQuery.or(`name.ilike.%${query.q}%,description.ilike.%${query.q}%`);
 
-    const { data, count, error } = await sbQuery;
+    if (query.sort === "price-asc") dbQuery = dbQuery.order("price_bdt", { ascending: true });
+    if (query.sort === "price-desc") dbQuery = dbQuery.order("price_bdt", { ascending: false });
+    if (query.sort === "name-asc") dbQuery = dbQuery.order("name", { ascending: true });
+
+    const page = query.page || 1;
+    const pageSize = query.pageSize || 12;
+    const from = (page - 1) * pageSize;
+    const to = from + pageSize - 1;
+    dbQuery = dbQuery.range(from, to);
+
+    const { data, count, error } = await dbQuery;
     if (!error && data && data.length > 0) {
       return {
         items: data as OotfyProduct[],
-        total: count ?? data.length,
-        page: query.page ?? 1,
-        pageSize: query.pageSize ?? data.length
+        total: count || data.length,
+        page,
+        pageSize,
       };
     }
   } catch {
-    // fallback to local catalog
+    // Fallback below
   }
 
-  // Local fallback
+  // Fallback to local catalog
   let items = [...OOTFY_PRODUCTS];
   if (query.category) {
     items = items.filter((p) => p.category.toLowerCase() === query.category!.toLowerCase());
@@ -1484,3 +2313,19 @@ export async function getProductById(id: string): Promise<OotfyProduct | null> {
   }
   return OOTFY_PRODUCTS.find((p) => p.id === id) || null;
 }
+
+export const CATALOG_PRODUCTS: OotfyProduct[] = OOTFY_PRODUCTS;
+
+export function formatPriceBDT(amount: number): string {
+  return `৳ ${amount.toLocaleString()}`;
+}
+
+export function formatPrice(amount: number, currency: string = "BDT"): string {
+  if (currency === "BDT") {
+    return formatPriceBDT(amount);
+  }
+  return `${currency} ${amount.toLocaleString()}`;
+}
+
+export type ProductQuery = ProductFilterQuery;
+
