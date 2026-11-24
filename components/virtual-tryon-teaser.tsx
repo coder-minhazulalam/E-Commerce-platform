@@ -61,11 +61,12 @@ export function VirtualTryonTeaser({ onLaunchModal }: VirtualTryonTeaserProps) {
           <div className="lg:col-span-6">
             <div className="w-full aspect-[4/5] bg-[#3a4a3f] overflow-hidden relative shadow-2xl group select-none">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeQSxquca6_eFBohygNnrAoIapcJGaMfofzrEmDPRb3zPxuW9P6IovnVCXVC5z97rXztB6lESH8fQskzP2GO-RoueMsra5Si2rvJLw9qERDxJeypiZOeael6njgxExI-CBy0Vk3OblYdhwjtsU0x1ZxXYWaOKPW_h7-ZXRkSHU3Adwh4yMX-KwEL-7ejUOI7ujkBBEhIcAb94wfinTAHs0TGf1Mo5vJsuSEDUEYgw"
+                src="/assets/tryon/tryon-avatar-mannequin.jpg"
                 alt="Virtual Try-On Black Panjabi Preview"
                 fill
                 unoptimized
-                className="object-cover object-top transition-transform duration-500 ease-out"
+                priority
+                className="object-cover object-center transition-transform duration-500 ease-out"
                 style={{ transform: angleConfig[angle].transform }}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

@@ -300,7 +300,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Made-to-Order (7 Days Dispatch)",
     "images": {
-      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYAFI_PmmauTCrm73TRCjj9Gevg-iIOPNnIMA2vXYOHYf5jALiTM7imQ9s_EH-7ht0ryf1qGxIMrIlApFTt66mJiK_hRskBhuya8Qth9QaLsb6RUIs9tADGdHqVSU1EODql9mLkxW7hSiE_Q92yyE_Gn7SPqLbbEJKY__D3IzzQDLnS0Z2e5S79HhdWI__isNQlL9jW9bAmBCiTdraouLZKeeE6AgSVWXojJf6ZIQ",
+      "hero_flatlay": "/assets/eid/eid-folded-silks.jpg",
       "hanging_view": "/assets/products/saree-tissue-drape.jpg",
       "fabric_macro_detail": "/assets/products/saree-tissue-zari-zoom.jpg",
       "back_view": null,
@@ -979,7 +979,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "2 Units Remaining",
     "images": {
-      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuBeQcivkgTtkfnKeO-ByW7wpzBO4JIOtGHPjj2SYlb8EIcaZ59Z3TRu88zjZ2TXH_31oUeBCa2_QM6tQDjdAI3LlyoNXoqpyA_ySh8kACVIYY5fHPgDQGd92NeDL9sM5-ZRQ2XUvwAjUHAdXsVqqd5ncYIbfujibuehHISlhUQueAkZ_tRKmPQoRDtebrNIiLHuJTs3lrijLnnZ4aJUmADlUq6bCLYDaQSHFjmkHyM",
+      "hero_flatlay": "/assets/eid/eid-muslin-detail.jpg",
       "hanging_view": "/assets/products/saree-jamdani-black-drape.jpg",
       "fabric_macro_detail": "/assets/products/saree-jamdani-black-zoom.jpg",
       "back_view": null,
