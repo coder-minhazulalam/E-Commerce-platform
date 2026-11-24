@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { OOTFY_PRODUCTS, getProducts, type OotfyProduct } from "../lib/products";
 import { SiteHeader } from "../components/site-header";
 import { HeroSection } from "../components/hero-section";
-import { CategoryNav } from "../components/category-nav";
 import { NewArrivalsSection } from "../components/new-arrivals-section";
 import { EidEditSection } from "../components/eid-edit-section";
 import { VirtualTryonTeaser } from "../components/virtual-tryon-teaser";
@@ -16,7 +15,6 @@ import { ToastNotification } from "../components/toast-notification";
 
 export default function HomePage() {
   const [products, setProducts] = useState<OotfyProduct[]>(OOTFY_PRODUCTS);
-  const [activeCategory, setActiveCategory] = useState("all");
   const [wishlistIds, setWishlistIds] = useState<Set<string>>(new Set());
   const [cartCount, setCartCount] = useState(1);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -38,29 +36,6 @@ export default function HomePage() {
       active = false;
     };
   }, []);
-
-  const handleSelectCategory = (catId: string) => {
-    setActiveCategory(catId);
-    if (catId === "all") {
-      setProducts(OOTFY_PRODUCTS);
-    } else {
-      const filtered = OOTFY_PRODUCTS.filter((p) => {
-        const pCat = p.category.toLowerCase().replace(/[\s-_]+/g, "");
-        const target = catId.replace(/[\s-_]+/g, "");
-        if (target === "suits") {
-          return pCat === "suit" || pCat === "blazer" || pCat === "suits";
-        }
-        if (target === "kids") {
-          return pCat === "kids" || p.gender.toLowerCase() === "kids";
-        }
-        if (target === "threepiece") {
-          return pCat === "threepiece" || pCat === "salwarkameez" || pCat === "kurti";
-        }
-        return pCat === target;
-      });
-      setProducts(filtered.length > 0 ? filtered : OOTFY_PRODUCTS);
-    }
-  };
 
   const handleQuickAdd = (product: OotfyProduct) => {
     setCartCount((prev) => prev + 1);
@@ -99,13 +74,7 @@ export default function HomePage() {
         {/* 2. Hero Section */}
         <HeroSection />
 
-        {/* 3. Category Navigation Filter */}
-        <CategoryNav
-          activeCategory={activeCategory}
-          onSelectCategory={handleSelectCategory}
-        />
-
-        {/* 4. New Arrivals Curated Releases */}
+        {/* 3. New Arrivals Curated Releases */}
         <NewArrivalsSection
           products={products}
           onQuickAdd={handleQuickAdd}

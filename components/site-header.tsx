@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Search, Heart, ShoppingBag, User } from "lucide-react";
 
 interface SiteHeaderProps {
@@ -11,6 +12,7 @@ interface SiteHeaderProps {
 }
 
 export function SiteHeader({ wishlistCount = 0, cartCount = 0, onOpenSearch }: SiteHeaderProps) {
+  const pathname = usePathname() || "/";
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -51,37 +53,27 @@ export function SiteHeader({ wishlistCount = 0, cartCount = 0, onOpenSearch }: S
               </span>
             </Link>
 
-            {/* Navigation Links */}
+            {/* Navigation Links - Home & Shop Only */}
             <nav className="hidden md:flex items-center gap-8 lg:gap-10" aria-label="Primary navigation">
               <Link
                 href="/"
-                className="uppercase transition-colors text-[#1c1c19] font-medium relative py-1 text-xs tracking-widest after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-[#243329]"
+                className={`uppercase transition-colors font-medium relative py-1 text-xs tracking-widest ${
+                  pathname === "/"
+                    ? "text-[#1c1c19] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-[#243329]"
+                    : "text-[#434844] hover:text-[#1c1c19]"
+                }`}
               >
                 Home
               </Link>
               <Link
-                href="#new-arrivals"
-                className="text-xs uppercase text-[#434844] hover:text-[#1c1c19] transition-colors py-1 tracking-widest font-medium"
+                href="/shop"
+                className={`uppercase transition-colors font-medium relative py-1 text-xs tracking-widest ${
+                  pathname.startsWith("/shop")
+                    ? "text-[#1c1c19] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-[#243329]"
+                    : "text-[#434844] hover:text-[#1c1c19]"
+                }`}
               >
                 Shop
-              </Link>
-              <Link
-                href="#category-nav"
-                className="text-xs uppercase text-[#434844] hover:text-[#1c1c19] transition-colors py-1 tracking-widest font-medium"
-              >
-                Men
-              </Link>
-              <Link
-                href="#category-nav"
-                className="text-xs uppercase text-[#434844] hover:text-[#1c1c19] transition-colors py-1 tracking-widest font-medium"
-              >
-                Women
-              </Link>
-              <Link
-                href="#category-nav"
-                className="text-xs uppercase text-[#434844] hover:text-[#1c1c19] transition-colors py-1 tracking-widest font-medium"
-              >
-                Kids
               </Link>
             </nav>
 

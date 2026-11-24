@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Heart, ShoppingBag } from "lucide-react";
+import Link from "next/link";
+import { Heart, ShoppingBag, Eye } from "lucide-react";
 import { type OotfyProduct, formatPriceBDT } from "../lib/products";
 
 interface ProductCardProps {
@@ -10,6 +11,7 @@ interface ProductCardProps {
   onQuickAdd?: (product: OotfyProduct) => void;
   onToggleWishlist?: (product: OotfyProduct) => void;
   isWishlisted?: boolean;
+  showPrice?: boolean;
 }
 
 // 100% Clothing-Only / Garment-Only photographic mapping (NO human models/people, NO brand watermarks)
@@ -171,6 +173,7 @@ export function ProductCard({
   onQuickAdd,
   onToggleWishlist,
   isWishlisted = false,
+  showPrice = false,
 }: ProductCardProps) {
   const [popping, setPopping] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -189,6 +192,7 @@ export function ProductCard({
   }, [product.id, product.images]);
 
   const handleHeartClick = (e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
     setPopping(true);
     setTimeout(() => setPopping(false), 400);
@@ -204,26 +208,28 @@ export function ProductCard({
           <div className="absolute inset-0 bg-[#ebe8e3] animate-pulse" />
         )}
 
-        <Image
-          src={currentImgSrc}
-          alt={product.name}
-          fill
-          unoptimized
-          onLoad={() => setImageLoaded(true)}
-          onError={() => {
-            setCurrentImgSrc(PRODUCT_IMAGE_MAP["OOT-PAN-001"]);
-            setImageLoaded(true);
-          }}
-          className={`object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 ${
-            imageLoaded ? "opacity-100" : "opacity-0"
-          }`}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-        />
+        <Link href={`/products/${product.id}`} className="absolute inset-0 z-0">
+          <Image
+            src={currentImgSrc}
+            alt={product.name}
+            fill
+            unoptimized
+            onLoad={() => setImageLoaded(true)}
+            onError={() => {
+              setCurrentImgSrc(PRODUCT_IMAGE_MAP["OOT-PAN-001"]);
+              setImageLoaded(true);
+            }}
+            className={`object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 ${
+              imageLoaded ? "opacity-100" : "opacity-0"
+            }`}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+        </Link>
 
         {/* Badge */}
         {product.badge && (
           <span
-            className={`absolute top-3 left-3 px-2.5 py-1 text-[10px] uppercase font-semibold tracking-widest z-10 ${
+            className={`absolute top-3 left-3 px-2.5 py-1 text-[10px] uppercase font-semibold tracking-widest z-10 pointer-events-none ${
               product.badge === "LIMITED"
                 ? "bg-[#243329] text-white"
                 : product.badge === "EXCLUSIVE"
@@ -240,7 +246,7 @@ export function ProductCard({
           type="button"
           aria-label={`Save ${product.name} to wishlist`}
           onClick={handleHeartClick}
-          className={`wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm shadow-sm transition-all duration-200 hover:scale-110 cursor-pointer z-10 ${
+          className={`wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm shadow-sm transition-all duration-200 hover:scale-110 cursor-pointer z-20 ${
             popping ? "heart-pop" : ""
           } ${
             isWishlisted
@@ -257,37 +263,50 @@ export function ProductCard({
           />
         </button>
 
-        {/* Quick Add To Bag Hover Drawer with Lucide ShoppingBag */}
-        <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/60 via-black/20 to-transparent translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center z-10">
+        {/* Hover Action Drawer: View Details on hover & Quick Add */}
+        <div className="absolute inset-x-0 bottom-0 p-2.5 sm:p-3 bg-gradient-to-t from-black/70 via-black/30 to-transparent translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2 justify-center z-20">
+          <Link
+            href={`/products/${product.id}`}
+            className="flex-1 bg-[#fcf9f4]/95 hover:bg-[#fcf9f4] text-[#1c1c19] text-[11px] uppercase tracking-wider py-2.5 px-3 flex items-center justify-center gap-1.5 backdrop-blur-sm shadow transition-colors active:scale-95 font-medium cursor-pointer text-center"
+          >
+            <Eye className="w-3.5 h-3.5 text-[#243329]" />
+            <span>View Details</span>
+          </Link>
           <button
             type="button"
+            aria-label={`Quick add ${product.name} to bag`}
             onClick={(e) => {
+              e.preventDefault();
               e.stopPropagation();
               onQuickAdd?.(product);
             }}
-            className="w-full bg-[#fcf9f4]/95 hover:bg-[#fcf9f4] text-[#1c1c19] text-[11px] uppercase tracking-wider py-2.5 px-3 flex items-center justify-center gap-2 backdrop-blur-sm shadow transition-colors active:scale-95 font-medium cursor-pointer"
+            className="w-10 h-10 bg-[#243329] hover:bg-[#1a261e] text-white flex items-center justify-center backdrop-blur-sm shadow transition-colors active:scale-95 cursor-pointer flex-shrink-0"
+            title="Quick Add to Bag"
           >
-            <ShoppingBag className="w-3.5 h-3.5 text-[#243329]" />
-            <span>Quick Add</span>
+            <ShoppingBag className="w-4 h-4" />
           </button>
         </div>
       </div>
 
       {/* Meta Information */}
       <div className="flex flex-col">
-        <h3 className="font-serif text-lg sm:text-xl text-[#1c1c19] group-hover:text-[#755a21] transition-colors cursor-pointer leading-snug">
-          {product.name}
-        </h3>
-        <div className="flex items-center gap-2 mt-1">
-          <p className="text-sm font-medium text-[#1c1c19]">
-            {formatPriceBDT(product.price_bdt)}
-          </p>
-          {product.original_price_bdt && (
-            <p className="text-xs text-[#737873] line-through">
-              {formatPriceBDT(product.original_price_bdt)}
+        <Link href={`/products/${product.id}`} className="group-hover:text-[#755a21] transition-colors">
+          <h3 className="font-serif text-lg sm:text-xl text-[#1c1c19] group-hover:text-[#755a21] transition-colors leading-snug">
+            {product.name}
+          </h3>
+        </Link>
+        {showPrice && (
+          <div className="flex items-center gap-2 mt-1">
+            <p className="text-sm font-medium text-[#1c1c19]">
+              {formatPriceBDT(product.price_bdt)}
             </p>
-          )}
-        </div>
+            {product.original_price_bdt && (
+              <p className="text-xs text-[#737873] line-through">
+                {formatPriceBDT(product.original_price_bdt)}
+              </p>
+            )}
+          </div>
+        )}
         {product.subtitle_or_tagline && (
           <p className="text-[11px] text-[#434844] mt-0.5 tracking-wide line-clamp-1">
             {product.subtitle_or_tagline}
