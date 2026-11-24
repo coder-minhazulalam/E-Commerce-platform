@@ -334,7 +334,7 @@ export function NocturneCampaignSection({ onNotify }: NocturneCampaignSectionPro
             <div className="relative w-full max-w-[440px] aspect-[3/4] rounded-sm overflow-hidden shadow-2xl border border-white/20 bg-[#d8cec3] group">
               {/* Garment Image on Pedestal */}
               <Image
-                src="/assets/eid/nocturne-garment.jpg"
+                src="/assets/eid/nocturne-garment-clean.jpg"
                 alt="The Nocturne of Bengal - Heritage Emerald Jamdani"
                 fill
                 unoptimized
