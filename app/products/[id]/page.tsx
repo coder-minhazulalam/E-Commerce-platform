@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { OOTFY_PRODUCTS, getProductById, formatPriceBDT } from "../../../lib/products";
@@ -31,10 +31,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const fallbackHero = PRODUCT_IMAGE_MAP[product.id] || product.images?.hero_flatlay || "/assets/products/jamdani-saree-clean.jpg";
 
   return (
-    <ProductDetailsClient
-      product={product}
-      fallbackHero={fallbackHero}
-      relatedProducts={relatedProducts}
-    />
+    <Suspense fallback={<div className="min-h-screen bg-[#fcf9f4]" />}>
+      <ProductDetailsClient
+        product={product}
+        fallbackHero={fallbackHero}
+        relatedProducts={relatedProducts}
+      />
+    </Suspense>
   );
 }
