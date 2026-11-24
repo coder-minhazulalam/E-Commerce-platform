@@ -106,7 +106,13 @@ export default function HomePage() {
         <EidEditSection />
 
         {/* 6. Virtual Try-On Teaser ("SEE IT ON YOU") */}
-        <VirtualTryonTeaser onLaunchModal={handleLaunchTryOn} />
+        <VirtualTryonTeaser
+          onLaunchModal={handleLaunchTryOn}
+          onQuickAdd={(name) => {
+            setCartCount((c) => c + 1);
+            setToastMessage(`Added ${name} to your bag`);
+          }}
+        />
 
         {/* 7. Best Sellers (Atelier Signatures) */}
         <BestSellersSection
