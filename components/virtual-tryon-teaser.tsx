@@ -1,545 +1,516 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { Sparkles, RotateCcw, Check, ShoppingBag, X, SlidersHorizontal } from "lucide-react";
+import { Sparkles, ShoppingBag, Eye, Check, Info, ZoomIn } from "lucide-react";
 
 interface VirtualTryonTeaserProps {
   onLaunchModal?: () => void;
   onQuickAdd?: (productName: string) => void;
 }
 
+interface GarmentOption {
+  id: string;
+  name: string;
+  tagline: string;
+  price: number;
+  originalPrice: number | null;
+  fabric: string;
+  craft: string;
+  fitDescription: string;
+  views: {
+    silhouette: {
+      url: string;
+      label: string;
+      description: string;
+    };
+    macro: {
+      url: string;
+      label: string;
+      description: string;
+    };
+    folded: {
+      url: string;
+      label: string;
+      description: string;
+    };
+  };
+  hotspots: Array<{
+    id: string;
+    top: string;
+    left: string;
+    title: string;
+    detail: string;
+  }>;
+}
+
+const GARMENTS: GarmentOption[] = [
+  {
+    id: "zardozi-panjabi",
+    name: "Zardozi Embroidered Silk Kurta",
+    tagline: "The Eid Edit · Midnight Espresso",
+    price: 7200,
+    originalPrice: 8500,
+    fabric: "100% Rajshahi Tussar Silk",
+    craft: "Old-Dhaka Antique Gold Zardozi Work",
+    fitDescription: "Tailored drape with 2.5\" chest ease for celebratory evening comfort.",
+    views: {
+      silhouette: {
+        url: "/assets/eid/eid-espresso-panjabi.jpg",
+        label: "Full Silhouette · Brass Stand",
+        description: "Hanging full drape on minimalist atelier stand",
+      },
+      macro: {
+        url: "/assets/eid/eid-muslin-detail.jpg",
+        label: "Craft Macro · 5X Zoom",
+        description: "Hand-embossed zari threadwork along the placket",
+      },
+      folded: {
+        url: "/assets/eid/eid-folded-silks.jpg",
+        label: "Atelier Folded · Travertine",
+        description: "Sculptural hand-pressed silk presentation",
+      },
+    },
+    hotspots: [
+      {
+        id: "collar",
+        top: "22%",
+        left: "50%",
+        title: "Mandarin Collar",
+        detail: "Hand-finished stand collar with antique bullion zardozi wire.",
+      },
+      {
+        id: "placket",
+        top: "38%",
+        left: "52%",
+        title: "Chest Placket",
+        detail: "Concealed closure with hand-sewn mother-of-pearl buttons.",
+      },
+      {
+        id: "cuff",
+        top: "54%",
+        left: "34%",
+        title: "Sleeve Cuff",
+        detail: "Tonal hand-stitch detailing along tailored French cuffs.",
+      },
+    ],
+  },
+  {
+    id: "ivory-panjabi",
+    name: "Embroidered Ivory Panjabi",
+    tagline: "Atelier Signatures · Handloom Muslin",
+    price: 2490,
+    originalPrice: 2990,
+    fabric: "80% Organic Cotton, 20% Mulberry Silk",
+    craft: "Dhakai Tonal Hand-Embroidery",
+    fitDescription: "Effortless relaxed drape in breathable heritage muslin blend.",
+    views: {
+      silhouette: {
+        url: "/assets/hero/hero-banner-master.jpg",
+        label: "Full Silhouette · Natural Light",
+        description: "Minimalist brass hanging presentation in sunlit atelier",
+      },
+      macro: {
+        url: "/assets/eid/eid-muslin-detail.jpg",
+        label: "Weave Detail · Fine Muslin",
+        description: "Translucent handloom cotton-silk threads with geometric motifs",
+      },
+      folded: {
+        url: "/assets/eid/eid-folded-silks.jpg",
+        label: "Folded Capsule · Atelier Box",
+        description: "Hand-wrapped in breathable acid-free muslin tissue",
+      },
+    },
+    hotspots: [
+      {
+        id: "collar",
+        top: "24%",
+        left: "48%",
+        title: "Tonal Collar",
+        detail: "Subtle tone-on-tone Dhakai threadwork on mandarin neck.",
+      },
+      {
+        id: "fabric",
+        top: "45%",
+        left: "52%",
+        title: "Heritage Muslin",
+        detail: "Lightweight 80/20 cotton-silk spun on traditional pit looms.",
+      },
+    ],
+  },
+  {
+    id: "jamdani-saree",
+    name: "Handloom Jamdani Saree",
+    tagline: "Heritage Weave · 6 Yards Muslin",
+    price: 8900,
+    originalPrice: 10500,
+    fabric: "100% Fine Count Khadi Muslin",
+    craft: "Traditional Shitalakhya Jamdani Weave",
+    fitDescription: "Classic architectural 6-yard drape with supplementary weft motifs.",
+    views: {
+      silhouette: {
+        url: "/assets/products/jamdani-saree-clean.jpg",
+        label: "Full Weave · Jamdani Drape",
+        description: "Hand-finished floral Jamdani weave in natural ivory & gold",
+      },
+      macro: {
+        url: "/assets/eid/eid-muslin-detail.jpg",
+        label: "Pallu Motifs · Supplementary Weft",
+        description: "Geometrical flora painstakingly laid by Dhakai master weavers",
+      },
+      folded: {
+        url: "/assets/eid/eid-folded-silks.jpg",
+        label: "Archive Fold · Travertine Slab",
+        description: "Museum-grade archival storage fold",
+      },
+    },
+    hotspots: [
+      {
+        id: "border",
+        top: "35%",
+        left: "42%",
+        title: "Jamdani Selvedge",
+        detail: "Intricate floral jaal motifs woven thread-by-thread on pit looms.",
+      },
+      {
+        id: "pallu",
+        top: "60%",
+        left: "58%",
+        title: "Zari Border",
+        detail: "Metallic antique zari threads blended with sheer cotton muslin.",
+      },
+    ],
+  },
+];
+
+const SIZES = [
+  {
+    code: "38R",
+    label: "38R (S)",
+    chest: '38.5"',
+    length: '41.5"',
+    shoulder: '17.5"',
+    sleeve: '25.0"',
+  },
+  {
+    code: "40R",
+    label: "40R (M)",
+    chest: '40.5"',
+    length: '42.0"',
+    shoulder: '18.2"',
+    sleeve: '25.5"',
+  },
+  {
+    code: "42R",
+    label: "42R (L)",
+    chest: '42.5"',
+    length: '43.0"',
+    shoulder: '18.8"',
+    sleeve: '26.0"',
+  },
+  {
+    code: "44R",
+    label: "44R (XL)",
+    chest: '44.5"',
+    length: '43.5"',
+    shoulder: '19.4"',
+    sleeve: '26.5"',
+  },
+];
+
 export function VirtualTryonTeaser({ onLaunchModal, onQuickAdd }: VirtualTryonTeaserProps) {
-  const [angle, setAngle] = useState<"front" | "perspective" | "back">("front");
-  const [rotationDeg, setRotationDeg] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [isAutoRotating, setIsAutoRotating] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedSize, setSelectedSize] = useState("40R (M)");
-  const [selectedColor, setSelectedColor] = useState("Obsidian Black");
-  const dragStartX = useRef(0);
-  const currentRotRef = useRef(0);
-  const autoRotateTimer = useRef<NodeJS.Timeout | null>(null);
+  const [selectedGarmentIndex, setSelectedGarmentIndex] = useState(0);
+  const [activeView, setActiveView] = useState<"silhouette" | "macro" | "folded">("silhouette");
+  const [selectedSizeIndex, setSelectedSizeIndex] = useState(1); // 40R default
+  const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
 
-  // Sync angle preset with degree rotation
-  const setPresetAngle = useCallback((preset: "front" | "perspective" | "back") => {
-    setIsAutoRotating(false);
-    setAngle(preset);
-    if (preset === "front") {
-      setRotationDeg(0);
-      currentRotRef.current = 0;
-    } else if (preset === "perspective") {
-      setRotationDeg(-32);
-      currentRotRef.current = -32;
-    } else if (preset === "back") {
-      setRotationDeg(180);
-      currentRotRef.current = 180;
+  const garment = GARMENTS[selectedGarmentIndex];
+  const currentView = garment.views[activeView];
+  const sizeSpec = SIZES[selectedSizeIndex];
+
+  const handleAdd = () => {
+    if (onQuickAdd) {
+      onQuickAdd(`${garment.name} (${sizeSpec.code})`);
     }
-  }, []);
-
-  // Handle Drag / Touch Rotation
-  const handlePointerDown = (e: React.PointerEvent) => {
-    setIsAutoRotating(false);
-    setIsDragging(true);
-    dragStartX.current = e.clientX;
-    (e.target as HTMLElement).setPointerCapture(e.pointerId);
-  };
-
-  const handlePointerMove = (e: React.PointerEvent) => {
-    if (!isDragging) return;
-    const deltaX = e.clientX - dragStartX.current;
-    dragStartX.current = e.clientX;
-    
-    // Scale sensitivity
-    const newRot = (currentRotRef.current + deltaX * 0.8) % 360;
-    currentRotRef.current = newRot;
-    setRotationDeg(newRot);
-
-    // Update active pill button based on current rotation
-    const normalized = ((newRot % 360) + 360) % 360;
-    if (normalized > 135 && normalized < 225) {
-      setAngle("back");
-    } else if ((normalized > 15 && normalized <= 135) || (normalized > 225 && normalized < 345)) {
-      setAngle("perspective");
-    } else {
-      setAngle("front");
-    }
-  };
-
-  const handlePointerUp = (e: React.PointerEvent) => {
-    if (isDragging) {
-      setIsDragging(false);
-      try {
-        (e.target as HTMLElement).releasePointerCapture(e.pointerId);
-      } catch {
-        // Pointer already released
-      }
-    }
-  };
-
-  // Auto 360 Turntable rotation
-  const toggleAutoRotate = () => {
-    if (isAutoRotating) {
-      setIsAutoRotating(false);
-    } else {
-      setIsAutoRotating(true);
-    }
-  };
-
-  useEffect(() => {
-    if (isAutoRotating) {
-      const interval = setInterval(() => {
-        setRotationDeg((prev) => {
-          const next = (prev + 1.5) % 360;
-          currentRotRef.current = next;
-          const normalized = ((next % 360) + 360) % 360;
-          if (normalized > 135 && normalized < 225) {
-            setAngle("back");
-          } else if ((normalized > 20 && normalized <= 135) || (normalized > 225 && normalized < 340)) {
-            setAngle("perspective");
-          } else {
-            setAngle("front");
-          }
-          return next;
-        });
-      }, 30);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoRotating]);
-
-  // Normalized rotation for rendering backface vs frontface
-  const normalizedRot = ((rotationDeg % 360) + 360) % 360;
-  const isBackSide = normalizedRot > 90 && normalizedRot < 270;
-
-  // View Angle Label Display
-  const getDisplayLabel = () => {
-    if (angle === "front") return "Preview: Front 0° · Atelier Studio";
-    if (angle === "perspective") return "Preview: Perspective ¾ 45° · Depth View";
-    return "Preview: Back Profile 180° · Tailored Yoke";
-  };
-
-  const handleLaunch = () => {
-    if (onLaunchModal) {
-      onLaunchModal();
-    }
-    setIsModalOpen(true);
   };
 
   return (
-    <>
-      <section className="w-full bg-[#243329] text-white py-16 lg:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left Narrative Column */}
-            <div className="lg:col-span-6 flex flex-col items-start gap-6 lg:gap-8">
-              <span className="text-[11px] uppercase text-[#b9cbbd] tracking-[0.2em] flex items-center gap-2 font-medium">
-                <span className="w-2 h-2 rounded-full bg-[#fed892] animate-pulse"></span>
-                Interactive Atelier
-              </span>
+    <section className="w-full bg-[#1b251f] text-[#fcf9f4] py-16 lg:py-24 border-y border-[#3a4a3f]/40 relative overflow-hidden">
+      {/* Background Subtle Atelier Atmosphere */}
+      <div className="absolute inset-0 bg-radial-gradient from-[#243329] to-[#151e18] pointer-events-none opacity-80" />
 
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+          
+          {/* Left Column: Atelier Narrative & Interactive Silhouette Configurator */}
+          <div className="lg:col-span-6 flex flex-col items-start gap-6 lg:gap-7">
+            {/* Eyebrow Status */}
+            <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-[#28382d] rounded-full border border-white/10 text-[11px] uppercase tracking-[0.2em] text-[#fed892] font-medium">
+              <span className="w-2 h-2 rounded-full bg-[#fed892] animate-pulse"></span>
+              <span>Interactive Silhouette Atelier</span>
+            </div>
+
+            {/* Main Headline */}
+            <div>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight leading-[1.1]">
                 SEE IT ON YOU
               </h2>
-
-              <p className="text-base text-[#a7b9ab] max-w-md leading-relaxed font-normal">
-                Experience bespoke proportion and drape before you order. Preview our tailored silhouettes on a neutral digital form mapped to standard South Asian tailoring proportions.
+              <p className="text-sm sm:text-base text-[#a7b9ab] mt-3 max-w-lg leading-relaxed font-normal">
+                Inspect proportions, artisanal drape, and textile weight before dispatch. Select an atelier silhouette below to explore high-definition photographic perspectives.
               </p>
-
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <button
-                  type="button"
-                  onClick={handleLaunch}
-                  className="tryon-pulse inline-flex items-center justify-center gap-2 bg-[#fcf9f4] text-[#1c1c19] text-xs uppercase tracking-widest px-8 py-4 hover:bg-[#f6f3ee] transition-all group cursor-pointer font-medium shadow-sm"
-                >
-                  <span>Launch Virtual Try-On</span>
-                  <Sparkles className="w-4 h-4 text-[#755a21] transition-transform duration-300 group-hover:scale-110" />
-                </button>
-                <div className="flex items-center gap-2 text-xs text-[#b9cbbd]/80">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#fed892]"></span>
-                  <span>Drag avatar for 360° rotation</span>
-                </div>
-              </div>
             </div>
 
-            {/* Right Interactive 3D Avatar Box */}
-            <div className="lg:col-span-6">
-              <div 
-                className={`w-full aspect-[4/5] bg-[#1a231d] overflow-hidden relative shadow-2xl group select-none ${
-                  isDragging ? "cursor-grabbing" : "cursor-grab"
-                }`}
-                style={{ perspective: "1200px" }}
-                onPointerDown={handlePointerDown}
-                onPointerMove={handlePointerMove}
-                onPointerUp={handlePointerUp}
-                onPointerCancel={handlePointerUp}
-              >
-                {/* 3D Rotating Avatar Card */}
-                <div
-                  className="relative w-full h-full"
-                  style={{
-                    transformStyle: "preserve-3d",
-                    transform: `rotateY(${rotationDeg}deg) ${angle === "perspective" && !isDragging ? "rotateX(2deg) scale(1.03)" : "scale(1)"}`,
-                    transition: isDragging || isAutoRotating ? "none" : "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
-                  }}
-                >
-                  {/* FRONT FACE */}
-                  <div
-                    className="absolute inset-0 w-full h-full"
-                    style={{
-                      backfaceVisibility: "hidden",
-                      WebkitBackfaceVisibility: "hidden",
-                    }}
-                  >
-                    <Image
-                      src="/assets/tryon/tryon-avatar-mannequin.jpg"
-                      alt="Virtual Try-On Front Preview"
-                      fill
-                      unoptimized
-                      priority
-                      className="object-cover object-center pointer-events-none"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-
-                    {/* Realistic 3D Dynamic Lighting Shading based on angle */}
-                    <div
-                      className="absolute inset-0 pointer-events-none transition-opacity duration-300"
-                      style={{
-                        background:
-                          angle === "perspective"
-                            ? "linear-gradient(110deg, rgba(255,255,255,0.18) 0%, transparent 40%, rgba(0,0,0,0.55) 100%)"
-                            : "radial-gradient(circle at 50% 35%, rgba(255,255,255,0.06) 0%, transparent 70%)",
-                      }}
-                    />
-                  </div>
-
-                  {/* BACK FACE (Tailored Back Profile of Panjabi) */}
-                  <div
-                    className="absolute inset-0 w-full h-full bg-[#1b251e] overflow-hidden"
-                    style={{
-                      transform: "rotateY(180deg)",
-                      backfaceVisibility: "hidden",
-                      WebkitBackfaceVisibility: "hidden",
-                    }}
-                  >
-                    {/* Back Base Mannequin Image */}
-                    <Image
-                      src="/assets/tryon/tryon-avatar-mannequin.jpg"
-                      alt="Virtual Try-On Back Profile Preview"
-                      fill
-                      unoptimized
-                      priority
-                      className="object-cover object-center scale-x-[-1] pointer-events-none filter brightness-95"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-
-                    {/* Tailored Back Panel Overlay: Smooth Mandarin Collar Back & Vertical Yoke Seam */}
-                    <div className="absolute inset-0 flex flex-col items-center pointer-events-none">
-                      {/* Back of Neutral Head */}
-                      <div className="w-[18%] aspect-[3/4] mt-[8%] rounded-[50%] bg-[#a3a3a0]/80 shadow-inner blur-[0.4px]" />
-
-                      {/* Tailored Mandarin Collar Back Band */}
-                      <div className="w-[14%] h-[2.5%] -mt-[1%] bg-[#1c1c1c] rounded-t-sm border-t border-[#333]/60 shadow-md" />
-
-                      {/* Tailored Back Yoke Line across shoulders */}
-                      <div className="w-[42%] h-[1px] bg-[#111] shadow-[0_1px_1px_rgba(255,255,255,0.07)] mt-[2%]" />
-
-                      {/* Center-Back Spine Stitching Seam down to hem */}
-                      <div className="w-[1.5px] h-[58%] bg-black/80 shadow-[1px_0_1px_rgba(255,255,255,0.05)] mt-[1px]" />
-                    </div>
-
-                    {/* Back Lighting Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none" />
-                  </div>
-                </div>
-
-                {/* Top View Angle Status Pill */}
-                <div className="absolute top-6 right-6 bg-[#fcf9f4]/95 text-[#1c1c19] px-3.5 py-1.5 text-[10px] uppercase tracking-wider backdrop-blur-sm shadow-md font-semibold flex items-center gap-1.5 pointer-events-none">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#755a21] animate-pulse"></span>
-                  <span>{getDisplayLabel()}</span>
-                </div>
-
-                {/* Angle Controls Pill Bar at Bottom */}
-                <div className="absolute bottom-6 inset-x-6 flex items-center justify-between pointer-events-auto">
-                  {/* Three Preset Buttons: FRONT | ¾ VIEW | BACK */}
-                  <div className="flex items-center gap-1 bg-black/60 backdrop-blur-md p-1.5 rounded-full border border-white/15 shadow-lg">
-                    <button
-                      type="button"
-                      onClick={() => setPresetAngle("front")}
-                      className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase tracking-wider transition-all cursor-pointer font-medium ${
-                        angle === "front" && !isBackSide
-                          ? "bg-white text-black font-semibold shadow-md"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
-                      }`}
-                    >
-                      Front
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setPresetAngle("perspective")}
-                      className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase tracking-wider transition-all cursor-pointer font-medium ${
-                        angle === "perspective" && !isBackSide
-                          ? "bg-white text-black font-semibold shadow-md"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
-                      }`}
-                    >
-                      ¾ View
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setPresetAngle("back")}
-                      className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase tracking-wider transition-all cursor-pointer font-medium ${
-                        isBackSide || angle === "back"
-                          ? "bg-white text-black font-semibold shadow-md"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
-                      }`}
-                    >
-                      Back
-                    </button>
-                  </div>
-
-                  {/* 360 Rotation Toggle */}
+            {/* Garment Selector Tabs */}
+            <div className="w-full border-b border-white/10 pb-4">
+              <span className="text-[10px] uppercase tracking-widest text-[#b9cbbd] block mb-2 font-medium">
+                Select Atelier Silhouette
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {GARMENTS.map((g, idx) => (
                   <button
+                    key={g.id}
                     type="button"
-                    onClick={toggleAutoRotate}
-                    className={`inline-flex items-center gap-1.5 text-[10px] uppercase tracking-wider backdrop-blur-md px-3.5 py-1.5 rounded-full border transition-all cursor-pointer font-medium ${
-                      isAutoRotating
-                        ? "bg-[#fed892] text-[#243329] border-[#fed892] font-semibold shadow-md"
-                        : "text-white/90 bg-black/60 border-white/15 hover:bg-black/80"
+                    onClick={() => {
+                      setSelectedGarmentIndex(idx);
+                      setActiveHotspot(null);
+                    }}
+                    className={`px-4 py-2 text-xs uppercase tracking-wider transition-all cursor-pointer font-medium border ${
+                      selectedGarmentIndex === idx
+                        ? "bg-[#fcf9f4] text-[#1c1c19] border-[#fcf9f4] shadow-md font-semibold"
+                        : "bg-black/30 text-white/80 border-white/15 hover:border-white/40 hover:text-white"
                     }`}
                   >
-                    <RotateCcw className={`w-3.5 h-3.5 ${isAutoRotating ? "animate-spin" : ""}`} />
-                    <span>{isAutoRotating ? "Rotating 360°" : "3D Rotate"}</span>
+                    {idx + 1}. {g.name.split(" ")[0]} {g.name.split(" ")[1]}
                   </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Garment Specs Summary */}
+            <div className="w-full space-y-3 bg-[#223026] p-5 border border-white/10">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <span className="text-[10px] uppercase tracking-widest text-[#fed892] font-semibold block">
+                    {garment.tagline}
+                  </span>
+                  <h3 className="font-serif text-xl sm:text-2xl text-white mt-0.5">
+                    {garment.name}
+                  </h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-lg sm:text-xl font-serif text-[#fed892]">
+                    ৳ {garment.price.toLocaleString()}
+                  </div>
+                  {garment.originalPrice && (
+                    <div className="text-xs text-[#a7b9ab] line-through">
+                      ৳ {garment.originalPrice.toLocaleString()}
+                    </div>
+                  )}
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Interactive Virtual Try-On Atelier Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-fade-in">
-          <div className="relative w-full max-w-4xl bg-[#fcf9f4] text-[#1c1c19] shadow-2xl border border-[#c3c8c2]/40 max-h-[92vh] overflow-y-auto">
-            {/* Modal Header */}
-            <div className="flex items-center justify-between p-6 border-b border-[#c3c8c2]/30">
-              <div>
-                <span className="text-[11px] uppercase tracking-widest text-[#755a21] font-medium block mb-0.5">
-                  Dhaka Atelier Digital Fitting
-                </span>
-                <h3 className="font-serif text-2xl lg:text-3xl uppercase tracking-tight text-[#1c1c19]">
-                  Virtual Try-On 3D Atelier
-                </h3>
+              <div className="grid grid-cols-2 gap-4 pt-3 border-t border-white/10 text-xs">
+                <div>
+                  <span className="text-[10px] uppercase tracking-wider text-[#a7b9ab] block">
+                    Fabric Composition
+                  </span>
+                  <span className="text-white font-medium">{garment.fabric}</span>
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase tracking-wider text-[#a7b9ab] block">
+                    Artisanal Technique
+                  </span>
+                  <span className="text-white font-medium">{garment.craft}</span>
+                </div>
               </div>
-              <button
-                type="button"
-                onClick={() => setIsModalOpen(false)}
-                className="p-2 hover:bg-[#ebe8e3] rounded-full transition-colors cursor-pointer text-[#434844]"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
 
-            {/* Modal Body */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6 lg:p-8">
-              {/* Left Column: Interactive 3D Canvas Preview */}
-              <div className="md:col-span-7">
-                <div 
-                  className="w-full aspect-[4/5] bg-[#243329] overflow-hidden relative shadow-lg cursor-grab active:cursor-grabbing select-none"
-                  style={{ perspective: "1200px" }}
-                  onPointerDown={handlePointerDown}
-                  onPointerMove={handlePointerMove}
-                  onPointerUp={handlePointerUp}
-                >
-                  <div
-                    className="relative w-full h-full"
-                    style={{
-                      transformStyle: "preserve-3d",
-                      transform: `rotateY(${rotationDeg}deg) ${angle === "perspective" && !isDragging ? "rotateX(2deg) scale(1.03)" : "scale(1)"}`,
-                      transition: isDragging || isAutoRotating ? "none" : "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
-                    }}
-                  >
-                    {/* Front */}
-                    <div className="absolute inset-0 w-full h-full" style={{ backfaceVisibility: "hidden" }}>
-                      <Image
-                        src="/assets/tryon/tryon-avatar-mannequin.jpg"
-                        alt="Fitting Avatar Front"
-                        fill
-                        unoptimized
-                        priority
-                        className="object-cover object-center pointer-events-none"
-                      />
-                    </div>
-                    {/* Back */}
-                    <div 
-                      className="absolute inset-0 w-full h-full bg-[#1b251e] overflow-hidden" 
-                      style={{ transform: "rotateY(180deg)", backfaceVisibility: "hidden" }}
-                    >
-                      <Image
-                        src="/assets/tryon/tryon-avatar-mannequin.jpg"
-                        alt="Fitting Avatar Back"
-                        fill
-                        unoptimized
-                        priority
-                        className="object-cover object-center scale-x-[-1] pointer-events-none filter brightness-95"
-                      />
-                      <div className="absolute inset-0 flex flex-col items-center pointer-events-none">
-                        <div className="w-[18%] aspect-[3/4] mt-[8%] rounded-[50%] bg-[#a3a3a0]/80 shadow-inner blur-[0.4px]" />
-                        <div className="w-[14%] h-[2.5%] -mt-[1%] bg-[#1c1c1c] rounded-t-sm border-t border-[#333]/60 shadow-md" />
-                        <div className="w-[42%] h-[1px] bg-[#111] shadow-[0_1px_1px_rgba(255,255,255,0.07)] mt-[2%]" />
-                        <div className="w-[1.5px] h-[58%] bg-black/80 mt-[1px]" />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Degree Readout Overlay */}
-                  <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 text-[10px] uppercase tracking-wider backdrop-blur-md rounded-full border border-white/10 font-mono">
-                    Azimuth: {Math.round(normalizedRot)}°
-                  </div>
-
-                  {/* Angle Switcher inside Modal */}
-                  <div className="absolute bottom-4 inset-x-4 flex items-center justify-between pointer-events-auto">
-                    <div className="flex items-center gap-1 bg-black/70 backdrop-blur-md p-1 rounded-full border border-white/15">
-                      <button
-                        type="button"
-                        onClick={() => setPresetAngle("front")}
-                        className={`px-3 py-1 rounded-full text-[10px] uppercase tracking-wider font-medium transition-all cursor-pointer ${
-                          angle === "front" && !isBackSide ? "bg-white text-black font-semibold" : "text-white/80"
-                        }`}
-                      >
-                        Front
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setPresetAngle("perspective")}
-                        className={`px-3 py-1 rounded-full text-[10px] uppercase tracking-wider font-medium transition-all cursor-pointer ${
-                          angle === "perspective" && !isBackSide ? "bg-white text-black font-semibold" : "text-white/80"
-                        }`}
-                      >
-                        ¾ View
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setPresetAngle("back")}
-                        className={`px-3 py-1 rounded-full text-[10px] uppercase tracking-wider font-medium transition-all cursor-pointer ${
-                          isBackSide || angle === "back" ? "bg-white text-black font-semibold" : "text-white/80"
-                        }`}
-                      >
-                        Back
-                      </button>
-                    </div>
-
+              {/* Sizing & Proportion Diagnostic */}
+              <div className="pt-3 border-t border-white/10">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[10px] uppercase tracking-wider text-[#a7b9ab] font-medium">
+                    Select Fit Size
+                  </span>
+                  <span className="text-[10px] text-[#fed892] font-mono">
+                    Chest {sizeSpec.chest} · Length {sizeSpec.length}
+                  </span>
+                </div>
+                <div className="grid grid-cols-4 gap-1.5">
+                  {SIZES.map((s, sIdx) => (
                     <button
+                      key={s.code}
                       type="button"
-                      onClick={toggleAutoRotate}
-                      className={`text-[10px] uppercase tracking-wider px-3 py-1 rounded-full border transition-all cursor-pointer ${
-                        isAutoRotating
-                          ? "bg-[#fed892] text-[#243329] border-[#fed892] font-semibold"
-                          : "text-white/90 bg-black/60 border-white/15"
+                      onClick={() => setSelectedSizeIndex(sIdx)}
+                      className={`py-1.5 text-center text-xs tracking-wider transition-all cursor-pointer border ${
+                        selectedSizeIndex === sIdx
+                          ? "bg-white text-black font-semibold border-white shadow-sm"
+                          : "bg-black/20 text-white/70 border-white/10 hover:border-white/30 hover:text-white"
                       }`}
                     >
-                      {isAutoRotating ? "Stop" : "360° Spin"}
+                      {s.code}
                     </button>
-                  </div>
+                  ))}
                 </div>
               </div>
+            </div>
 
-              {/* Right Column: Tailoring Configuration & Fit Analysis */}
-              <div className="md:col-span-5 flex flex-col justify-between gap-6">
-                <div>
-                  <div className="mb-4">
-                    <span className="text-[10px] uppercase tracking-widest text-[#755a21] font-semibold block mb-1">
-                      Garment Silhouette
-                    </span>
-                    <h4 className="font-serif text-xl uppercase tracking-tight text-[#1c1c19]">
-                      Obsidian Embroidered Panjabi
-                    </h4>
-                    <p className="text-xs text-[#434844] mt-1">
-                      Pure Rajshahi Silk with tonal Dhakai stitchwork. Mapped to 5-point proportion mannequin.
-                    </p>
-                    <div className="text-lg font-serif text-[#1c1c19] mt-2">
-                      ৳ 6,800
-                    </div>
-                  </div>
+            {/* CTAs */}
+            <div className="flex flex-wrap items-center gap-4 w-full pt-1">
+              <button
+                type="button"
+                onClick={handleAdd}
+                className="flex-1 min-w-[200px] bg-[#fcf9f4] text-[#1c1c19] py-4 px-6 uppercase tracking-widest text-xs font-semibold hover:bg-[#fed892] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+              >
+                <ShoppingBag className="w-4 h-4 text-[#1c1c19]" />
+                <span>Add To Bag ({sizeSpec.code}) · ৳ {garment.price.toLocaleString()}</span>
+              </button>
+              {onLaunchModal && (
+                <button
+                  type="button"
+                  onClick={onLaunchModal}
+                  className="px-6 py-4 border border-white/20 text-white uppercase tracking-widest text-xs font-medium hover:bg-white/10 transition-colors flex items-center gap-2 cursor-pointer"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-[#fed892]" />
+                  <span>Atelier Notes</span>
+                </button>
+              )}
+            </div>
+          </div>
 
-                  {/* Size Selector */}
-                  <div className="mb-6 pt-3 border-t border-[#c3c8c2]/30">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-[11px] uppercase tracking-wider font-medium text-[#1c1c19]">
-                        Select Fit Size
-                      </span>
-                      <span className="text-[10px] text-[#755a21] font-medium uppercase tracking-wider">
-                        Tailored Slim Fit
-                      </span>
-                    </div>
-                    <div className="grid grid-cols-4 gap-2">
-                      {["38R (S)", "40R (M)", "42R (L)", "44R (XL)"].map((sz) => (
-                        <button
-                          key={sz}
-                          type="button"
-                          onClick={() => setSelectedSize(sz)}
-                          className={`py-2 px-1 text-center text-xs tracking-wider transition-all border cursor-pointer ${
-                            selectedSize === sz
-                              ? "border-[#1c1c19] bg-[#1c1c19] text-white font-medium"
-                              : "border-[#c3c8c2] bg-white text-[#1c1c19] hover:border-[#1c1c19]"
-                          }`}
-                        >
-                          {sz}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+          {/* Right Column: Master Photographic Showcase with High-Res View Switcher */}
+          <div className="lg:col-span-6">
+            <div className="w-full aspect-[4/5] bg-[#141d17] border border-white/15 overflow-hidden relative shadow-2xl group select-none">
+              
+              {/* Main High-Res Image with smooth transition */}
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  key={`${garment.id}-${activeView}`}
+                  src={currentView.url}
+                  alt={currentView.label}
+                  fill
+                  unoptimized
+                  priority
+                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
 
-                  {/* Proportion Specs Accordion */}
-                  <div className="bg-[#f0ede9] p-4 text-xs space-y-2 border border-[#c3c8c2]/30">
-                    <span className="text-[10px] uppercase tracking-wider text-[#755a21] font-semibold block mb-1">
-                      Proportion Diagnostics
-                    </span>
-                    <div className="flex justify-between text-[#434844]">
-                      <span>Chest Width</span>
-                      <span className="font-medium text-[#1c1c19]">
-                        {selectedSize.includes("38") ? '38.5"' : selectedSize.includes("40") ? '40.5"' : selectedSize.includes("42") ? '42.5"' : '44.5"'}
-                      </span>
-                    </div>
-                    <div className="flex justify-between text-[#434844]">
-                      <span>Garment Length</span>
-                      <span className="font-medium text-[#1c1c19]">42.0"</span>
-                    </div>
-                    <div className="flex justify-between text-[#434844]">
-                      <span>Shoulder Span</span>
-                      <span className="font-medium text-[#1c1c19]">18.2"</span>
-                    </div>
-                    <div className="flex justify-between text-[#434844]">
-                      <span>Sleeve Length</span>
-                      <span className="font-medium text-[#1c1c19]">25.5"</span>
-                    </div>
-                  </div>
-                </div>
+                {/* Subtle Cinematic Vignette */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 pointer-events-none" />
+              </div>
 
-                {/* Add to Bag CTA */}
-                <div className="pt-4 border-t border-[#c3c8c2]/30 space-y-2">
+              {/* Interactive Craft Hotspot Pins */}
+              {activeView === "silhouette" &&
+                garment.hotspots.map((h) => {
+                  const isActive = activeHotspot === h.id;
+                  return (
+                    <div
+                      key={h.id}
+                      className="absolute z-20"
+                      style={{ top: h.top, left: h.left }}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => setActiveHotspot(isActive ? null : h.id)}
+                        className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all shadow-lg cursor-pointer ${
+                          isActive
+                            ? "bg-[#fed892] text-[#1c1c19] scale-110 ring-4 ring-[#fed892]/30"
+                            : "bg-[#fcf9f4]/90 text-[#1c1c19] hover:bg-white hover:scale-105"
+                        }`}
+                        title={h.title}
+                        aria-label={h.title}
+                      >
+                        +
+                      </button>
+
+                      {/* Hotspot Floating Tooltip */}
+                      {isActive && (
+                        <div className="absolute left-8 top-1/2 -translate-y-1/2 w-52 sm:w-60 bg-[#fcf9f4] text-[#1c1c19] p-3 shadow-2xl border border-[#c3c8c2] z-30 animate-fade-in text-left">
+                          <div className="flex items-center justify-between pb-1 border-b border-[#c3c8c2]/30 mb-1">
+                            <span className="text-[10px] uppercase font-bold text-[#755a21] tracking-wider">
+                              {h.title}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => setActiveHotspot(null)}
+                              className="text-xs text-[#434844] hover:text-black"
+                            >
+                              ✕
+                            </button>
+                          </div>
+                          <p className="text-[11px] leading-relaxed text-[#434844]">
+                            {h.detail}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+
+              {/* Top View Mode Badge */}
+              <div className="absolute top-6 right-6 bg-[#fcf9f4]/95 text-[#1c1c19] px-3.5 py-1.5 text-[10px] uppercase tracking-wider backdrop-blur-sm shadow-md font-semibold flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#755a21]"></span>
+                <span>{currentView.label}</span>
+              </div>
+
+              {/* Bottom Interactive View Angle Selector Bar */}
+              <div className="absolute bottom-6 inset-x-6 flex flex-col sm:flex-row items-center justify-between gap-3 pointer-events-auto">
+                {/* 3 View Tabs: FULL SILHOUETTE | CRAFT MACRO | ATELIER FOLDED */}
+                <div className="flex items-center gap-1 bg-black/75 backdrop-blur-md p-1.5 rounded-full border border-white/20 shadow-xl">
                   <button
                     type="button"
                     onClick={() => {
-                      if (onQuickAdd) {
-                        onQuickAdd("Obsidian Embroidered Panjabi");
-                      }
-                      setIsModalOpen(false);
+                      setActiveView("silhouette");
+                      setActiveHotspot(null);
                     }}
-                    className="w-full bg-[#1c1c19] text-white py-3.5 uppercase tracking-widest text-xs font-medium hover:bg-[#755a21] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                    className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase tracking-wider transition-all cursor-pointer font-medium ${
+                      activeView === "silhouette"
+                        ? "bg-white text-black font-semibold shadow-md"
+                        : "text-white/80 hover:text-white hover:bg-white/10"
+                    }`}
                   >
-                    <ShoppingBag className="w-4 h-4" />
-                    <span>Order In Selected Size ({selectedSize.split(" ")[0]})</span>
+                    Silhouette
                   </button>
-                  <p className="text-[11px] text-center text-[#737873]">
-                    Complimentary bespoke atelier sizing adjustments in Dhaka.
-                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveView("macro");
+                      setActiveHotspot(null);
+                    }}
+                    className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase tracking-wider transition-all cursor-pointer font-medium ${
+                      activeView === "macro"
+                        ? "bg-white text-black font-semibold shadow-md"
+                        : "text-white/80 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    Craft Macro
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveView("folded");
+                      setActiveHotspot(null);
+                    }}
+                    className={`px-3.5 py-1.5 rounded-full text-[10px] uppercase tracking-wider transition-all cursor-pointer font-medium ${
+                      activeView === "folded"
+                        ? "bg-white text-black font-semibold shadow-md"
+                        : "text-white/80 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    Atelier Folded
+                  </button>
+                </div>
+
+                {/* View Hint */}
+                <div className="text-[10px] uppercase tracking-wider text-white/80 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/15 hidden sm:inline-flex items-center gap-1.5 font-medium">
+                  <Eye className="w-3.5 h-3.5 text-[#fed892]" />
+                  <span>100% Clothing-Only</span>
                 </div>
               </div>
+
             </div>
           </div>
+
         </div>
-      )}
-    </>
+      </div>
+    </section>
   );
 }
