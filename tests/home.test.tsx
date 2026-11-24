@@ -15,7 +15,7 @@ describe("HomePage OOTFY Luxury Storefront", () => {
     render(<HomePage />);
     expect(screen.getByRole("heading", { name: /New Arrivals/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /THE EID EDIT/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /SEE IT ON YOU/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /THE NOCTURNE OF BENGAL/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /Best Sellers/i })).toBeInTheDocument();
   });
 });

@@ -6,7 +6,7 @@ import { SiteHeader } from "../components/site-header";
 import { HeroSection } from "../components/hero-section";
 import { NewArrivalsSection } from "../components/new-arrivals-section";
 import { EidEditSection } from "../components/eid-edit-section";
-import { VirtualTryonTeaser } from "../components/virtual-tryon-teaser";
+import { NocturneCampaignSection } from "../components/nocturne-campaign-section";
 import { BestSellersSection } from "../components/best-sellers-section";
 import { BrandPhilosophySection } from "../components/brand-philosophy-section";
 import { ReviewsNewsletterSection } from "../components/reviews-newsletter-section";
@@ -85,14 +85,8 @@ export default function HomePage() {
         {/* 5. The Eid Edit Seasonal Capsule */}
         <EidEditSection />
 
-        {/* 6. Virtual Try-On Teaser ("SEE IT ON YOU") */}
-        <VirtualTryonTeaser
-          onLaunchModal={handleLaunchTryOn}
-          onQuickAdd={(name) => {
-            setCartCount((c) => c + 1);
-            setToastMessage(`Added ${name} to your bag`);
-          }}
-        />
+        {/* 6. The Nocturne of Bengal (WebGL Liquid Emerald & Gold Shimmer Canvas) */}
+        <NocturneCampaignSection onNotify={(msg) => setToastMessage(msg)} />
 
         {/* 7. Best Sellers (Atelier Signatures) */}
         <BestSellersSection
