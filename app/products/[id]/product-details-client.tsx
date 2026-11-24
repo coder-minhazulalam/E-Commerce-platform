@@ -32,13 +32,43 @@ export function ProductDetailsClient({
   fallbackHero,
   relatedProducts,
 }: ProductDetailsClientProps) {
-  // Image gallery views: Combine clean photographic assets
-  const galleryImages = [
-    { label: "Hero Flatlay", url: fallbackHero },
-    { label: "Hanging View", url: product.images?.hanging_view || "/assets/eid/eid-espresso-panjabi.jpg" },
-    { label: "Fabric Macro Detail", url: product.images?.fabric_macro_detail || "/assets/eid/eid-muslin-detail.jpg" },
-    { label: "Folded Packshot", url: product.images?.folded_view || "/assets/eid/eid-folded-silks.jpg" },
-  ];
+  // Image gallery views: Tailored photographic perspectives for this specific garment
+  const galleryImages = React.useMemo(() => {
+    if (fallbackHero.includes("unsplash.com")) {
+      const baseUrl = fallbackHero.split("?")[0];
+      return [
+        { label: "Master Packshot", url: `${baseUrl}?q=85&w=1200&auto=format&fit=crop` },
+        { label: "Craft & Collar Macro", url: `${baseUrl}?q=85&w=1200&auto=format&fit=crop&crop=top` },
+        { label: "Weave & Textile Detail", url: `${baseUrl}?q=85&w=1200&auto=format&fit=crop&crop=entropy` },
+        { label: "Sculptural Drape", url: `${baseUrl}?q=85&w=1200&auto=format&fit=crop&crop=bottom` },
+      ];
+    }
+
+    if (product.id === "OOT-SAR-002" || product.category === "Saree") {
+      return [
+        { label: "Full Saree Drape", url: fallbackHero },
+        { label: "Zari Weave Macro", url: "/assets/eid/eid-muslin-detail.jpg" },
+        { label: "Pallu Presentation", url: "/assets/products/jamdani-saree-clean.jpg" },
+        { label: "Atelier Folded Box", url: "/assets/eid/eid-folded-silks.jpg" },
+      ];
+    }
+
+    if (product.id === "OOT-PAN-005" || product.id === "OOT-PAN-001" || product.category === "Panjabi") {
+      return [
+        { label: "Full Atelier Silhouette", url: fallbackHero },
+        { label: "Hand-Embroidered Placket", url: "/assets/eid/eid-muslin-detail.jpg" },
+        { label: "Brass Stand Drape", url: "/assets/eid/eid-espresso-panjabi.jpg" },
+        { label: "Pressed Presentation", url: "/assets/eid/eid-folded-silks.jpg" },
+      ];
+    }
+
+    return [
+      { label: "Master Silhouette", url: fallbackHero },
+      { label: "Craft Perspective", url: fallbackHero },
+      { label: "Atelier Presentation", url: fallbackHero },
+      { label: "Folded Packshot", url: fallbackHero },
+    ];
+  }, [fallbackHero, product.id, product.category]);
 
   const [activeImage, setActiveImage] = useState(galleryImages[0].url);
   const [selectedColor, setSelectedColor] = useState(
