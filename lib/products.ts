@@ -570,7 +570,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
       "hanging_view": "/assets/products/men/overshirt-atelier-linen-olive/natural_oak_hang.jpg",
       "fabric_macro_detail": "/assets/products/men/overshirt-atelier-linen-olive/bellow_pocket_texture_macro.jpg",
       "back_view": "/assets/products/men/overshirt-atelier-linen-olive/straight_yoke_back.jpg",
@@ -607,7 +607,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Bespoke Order (14 Days Crafting)",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/eid/nocturne-garment-clean.jpg",
       "hanging_view": "/assets/products/women/lehenga-botanical-jamdani-ecru/mannequin_volumetric_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/lehenga-botanical-jamdani-ecru/kalidar_zari_vine_macro.jpg",
       "back_view": "/assets/products/women/lehenga-botanical-jamdani-ecru/tassled_latkan_back.jpg",
@@ -653,7 +653,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "/assets/tryon/tryon-avatar-mannequin.jpg",
+      "hero_flatlay": "/assets/eid/eid-espresso-panjabi.jpg",
       "hanging_view": "/assets/products/men/panjabi-obsidian-black-minimal/black_metal_hanger_view.jpg",
       "fabric_macro_detail": "/assets/products/men/panjabi-obsidian-black-minimal/gunmetal_snap_macro.jpg",
       "back_view": "/assets/products/men/panjabi-obsidian-black-minimal/streamlined_spine_back.jpg",
@@ -699,7 +699,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuCua08J3bqXRcnBLFIc44WM9WsVxOnAAg28SNwXK4lp6Ce0iAzpBJYKlB7PIHzIBPij1H_rbO4ZEMXqJ8BscO9KLIMx_GolCSnVirGq7Nu1Nev-pFgZ8jqJiHh-xYqoYA-Mct08q996xytLK4N8VVD_Lo5vx3rOcyNfnORRk_kXsbUlU2pjvXSuNfmwA0vTrIHAlimLRf6G5s8GR-8y42MNb5_gM79OdXVD_ljpLTY=s0",
       "hanging_view": "/assets/products/kids/panjabi-junior-jamdani-ivory/child_wooden_hanger.jpg",
       "fabric_macro_detail": "/assets/products/kids/panjabi-junior-jamdani-ivory/soft_yoke_jamdani_macro.jpg",
       "back_view": "/assets/products/kids/panjabi-junior-jamdani-ivory/relaxed_kid_cut_back.jpg",
@@ -744,7 +744,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYAFI_PmmauTCrm73TRCjj9Gevg-iIOPNnIMA2vXYOHYf5jALiTM7imQ9s_EH-7ht0ryf1qGxIMrIlApFTt66mJiK_hRskBhuya8Qth9QaLsb6RUIs9tADGdHqVSU1EODql9mLkxW7hSiE_Q92yyE_Gn7SPqLbbEJKY__D3IzzQDLnS0Z2e5S79HhdWI__isNQlL9jW9bAmBCiTdraouLZKeeE6AgSVWXojJf6ZIQ=s0",
       "hanging_view": "/assets/products/kids/kurti-girls-chanderi-blush/petite_mannequin_hang.jpg",
       "fabric_macro_detail": "/assets/products/kids/kurti-girls-chanderi-blush/scallop_booti_macro.jpg",
       "back_view": "/assets/products/kids/kurti-girls-chanderi-blush/keyhole_button_back.jpg",
@@ -835,7 +835,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/eid/nocturne-garment-clean.jpg",
       "hanging_view": "/assets/products/women/salwar-tangail-cotton-ecru/studio_rod_drape.jpg",
       "fabric_macro_detail": "/assets/products/women/salwar-tangail-cotton-ecru/fishscale_border_macro.jpg",
       "back_view": "/assets/products/women/salwar-tangail-cotton-ecru/churidar_dupatta_back.jpg",
@@ -881,7 +881,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1598966739654-5e9a252d8c32?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAlHxT9a54dLcyokiwx7H_bzlRZyUPfxuO-b1pZ4NW1rc8f-PiooIwIfcW8aNnLVWxNQp1GNxzynr9XfDXZapZ6QwKy2oaaxp5c6qsKoQZtGg1SR8wGv0MGNkwlQxIV9nplGd11SyLjykbZnpyh091diOfdjb6DO9-KU9gJT84zZ9gy6-OQ0V8f8g0IhesvVkOWoLIg7D1-UHz_uIn922tCC0eLYqg4dDHAOSBNQD0=s0",
       "hanging_view": "/assets/products/men/panjabi-fine-khadi-oatmeal/rustic_wooden_hanger.jpg",
       "fabric_macro_detail": "/assets/products/men/panjabi-fine-khadi-oatmeal/slub_khadi_stud_macro.jpg",
       "back_view": "/assets/products/men/panjabi-fine-khadi-oatmeal/contrast_yoke_back.jpg",
@@ -927,7 +927,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_sl1s-rT1jL4gihSPUtemgnbulNFdRvXMSwQACnkPPgXP64mG6K6Hvb2_WwmH-dOYsBO2eR5FwRvlS9KlfAryHZgQLgD4V2e8jKTAEbo0H_HJXcmMYyXM0RKi7hRK6_q-tcEjHyKBqCyGNa9XA9sWmHJKM3CYyuwhN_NeEXmdtdx52UrQHj-KoTp4IZpaFMLu-Mw_AmMu9YBegBW1hj-19vlPIWlrgOqtUjbFAxY=s0",
       "hanging_view": "/assets/products/men/trouser-tailored-charcoal-wool/clamping_hanger_view.jpg",
       "fabric_macro_detail": "/assets/products/men/trouser-tailored-charcoal-wool/blind_hem_crease_macro.jpg",
       "back_view": "/assets/products/men/trouser-tailored-charcoal-wool/curtain_waistband_back.jpg",
@@ -1006,7 +1006,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1578932750294-f5075e85f44a?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
       "hanging_view": "/assets/products/men/shirt-pleated-bib-tuxedo/tuxedo_stand_hanger.jpg",
       "fabric_macro_detail": "/assets/products/men/shirt-pleated-bib-tuxedo/micro_pintuck_bib_macro.jpg",
       "back_view": "/assets/products/men/shirt-pleated-bib-tuxedo/french_cuff_back.jpg",
@@ -1051,7 +1051,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuCoFHKrK_pzA3MAoy-T41foeGmDQxJ0Wzcvk68JSpVpPJUty7qH4nx0IJNuFFjnKMHMiMIAj2Tr2EEv1p_AlVi5BQdKmUq2X_s_MA93FcfeqLhoiAuLsTu4NZypKr3W3iSvlftVfCEVpAV3JilELtV5jpN7qPlAHKbYJbXV9tsTf8AEvJyeIilVwSj3dV5Sf-rmKRzrYePi7PCtsrj2-xIHmGw4MF3WILCYvms8xyM=s0",
       "hanging_view": "/assets/products/men/blazer-bandhgala-sand-matka/sculpted_torso_hanger.jpg",
       "fabric_macro_detail": "/assets/products/men/blazer-bandhgala-sand-matka/brass_button_collar_macro.jpg",
       "back_view": "/assets/products/men/blazer-bandhgala-sand-matka/tailored_waist_seam_back.jpg",
@@ -1096,7 +1096,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuBaHEhrOg3rqjVYFyAaT_FhKLFkCkrCMOZOGzHAgOQabQL6MjrKy9tH16rH4EI7wi6b2dORwohONtNL_fOwNRd25jXY5bHVv2cYlP_PQA3_v573jK1EuaEWCvAFmgFPT0nM-S3OH4CF8Q3PKAq0x0X2BkKhlC-n2e1OkeUnn3NXr4ik6CnPtcsIe5JVCorVtqXe70WtHKYZouQx1Wpc8sxj702NGJNsORjJ9LEaDPY=s0",
       "hanging_view": "/assets/products/women/threepiece-chanderi-goldleaf/trio_palazzo_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/threepiece-chanderi-goldleaf/aari_sequin_leaf_macro.jpg",
       "back_view": "/assets/products/women/threepiece-chanderi-goldleaf/sheer_kota_dupatta_back.jpg",
@@ -1179,7 +1179,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/eid/eid-folded-silks.jpg",
       "hanging_view": "/assets/products/women/saree-matka-biscuit-selvedge/vertical_drape_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/saree-matka-biscuit-selvedge/charcoal_selvedge_macro.jpg",
       "back_view": "/assets/products/women/saree-matka-biscuit-selvedge/sculptural_fall_back.jpg",
@@ -1224,7 +1224,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_sl1s-rT1jL4gihSPUtemgnbulNFdRvXMSwQACnkPPgXP64mG6K6Hvb2_WwmH-dOYsBO2eR5FwRvlS9KlfAryHZgQLgD4V2e8jKTAEbo0H_HJXcmMYyXM0RKi7hRK6_q-tcEjHyKBqCyGNa9XA9sWmHJKM3CYyuwhN_NeEXmdtdx52UrQHj-KoTp4IZpaFMLu-Mw_AmMu9YBegBW1hj-19vlPIWlrgOqtUjbFAxY=s0",
       "hanging_view": "/assets/products/men/pants-relaxed-silk-linen-ivory/drawstring_clamp_hang.jpg",
       "fabric_macro_detail": "/assets/products/men/pants-relaxed-silk-linen-ivory/woven_cord_eyelet_macro.jpg",
       "back_view": "/assets/products/men/pants-relaxed-silk-linen-ivory/vented_ankle_hem_back.jpg",
@@ -1265,7 +1265,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
       "hanging_view": "/assets/products/men/shirt-indigo-khadi-bandcollar/rustic_peg_hang.jpg",
       "fabric_macro_detail": "/assets/products/men/shirt-indigo-khadi-bandcollar/indigo_slub_bonebutton_macro.jpg",
       "back_view": "/assets/products/men/shirt-indigo-khadi-bandcollar/reinforced_yoke_back.jpg",
@@ -1306,7 +1306,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Made-to-Order (10 Days)",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/products/jamdani-saree-clean.jpg",
       "hanging_view": "/assets/products/women/lehenga-tissue-organza-sand/can-can_flared_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/lehenga-tissue-organza-sand/cord_embroidery_border_macro.jpg",
       "back_view": "/assets/products/women/lehenga-tissue-organza-sand/bustier_tie_back.jpg",
@@ -1357,7 +1357,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1626947346165-4c2288dadc2a?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/hero/hero-banner-master.jpg",
       "hanging_view": "/assets/products/men/panjabi-minimalist-linen-sand/studio_hanger_view.jpg",
       "fabric_macro_detail": "/assets/products/men/panjabi-minimalist-linen-sand/french_seam_texture_macro.jpg",
       "back_view": "/assets/products/men/panjabi-minimalist-linen-sand/vented_silhouette_back.jpg",
@@ -1445,7 +1445,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/eid/nocturne-garment-clean.jpg",
       "hanging_view": "/assets/products/women/threepiece-angrakha-muslin-ivory/mannequin_overlap_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/threepiece-angrakha-muslin-ivory/latkan_cord_tassel_macro.jpg",
       "back_view": "/assets/products/women/threepiece-angrakha-muslin-ivory/fluid_flare_back.jpg",
@@ -1490,7 +1490,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYAFI_PmmauTCrm73TRCjj9Gevg-iIOPNnIMA2vXYOHYf5jALiTM7imQ9s_EH-7ht0ryf1qGxIMrIlApFTt66mJiK_hRskBhuya8Qth9QaLsb6RUIs9tADGdHqVSU1EODql9mLkxW7hSiE_Q92yyE_Gn7SPqLbbEJKY__D3IzzQDLnS0Z2e5S79HhdWI__isNQlL9jW9bAmBCiTdraouLZKeeE6AgSVWXojJf6ZIQ=s0",
       "hanging_view": "/assets/products/women/kurti-pintuck-khadi-sage/minimal_rack_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/kurti-pintuck-khadi-sage/millimeter_pintuck_macro.jpg",
       "back_view": "/assets/products/women/kurti-pintuck-khadi-sage/inverted_box_pleat_back.jpg",
@@ -1527,7 +1527,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "1 Unit in Atelier Vault",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/products/jamdani-saree-clean.jpg",
       "hanging_view": "/assets/products/women/saree-tissue-banarasi-burnished-gold/museum_mount_drape.jpg",
       "fabric_macro_detail": "/assets/products/women/saree-tissue-banarasi-burnished-gold/kadwa_jaal_zari_macro.jpg",
       "back_view": "/assets/products/women/saree-tissue-banarasi-burnished-gold/dense_pallu_fall_back.jpg",
@@ -1573,7 +1573,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_sl1s-rT1jL4gihSPUtemgnbulNFdRvXMSwQACnkPPgXP64mG6K6Hvb2_WwmH-dOYsBO2eR5FwRvlS9KlfAryHZgQLgD4V2e8jKTAEbo0H_HJXcmMYyXM0RKi7hRK6_q-tcEjHyKBqCyGNa9XA9sWmHJKM3CYyuwhN_NeEXmdtdx52UrQHj-KoTp4IZpaFMLu-Mw_AmMu9YBegBW1hj-19vlPIWlrgOqtUjbFAxY=s0",
       "hanging_view": "/assets/products/women/pants-wideleg-rawsilk-sand/vertical_leg_fall_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/pants-wideleg-rawsilk-sand/slub_silk_waistband_macro.jpg",
       "back_view": "/assets/products/women/pants-wideleg-rawsilk-sand/tailored_dart_profile_back.jpg",
@@ -1617,7 +1617,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAqyrJTi9nfT1P_Di0ZavWYRlZQKt4gQQ9uVi337kVqznaHvZNLLji3PwQBM6Ksjf5RGTEhTAx_OuGb3sRSO69ilPKqmizPOEyWbJjJAXtRLAU3w2zcshQ0DJU_EpFYRhr0yjxPEN_wm1Pv8GO4h3AWa_OxeG-ibCX5lqnhHWmq6hCEPbbh9UFmxReEYx_SmqPjSjEOR6OU3pmzbsT7pvPWLIk9wS-nwSNfj8Pekyw=s0",
       "hanging_view": "/assets/products/women/vest-tuxedo-rawsilk-ivory/tailor_mannequin_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/vest-tuxedo-rawsilk-ivory/shawl_lapel_welt_macro.jpg",
       "back_view": "/assets/products/women/vest-tuxedo-rawsilk-ivory/cinched_buckle_back.jpg",
@@ -1654,7 +1654,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "Bespoke Order (18 Days Crafting)",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/eid/eid-folded-silks.jpg",
       "hanging_view": "/assets/products/women/lehenga-indigo-jamdani-zari/monumental_flare_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/lehenga-indigo-jamdani-zari/silver_gold_bel_macro.jpg",
       "back_view": "/assets/products/women/lehenga-indigo-jamdani-zari/handwoven_dori_back.jpg",
@@ -1696,7 +1696,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/eid/eid-folded-silks.jpg",
       "hanging_view": "/assets/products/women/saree-tangail-silk-alabaster/linen_cord_drape_hang.jpg",
       "fabric_macro_detail": "/assets/products/women/saree-tangail-silk-alabaster/temple_border_weave_macro.jpg",
       "back_view": "/assets/products/women/saree-tangail-silk-alabaster/cascade_pallu_back.jpg",
@@ -1742,7 +1742,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuCua08J3bqXRcnBLFIc44WM9WsVxOnAAg28SNwXK4lp6Ce0iAzpBJYKlB7PIHzIBPij1H_rbO4ZEMXqJ8BscO9KLIMx_GolCSnVirGq7Nu1Nev-pFgZ8jqJiHh-xYqoYA-Mct08q996xytLK4N8VVD_Lo5vx3rOcyNfnORRk_kXsbUlU2pjvXSuNfmwA0vTrIHAlimLRf6G5s8GR-8y42MNb5_gM79OdXVD_ljpLTY=s0",
       "hanging_view": "/assets/products/men/panjabi-minimalist-slate-grey/steel_hanger_hang.jpg",
       "fabric_macro_detail": "/assets/products/men/panjabi-minimalist-slate-grey/hidden_snap_collar_macro.jpg",
       "back_view": "/assets/products/men/panjabi-minimalist-slate-grey/clean_shoulder_back.jpg",
@@ -1828,7 +1828,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
       "hanging_view": "/assets/products/men/shirt-camp-collar-sand-linen/sunlit_breeze_hang.jpg",
       "fabric_macro_detail": "/assets/products/men/shirt-camp-collar-sand-linen/camp_collar_horn_button_macro.jpg",
       "back_view": "/assets/products/men/shirt-camp-collar-sand-linen/straight_box_pleat_back.jpg",
@@ -1868,7 +1868,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuCoFHKrK_pzA3MAoy-T41foeGmDQxJ0Wzcvk68JSpVpPJUty7qH4nx0IJNuFFjnKMHMiMIAj2Tr2EEv1p_AlVi5BQdKmUq2X_s_MA93FcfeqLhoiAuLsTu4NZypKr3W3iSvlftVfCEVpAV3JilELtV5jpN7qPlAHKbYJbXV9tsTf8AEvJyeIilVwSj3dV5Sf-rmKRzrYePi7PCtsrj2-xIHmGw4MF3WILCYvms8xyM=s0",
       "hanging_view": "/assets/products/men/blazer-doublebreasted-midnight-wool/sartorial_stand_hang.jpg",
       "fabric_macro_detail": "/assets/products/men/blazer-doublebreasted-midnight-wool/peak_lapel_buttonhole_macro.jpg",
       "back_view": "/assets/products/men/blazer-doublebreasted-midnight-wool/double_flapped_vent_back.jpg",
@@ -1914,7 +1914,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_sl1s-rT1jL4gihSPUtemgnbulNFdRvXMSwQACnkPPgXP64mG6K6Hvb2_WwmH-dOYsBO2eR5FwRvlS9KlfAryHZgQLgD4V2e8jKTAEbo0H_HJXcmMYyXM0RKi7hRK6_q-tcEjHyKBqCyGNa9XA9sWmHJKM3CYyuwhN_NeEXmdtdx52UrQHj-KoTp4IZpaFMLu-Mw_AmMu9YBegBW1hj-19vlPIWlrgOqtUjbFAxY=s0",
       "hanging_view": "/assets/products/men/pants-gurkha-alabaster-twill/buckle_detail_hang.jpg",
       "fabric_macro_detail": "/assets/products/men/pants-gurkha-alabaster-twill/brass_gurkha_buckles_macro.jpg",
       "back_view": "/assets/products/men/pants-gurkha-alabaster-twill/split_waistband_back.jpg",
@@ -1954,7 +1954,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1584030373081-f37b7bb4fa8e?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
       "hanging_view": "/assets/products/men/shirt-raw-silk-ecru-matka/minimal_hanger_view.jpg",
       "fabric_macro_detail": "/assets/products/men/shirt-raw-silk-ecru-matka/matka_slub_texture_macro.jpg",
       "back_view": "/assets/products/men/shirt-raw-silk-ecru-matka/clean_curved_hem_back.jpg",
@@ -1995,7 +1995,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAlHxT9a54dLcyokiwx7H_bzlRZyUPfxuO-b1pZ4NW1rc8f-PiooIwIfcW8aNnLVWxNQp1GNxzynr9XfDXZapZ6QwKy2oaaxp5c6qsKoQZtGg1SR8wGv0MGNkwlQxIV9nplGd11SyLjykbZnpyh091diOfdjb6DO9-KU9gJT84zZ9gy6-OQ0V8f8g0IhesvVkOWoLIg7D1-UHz_uIn922tCC0eLYqg4dDHAOSBNQD0=s0",
       "hanging_view": "/assets/products/kids/panjabi-boys-olive-khadi/nursery_wooden_hang.jpg",
       "fabric_macro_detail": "/assets/products/kids/panjabi-boys-olive-khadi/wood_toggle_button_macro.jpg",
       "back_view": "/assets/products/kids/panjabi-boys-olive-khadi/soft_vent_back.jpg",
@@ -2035,7 +2035,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/eid/nocturne-garment-clean.jpg",
       "hanging_view": "/assets/products/kids/kurti-girls-jamdani-coral/petite_studio_hang.jpg",
       "fabric_macro_detail": "/assets/products/kids/kurti-girls-jamdani-coral/coral_flora_weft_macro.jpg",
       "back_view": "/assets/products/kids/kurti-girls-jamdani-coral/gentle_gathers_back.jpg",
@@ -2080,7 +2080,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkho7GRGanucC5LObsfZbrhRkfflXmrqZSVX2dIQIYYJHZl9Z_6i1wxWSWhg7WScfqasuirL_gfLs9XIlwZH2zioeEupmoY0duuxc8-5tuH8bEFZ3GELo8eDEOwGN70kGd8dgyds3Fly1YMVLEtYuR2r6ldcQeRaF4GOMN48hmphElDZQFQFoCGe7loxlLMmLkgHNYvZ0UxznsjWhAhORHKCPb7-o_-av2YZTPdGs=s0",
       "hanging_view": "/assets/products/kids/kurta-junior-sand-linen/small_brass_hanger.jpg",
       "fabric_macro_detail": "/assets/products/kids/kurta-junior-sand-linen/linen_texture_roundhem_macro.jpg",
       "back_view": "/assets/products/kids/kurta-junior-sand-linen/kid_pleated_yoke_back.jpg",
@@ -2120,7 +2120,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "/assets/products/jamdani-saree-clean.jpg",
       "hanging_view": "/assets/products/kids/dress-girls-organza-champagne/tiered_float_hang.jpg",
       "fabric_macro_detail": "/assets/products/kids/dress-girls-organza-champagne/organza_zari_scallop_macro.jpg",
       "back_view": "/assets/products/kids/dress-girls-organza-champagne/silk_sash_bow_back.jpg",
@@ -2160,7 +2160,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuCoFHKrK_pzA3MAoy-T41foeGmDQxJ0Wzcvk68JSpVpPJUty7qH4nx0IJNuFFjnKMHMiMIAj2Tr2EEv1p_AlVi5BQdKmUq2X_s_MA93FcfeqLhoiAuLsTu4NZypKr3W3iSvlftVfCEVpAV3JilELtV5jpN7qPlAHKbYJbXV9tsTf8AEvJyeIilVwSj3dV5Sf-rmKRzrYePi7PCtsrj2-xIHmGw4MF3WILCYvms8xyM=s0",
       "hanging_view": "/assets/products/kids/waistcoat-boys-bandhgala-sand/formal_junior_hang.jpg",
       "fabric_macro_detail": "/assets/products/kids/waistcoat-boys-bandhgala-sand/miniature_brass_button_macro.jpg",
       "back_view": "/assets/products/kids/waistcoat-boys-bandhgala-sand/cinch_strap_back.jpg",
@@ -2200,7 +2200,7 @@ export const OOTFY_PRODUCTS: OotfyProduct[] = [
     ],
     "stock_status": "In Stock — Dhaka Atelier",
     "images": {
-      "hero_flatlay": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop",
+      "hero_flatlay": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYAFI_PmmauTCrm73TRCjj9Gevg-iIOPNnIMA2vXYOHYf5jALiTM7imQ9s_EH-7ht0ryf1qGxIMrIlApFTt66mJiK_hRskBhuya8Qth9QaLsb6RUIs9tADGdHqVSU1EODql9mLkxW7hSiE_Q92yyE_Gn7SPqLbbEJKY__D3IzzQDLnS0Z2e5S79HhdWI__isNQlL9jW9bAmBCiTdraouLZKeeE6AgSVWXojJf6ZIQ=s0",
       "hanging_view": "/assets/products/kids/kurti-junior-monochrome-muslin/child_boutique_hang.jpg",
       "fabric_macro_detail": "/assets/products/kids/kurti-junior-monochrome-muslin/geometric_chalk_motif_macro.jpg",
       "back_view": "/assets/products/kids/kurti-junior-monochrome-muslin/button_fastening_back.jpg",
