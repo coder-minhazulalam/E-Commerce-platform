@@ -164,6 +164,14 @@ export function SiteHeader({
                 {/* Account / Patron Profile */}
                 {isAuthenticated && user ? (
                   <div className="flex items-center gap-2">
+                    {user.role === "admin" && (
+                      <Link
+                        href="/admin"
+                        className="flex items-center gap-1.5 px-3 py-1 bg-[#755a21] hover:bg-[#5c4618] text-white rounded-full text-xs font-semibold cursor-pointer shadow-sm transition-colors"
+                      >
+                        <span>Console</span>
+                      </Link>
+                    )}
                     <button
                       type="button"
                       onClick={() => openAuthModal("Update your Atelier patron account details")}

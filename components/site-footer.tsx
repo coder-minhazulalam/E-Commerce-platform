@@ -109,6 +109,14 @@ export function SiteFooter({ onNotify }: SiteFooterProps) {
                   <span>Dhaka Concierge Desk</span>
                 </button>
               </li>
+              <li className="pt-1 border-t border-[#c3c8c2]/30">
+                <Link
+                  href="/admin/login"
+                  className="text-xs text-[#737873] hover:text-[#755a21] transition-colors flex items-center gap-1"
+                >
+                  <span>Atelier Director Portal</span>
+                </Link>
+              </li>
             </ul>
           </div>
 
