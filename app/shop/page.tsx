@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, SlidersHorizontal, ArrowUpDown } from "lucide-react";
+import { Search, ArrowUpDown, Filter } from "lucide-react";
 import { OOTFY_PRODUCTS, type OotfyProduct } from "../../lib/products";
 import { SiteHeader } from "../../components/site-header";
 import { CategoryNav } from "../../components/category-nav";
@@ -10,9 +10,18 @@ import { ProductCard } from "../../components/product-card";
 import { SiteFooter } from "../../components/site-footer";
 import { ToastNotification } from "../../components/toast-notification";
 
+const COLLECTIONS = [
+  "All Collections",
+  "The Eid Edit",
+  "The New Bangladeshi Edit",
+  "Atelier Signatures",
+  "The Little Edit",
+] as const;
+
 export default function ShopPage() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [activeGender, setActiveGender] = useState<"All" | "Men" | "Women" | "Kids">("All");
+  const [activeCollection, setActiveCollection] = useState<string>("All Collections");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"featured" | "price-asc" | "price-desc" | "name-asc">("featured");
   const [wishlistIds, setWishlistIds] = useState<Set<string>>(new Set());
@@ -38,6 +47,11 @@ export default function ShopPage() {
         }
         return pCat === target;
       });
+    }
+
+    // Collection Filter
+    if (activeCollection !== "All Collections") {
+      list = list.filter((p) => p.collection.toLowerCase() === activeCollection.toLowerCase());
     }
 
     // Gender Filter
@@ -68,7 +82,7 @@ export default function ShopPage() {
     }
 
     return list;
-  }, [activeCategory, activeGender, searchQuery, sortBy]);
+  }, [activeCategory, activeCollection, activeGender, searchQuery, sortBy]);
 
   const handleQuickAdd = (product: OotfyProduct) => {
     setCartCount((prev) => prev + 1);
@@ -88,6 +102,19 @@ export default function ShopPage() {
       return next;
     });
   };
+
+  const resetAllFilters = () => {
+    setActiveCategory("all");
+    setActiveGender("All");
+    setActiveCollection("All Collections");
+    setSearchQuery("");
+  };
+
+  const hasActiveFilters =
+    activeCategory !== "all" ||
+    activeGender !== "All" ||
+    activeCollection !== "All Collections" ||
+    Boolean(searchQuery.trim());
 
   return (
     <div className="w-full min-h-screen bg-[#fcf9f4] text-[#1c1c19] flex flex-col font-sans selection:bg-[#fed892] selection:text-[#785d24]">
@@ -147,29 +174,53 @@ export default function ShopPage() {
             </div>
           </div>
 
-          {/* Gender Filter Row */}
-          <div className="flex items-center gap-2 mt-6 pt-4 border-t border-[#c3c8c2]/20">
-            <span className="text-[11px] uppercase tracking-widest text-[#737873] mr-2">
-              Gender:
-            </span>
-            {(["All", "Men", "Women", "Kids"] as const).map((gender) => (
-              <button
-                key={gender}
-                type="button"
-                onClick={() => setActiveGender(gender)}
-                className={`text-xs uppercase tracking-widest px-3 py-1.5 transition-all cursor-pointer font-medium ${
-                  activeGender === gender
-                    ? "bg-[#243329] text-white"
-                    : "bg-[#f6f3ee] text-[#434844] hover:bg-[#ebe8e3] hover:text-[#1c1c19]"
-                }`}
-              >
-                {gender}
-              </button>
-            ))}
+          {/* Filtering Control Rows: Collections & Gender */}
+          <div className="mt-6 pt-4 border-t border-[#c3c8c2]/20 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            {/* Gender Filter */}
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[11px] uppercase tracking-widest text-[#737873] mr-1">
+                Gender:
+              </span>
+              {(["All", "Men", "Women", "Kids"] as const).map((gender) => (
+                <button
+                  key={gender}
+                  type="button"
+                  onClick={() => setActiveGender(gender)}
+                  className={`text-xs uppercase tracking-widest px-3 py-1.5 transition-all cursor-pointer font-medium ${
+                    activeGender === gender
+                      ? "bg-[#243329] text-white"
+                      : "bg-[#f6f3ee] text-[#434844] hover:bg-[#ebe8e3] hover:text-[#1c1c19]"
+                  }`}
+                >
+                  {gender}
+                </button>
+              ))}
+            </div>
+
+            {/* Collection Filter */}
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[11px] uppercase tracking-widest text-[#737873] mr-1">
+                Collection:
+              </span>
+              {COLLECTIONS.map((col) => (
+                <button
+                  key={col}
+                  type="button"
+                  onClick={() => setActiveCollection(col)}
+                  className={`text-xs uppercase tracking-widest px-3 py-1.5 transition-all cursor-pointer font-medium ${
+                    activeCollection === col
+                      ? "bg-[#755a21] text-white"
+                      : "bg-[#f6f3ee] text-[#434844] hover:bg-[#ebe8e3] hover:text-[#1c1c19]"
+                  }`}
+                >
+                  {col}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* 2. Category Navigation Bar (Moved from Home to Shop) */}
+        {/* 2. Category Navigation Bar */}
         <CategoryNav
           activeCategory={activeCategory}
           onSelectCategory={(catId) => setActiveCategory(catId)}
@@ -181,14 +232,10 @@ export default function ShopPage() {
             <p className="uppercase tracking-widest">
               Showing <span className="font-semibold text-[#1c1c19]">{filteredProducts.length}</span> of {OOTFY_PRODUCTS.length} Atelier Creations
             </p>
-            {(activeCategory !== "all" || activeGender !== "All" || searchQuery) && (
+            {hasActiveFilters && (
               <button
                 type="button"
-                onClick={() => {
-                  setActiveCategory("all");
-                  setActiveGender("All");
-                  setSearchQuery("");
-                }}
+                onClick={resetAllFilters}
                 className="uppercase tracking-widest text-[#755a21] hover:underline font-medium cursor-pointer"
               >
                 Reset All Filters
@@ -202,11 +249,7 @@ export default function ShopPage() {
               <p className="text-xs text-[#737873] mt-2">Try clearing your search or selecting another category.</p>
               <button
                 type="button"
-                onClick={() => {
-                  setActiveCategory("all");
-                  setActiveGender("All");
-                  setSearchQuery("");
-                }}
+                onClick={resetAllFilters}
                 className="mt-6 px-6 py-2.5 bg-[#243329] text-white text-xs uppercase tracking-widest font-medium hover:bg-[#1a261e] cursor-pointer"
               >
                 View Full Collection
