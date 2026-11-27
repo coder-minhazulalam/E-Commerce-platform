@@ -26,6 +26,7 @@ import { ProductCard, PRODUCT_IMAGE_MAP } from "../../../components/product-card
 import { SiteFooter } from "../../../components/site-footer";
 import { ToastNotification } from "../../../components/toast-notification";
 import { VirtualTryonStudio } from "../../../components/virtual-tryon-studio";
+import { useRealtimeInventory } from "../../../lib/use-realtime-inventory";
 
 interface ProductDetailsClientProps {
   product: OotfyProduct;
@@ -41,6 +42,7 @@ export function ProductDetailsClient({
   const searchParams = useSearchParams();
   const [activeProduct, setActiveProduct] = useState<OotfyProduct>(initialProduct);
   const [isTryOnActive, setIsTryOnActive] = useState(false);
+  const liveInventory = useRealtimeInventory(activeProduct.id, activeProduct.stock_status);
 
   // Check query params on mount
   useEffect(() => {
@@ -383,9 +385,10 @@ export function ProductDetailsClient({
                   <span className="text-[11px] uppercase tracking-[0.2em] text-[#755a21] font-semibold">
                     {activeProduct.gender.toUpperCase()} / {activeProduct.category.toUpperCase()} / ATELIER {activeProduct.id.split("-").pop()}
                   </span>
-                  <span className="text-[10px] uppercase tracking-wider text-[#737873] bg-[#ebe8e3] px-2 py-0.5">
-                    {activeProduct.stock_status || "In Stock — Atelier"}
-                  </span>
+                  <div className="inline-flex items-center gap-1.5 bg-[#ebe8e3] px-2 py-0.5 text-[10px] uppercase tracking-wider text-[#434844] font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                    <span>{liveInventory.stockStatus}</span>
+                  </div>
                 </div>
 
                 {/* Garment Title */}
