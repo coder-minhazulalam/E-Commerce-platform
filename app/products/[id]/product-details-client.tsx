@@ -19,6 +19,8 @@ import {
   Share2,
   Eye,
   Maximize2,
+  Lock,
+  ArrowRight,
 } from "lucide-react";
 import { type OotfyProduct, formatPriceBDT, OOTFY_PRODUCTS } from "../../../lib/products";
 import { SiteHeader } from "../../../components/site-header";
@@ -28,6 +30,7 @@ import { ToastNotification } from "../../../components/toast-notification";
 import { VirtualTryonStudio } from "../../../components/virtual-tryon-studio";
 import { useRealtimeInventory } from "../../../lib/use-realtime-inventory";
 import { useCart } from "../../../lib/cart-context";
+import { useAuth } from "../../../lib/auth-context";
 import { useRouter } from "next/navigation";
 
 interface ProductDetailsClientProps {
@@ -44,8 +47,10 @@ export function ProductDetailsClient({
   const searchParams = useSearchParams();
   const router = useRouter();
   const { addItem, openBag } = useCart();
+  const { isAuthenticated, openAuthModal, user } = useAuth();
   const [activeProduct, setActiveProduct] = useState<OotfyProduct>(initialProduct);
   const [isTryOnActive, setIsTryOnActive] = useState(false);
+  const [isBuyingNow, setIsBuyingNow] = useState(false);
   const liveInventory = useRealtimeInventory(activeProduct.id, activeProduct.stock_status);
 
   // Check query params on mount
@@ -54,6 +59,13 @@ export function ProductDetailsClient({
       setIsTryOnActive(true);
     }
   }, [searchParams]);
+
+  // Auth gate check on mount: prompt login if not authenticated
+  useEffect(() => {
+    if (!isAuthenticated) {
+      openAuthModal(`Sign in to view full atelier specifications for ${activeProduct.name}`);
+    }
+  }, [isAuthenticated, activeProduct.name]);
 
   // Current product fallback hero
   const currentHero = useMemo(() => {
@@ -203,14 +215,25 @@ export function ProductDetailsClient({
   }, [activeProduct]);
 
   const handleAddToCart = () => {
+    if (!isAuthenticated) {
+      openAuthModal(`Sign in to add ${activeProduct.name} to your bag`);
+      return;
+    }
     addItem(activeProduct, selectedSize, selectedColor, quantity);
     setCartCount((c) => c + quantity);
     setToastMessage(`Added ${quantity} × ${activeProduct.name} (${selectedSize}) to bag`);
   };
 
   const handleBuyNow = () => {
+    if (!isAuthenticated) {
+      openAuthModal("Sign in to complete your atelier purchase");
+      return;
+    }
+    setIsBuyingNow(true);
     addItem(activeProduct, selectedSize, selectedColor, quantity);
-    router.push("/checkout");
+    setTimeout(() => {
+      router.push("/checkout");
+    }, 350);
   };
 
   const handleToggleWishlist = () => {
@@ -249,8 +272,53 @@ export function ProductDetailsClient({
         onOpenSearch={() => setToastMessage("Search functionality opening...")}
       />
 
-      {/* Conditional Rendering: VIRTUAL TRY-ON STUDIO or ATELIER PRODUCT DETAILS */}
-      {isTryOnActive ? (
+      {/* Conditional Rendering: PATRON GATE, VIRTUAL TRY-ON STUDIO or ATELIER PRODUCT DETAILS */}
+      {!isAuthenticated ? (
+        <main className="w-full flex-1 pt-24 sm:pt-28 pb-16 flex items-center justify-center relative min-h-[72vh]">
+          {/* Blurred Background Preview */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 filter blur-2xl">
+            <Image
+              src={activeImage}
+              alt={activeProduct.name}
+              fill
+              unoptimized
+              className="object-cover object-center"
+            />
+          </div>
+
+          {/* Luxury Access Gate Card */}
+          <div className="relative z-10 max-w-lg w-full mx-4 p-8 sm:p-10 bg-[#fcf9f4]/95 backdrop-blur-2xl border border-[#c3c8c2]/70 shadow-2xl text-center animate-fadeIn">
+            <div className="w-14 h-14 rounded-full bg-[#243329] text-[#fed892] flex items-center justify-center mx-auto mb-4 shadow-md">
+              <Lock className="w-6 h-6" />
+            </div>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#755a21] font-semibold block mb-1">
+              OOTFY ATELIER RESTRICTED ACCESS
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl text-[#1c1c19] tracking-tight mb-2">
+              Patron Sign-In Required
+            </h2>
+            <p className="text-xs text-[#5a605b] leading-relaxed mb-6">
+              Full garment drape, artisan provenance, weave specifications, and ordering for <strong className="text-[#1c1c19]">{activeProduct.name}</strong> are reserved for registered OOTFY patrons.
+            </p>
+            <div className="space-y-3">
+              <button
+                type="button"
+                onClick={() => openAuthModal(`Sign in to inspect atelier drape and specifications for ${activeProduct.name}`)}
+                className="w-full py-3.5 bg-[#243329] hover:bg-[#1a261e] text-white text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer shadow"
+              >
+                <span>Sign In as Atelier Patron</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <Link
+                href="/shop"
+                className="w-full py-3 bg-[#f6f3ee] hover:bg-[#ebe8e3] text-[#434844] hover:text-[#1c1c19] text-xs uppercase tracking-widest font-medium flex items-center justify-center transition-all cursor-pointer border border-[#c3c8c2]/50"
+              >
+                Return to Atelier Gallery
+              </Link>
+            </div>
+          </div>
+        </main>
+      ) : isTryOnActive ? (
         <main className="w-full flex-1 pt-20 sm:pt-24 animate-fadeIn">
           <VirtualTryonStudio
             product={activeProduct}
@@ -402,7 +470,7 @@ export function ProductDetailsClient({
                 </h1>
 
                 {/* Price in BDT */}
-                <div className="flex items-baseline gap-3 py-3 border-y border-[#c3c8c2]/30 mb-4">
+                <div className="flex flex-wrap items-baseline gap-3 py-3 border-y border-[#c3c8c2]/30 mb-4">
                   <span className="font-serif text-2xl sm:text-3xl font-semibold text-[#1c1c19]">
                     {formatPriceBDT(activeProduct.price_bdt)}
                   </span>
@@ -414,6 +482,11 @@ export function ProductDetailsClient({
                   {activeProduct.original_price_bdt && (
                     <span className="text-xs uppercase tracking-wider text-[#755a21] font-semibold">
                       Save {Math.round(((activeProduct.original_price_bdt - activeProduct.price_bdt) / activeProduct.original_price_bdt) * 100)}%
+                    </span>
+                  )}
+                  {quantity > 1 && (
+                    <span className="text-xs text-[#755a21] font-semibold sm:ml-auto bg-[#f6f3ee] px-2.5 py-1 border border-[#c3c8c2]/40">
+                      Line Total ({quantity} items): {formatPriceBDT(activeProduct.price_bdt * quantity)}
                     </span>
                   )}
                 </div>
@@ -544,16 +617,28 @@ export function ProductDetailsClient({
                   {/* Buy Now Button */}
                   <button
                     type="button"
+                    disabled={isBuyingNow}
                     onClick={handleBuyNow}
-                    className="w-full h-12 bg-[#f6f3ee] hover:bg-[#ebe8e3] text-[#1c1c19] border border-[#c3c8c2] text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-[0.99]"
+                    className="w-full h-12 bg-[#f6f3ee] hover:bg-[#ebe8e3] text-[#1c1c19] border border-[#c3c8c2] text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
                   >
-                    <span>Buy Now</span>
+                    {isBuyingNow ? (
+                      <span className="inline-flex items-center gap-2">
+                        <span className="w-3.5 h-3.5 border-2 border-[#1c1c19] border-t-transparent rounded-full animate-spin" />
+                        Securing Atelier Piece...
+                      </span>
+                    ) : (
+                      <span>Buy Now</span>
+                    )}
                   </button>
 
                   {/* ✨ SEE IT ON YOU Button (Directly switches to Virtual Try-On screen!) */}
                   <button
                     type="button"
                     onClick={() => {
+                      if (!isAuthenticated) {
+                        openAuthModal("Sign in to access 3D Virtual Try-On Studio");
+                        return;
+                      }
                       setIsTryOnActive(true);
                       if (typeof window !== "undefined" && typeof window.scrollTo === "function") {
                         try {

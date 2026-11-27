@@ -2,17 +2,28 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck, PhoneCall, Sparkles } from "lucide-react";
+import { useAuth } from "../lib/auth-context";
 
 interface SiteFooterProps {
   onNotify?: (msg: string) => void;
 }
 
 export function SiteFooter({ onNotify }: SiteFooterProps) {
+  const { isAuthenticated, openAuthModal, user } = useAuth();
+
   const handleNewsletter = (e: React.FormEvent) => {
     e.preventDefault();
     onNotify?.("Subscribed to private dispatches");
     (e.target as HTMLFormElement).reset();
+  };
+
+  const handleClientCare = (action: string) => {
+    if (!isAuthenticated) {
+      openAuthModal(`Sign in to contact Dhaka Atelier Concierge & Client Care for ${action}`);
+      return;
+    }
+    onNotify?.(`Dhaka Concierge request received for: ${action}. Welcome, ${user?.fullName}!`);
   };
 
   return (
@@ -26,53 +37,77 @@ export function SiteFooter({ onNotify }: SiteFooterProps) {
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <Link href="#category-nav" className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors">
-                  Men
+                <Link href="/shop" className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors">
+                  Men's Collection
                 </Link>
               </li>
               <li>
-                <Link href="#category-nav" className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors">
-                  Women
+                <Link href="/shop" className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors">
+                  Women's Masterpieces
                 </Link>
               </li>
               <li>
-                <Link href="#category-nav" className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors">
-                  Kids
+                <Link href="/shop" className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors">
+                  Kids Festive Edits
                 </Link>
               </li>
               <li>
-                <Link href="#new-arrivals" className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors">
-                  All Products
+                <Link href="/shop" className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors">
+                  All 50 Masterworks
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Customer */}
+          {/* Client Care - Protected by Login Gate */}
           <div>
-            <h4 className="text-xs uppercase text-[#1c1c19] mb-4 tracking-widest font-semibold">
-              Client Care
-            </h4>
+            <div className="flex items-center gap-1.5 mb-4">
+              <h4 className="text-xs uppercase text-[#1c1c19] tracking-widest font-semibold">
+                Client Care
+              </h4>
+              {!isAuthenticated && (
+                <span className="text-[9px] uppercase px-1.5 py-0.5 bg-[#ebe8e3] text-[#755a21] font-semibold border border-[#c3c8c2]/40">
+                  Patron Only
+                </span>
+              )}
+            </div>
             <ul className="space-y-2.5">
               <li>
-                <span className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors cursor-pointer">
+                <button
+                  type="button"
+                  onClick={() => handleClientCare("Complimentary Shipping Inquiry")}
+                  className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors text-left cursor-pointer"
+                >
                   Complimentary Shipping
-                </span>
+                </button>
               </li>
               <li>
-                <span className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors cursor-pointer">
+                <button
+                  type="button"
+                  onClick={() => handleClientCare("Bespoke Return Services")}
+                  className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors text-left cursor-pointer"
+                >
                   Bespoke Returns
-                </span>
+                </button>
               </li>
               <li>
-                <span className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors cursor-pointer">
+                <button
+                  type="button"
+                  onClick={() => handleClientCare("Tailor Measurement & Size Consultation")}
+                  className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors text-left cursor-pointer"
+                >
                   Atelier Size Guide
-                </span>
+                </button>
               </li>
               <li>
-                <span className="text-xs text-[#434844] hover:text-[#1c1c19] transition-colors cursor-pointer">
-                  Dhaka Concierge
-                </span>
+                <button
+                  type="button"
+                  onClick={() => handleClientCare("Direct Dhaka Atelier Concierge Call")}
+                  className="text-xs text-[#755a21] hover:text-[#1c1c19] font-medium transition-colors text-left cursor-pointer flex items-center gap-1"
+                >
+                  <PhoneCall className="w-3 h-3" />
+                  <span>Dhaka Concierge Desk</span>
+                </button>
               </li>
             </ul>
           </div>

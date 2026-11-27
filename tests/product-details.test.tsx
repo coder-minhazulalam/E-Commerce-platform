@@ -5,6 +5,9 @@ import { ProductDetailsClient } from "../app/products/[id]/product-details-clien
 import { VirtualTryonStudio } from "../components/virtual-tryon-studio";
 import { OOTFY_PRODUCTS } from "../lib/products";
 
+let mockIsAuthenticated = true;
+const mockOpenAuthModal = vi.fn();
+
 // Mock next/navigation
 vi.mock("next/navigation", () => ({
   useSearchParams: () => new URLSearchParams(),
@@ -12,14 +15,54 @@ vi.mock("next/navigation", () => ({
   useRouter: () => ({ push: vi.fn() }),
 }));
 
+// Mock auth-context
+vi.mock("../lib/auth-context", () => ({
+  useAuth: () => ({
+    user: mockIsAuthenticated
+      ? { id: "u1", email: "patron@ootfy.com", fullName: "Atelier Patron", role: "customer" }
+      : null,
+    isAuthenticated: mockIsAuthenticated,
+    isLoading: false,
+    isAuthModalOpen: false,
+    openAuthModal: mockOpenAuthModal,
+    closeAuthModal: vi.fn(),
+    login: vi.fn(),
+    logout: vi.fn(),
+    authReason: "",
+  }),
+}));
+
 describe("Product Details & Virtual Try-On Studio", () => {
   const sampleProduct = OOTFY_PRODUCTS[0]; // OOT-PAN-001 Ivory Panjabi
 
   beforeEach(() => {
     window.scrollTo = vi.fn();
+    mockIsAuthenticated = true;
+    mockOpenAuthModal.mockClear();
   });
 
-  it("renders Product Details screen matching reference layout", () => {
+  it("renders Patron Sign-In Required gate when not authenticated", () => {
+    mockIsAuthenticated = false;
+
+    render(
+      <ProductDetailsClient
+        product={sampleProduct}
+        fallbackHero="/assets/products/jamdani-saree-clean.jpg"
+        relatedProducts={OOTFY_PRODUCTS.slice(1, 5)}
+      />
+    );
+
+    expect(screen.getByText("Patron Sign-In Required")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Sign In as Atelier Patron/i })).toBeInTheDocument();
+
+    const signInBtn = screen.getByRole("button", { name: /Sign In as Atelier Patron/i });
+    fireEvent.click(signInBtn);
+    expect(mockOpenAuthModal).toHaveBeenCalled();
+  });
+
+  it("renders Product Details screen matching reference layout when authenticated", () => {
+    mockIsAuthenticated = true;
+
     render(
       <ProductDetailsClient
         product={sampleProduct}
@@ -49,6 +92,8 @@ describe("Product Details & Virtual Try-On Studio", () => {
   });
 
   it("clicking 'See It On You' opens the Virtual Try-On Studio", () => {
+    mockIsAuthenticated = true;
+
     render(
       <ProductDetailsClient
         product={sampleProduct}
