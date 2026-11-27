@@ -4,16 +4,26 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search, Heart, ShoppingBag, User } from "lucide-react";
+import { useCart } from "../lib/cart-context";
 
 interface SiteHeaderProps {
   wishlistCount?: number;
   cartCount?: number;
   onOpenSearch?: () => void;
+  onOpenBag?: () => void;
 }
 
-export function SiteHeader({ wishlistCount = 0, cartCount = 0, onOpenSearch }: SiteHeaderProps) {
+export function SiteHeader({
+  wishlistCount = 0,
+  cartCount: propCartCount,
+  onOpenSearch,
+  onOpenBag,
+}: SiteHeaderProps) {
   const pathname = usePathname() || "/";
   const [scrolled, setScrolled] = useState(false);
+  const { totalCount, openBag } = useCart();
+
+  const effectiveCartCount = propCartCount !== undefined ? propCartCount : totalCount;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +32,14 @@ export function SiteHeader({ wishlistCount = 0, cartCount = 0, onOpenSearch }: S
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleBagClick = () => {
+    if (onOpenBag) {
+      onOpenBag();
+    } else {
+      openBag();
+    }
+  };
 
   return (
     <header className="fixed top-0 w-full z-50 bg-[#fcf9f4]/95 transition-all duration-300" id="site-header">
@@ -103,13 +121,14 @@ export function SiteHeader({ wishlistCount = 0, cartCount = 0, onOpenSearch }: S
 
               <button
                 aria-label="Bag"
+                onClick={handleBagClick}
                 className="text-[#434844] hover:text-[#1c1c19] transition-transform duration-200 hover:scale-110 flex items-center relative cursor-pointer"
                 type="button"
               >
                 <ShoppingBag className="w-5 h-5" />
-                {cartCount > 0 && (
+                {effectiveCartCount > 0 && (
                   <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#243329] text-[9px] font-bold text-white rounded-full flex items-center justify-center">
-                    {cartCount}
+                    {effectiveCartCount}
                   </span>
                 )}
               </button>

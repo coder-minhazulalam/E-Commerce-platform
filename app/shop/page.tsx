@@ -9,6 +9,7 @@ import { CategoryNav } from "../../components/category-nav";
 import { ProductCard } from "../../components/product-card";
 import { SiteFooter } from "../../components/site-footer";
 import { ToastNotification } from "../../components/toast-notification";
+import { useCart } from "../../lib/cart-context";
 
 const COLLECTIONS = [
   "All Collections",
@@ -19,6 +20,7 @@ const COLLECTIONS = [
 ] as const;
 
 export default function ShopPage() {
+  const { addItem, totalCount } = useCart();
   const [activeCategory, setActiveCategory] = useState("all");
   const [activeGender, setActiveGender] = useState<"All" | "Men" | "Women" | "Kids">("All");
   const [activeCollection, setActiveCollection] = useState<string>("All Collections");
@@ -85,7 +87,7 @@ export default function ShopPage() {
   }, [activeCategory, activeCollection, activeGender, searchQuery, sortBy]);
 
   const handleQuickAdd = (product: OotfyProduct) => {
-    setCartCount((prev) => prev + 1);
+    addItem(product);
     setToastMessage(`Added ${product.name} to your bag`);
   };
 

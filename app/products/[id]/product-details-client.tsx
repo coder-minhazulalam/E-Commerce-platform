@@ -27,6 +27,8 @@ import { SiteFooter } from "../../../components/site-footer";
 import { ToastNotification } from "../../../components/toast-notification";
 import { VirtualTryonStudio } from "../../../components/virtual-tryon-studio";
 import { useRealtimeInventory } from "../../../lib/use-realtime-inventory";
+import { useCart } from "../../../lib/cart-context";
+import { useRouter } from "next/navigation";
 
 interface ProductDetailsClientProps {
   product: OotfyProduct;
@@ -40,6 +42,8 @@ export function ProductDetailsClient({
   relatedProducts,
 }: ProductDetailsClientProps) {
   const searchParams = useSearchParams();
+  const router = useRouter();
+  const { addItem, openBag } = useCart();
   const [activeProduct, setActiveProduct] = useState<OotfyProduct>(initialProduct);
   const [isTryOnActive, setIsTryOnActive] = useState(false);
   const liveInventory = useRealtimeInventory(activeProduct.id, activeProduct.stock_status);
@@ -199,13 +203,14 @@ export function ProductDetailsClient({
   }, [activeProduct]);
 
   const handleAddToCart = () => {
+    addItem(activeProduct, selectedSize, selectedColor, quantity);
     setCartCount((c) => c + quantity);
     setToastMessage(`Added ${quantity} × ${activeProduct.name} (${selectedSize}) to bag`);
   };
 
   const handleBuyNow = () => {
-    setCartCount((c) => c + quantity);
-    setToastMessage(`Proceeding to atelier checkout for ${activeProduct.name}...`);
+    addItem(activeProduct, selectedSize, selectedColor, quantity);
+    router.push("/checkout");
   };
 
   const handleToggleWishlist = () => {
